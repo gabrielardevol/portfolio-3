@@ -26,6 +26,7 @@ function App() {
 
   const unfoldSecondLayout = () => {
     document.querySelector("#second-layout").style.border = "1px solid black"
+    document.querySelector("#second-layout").style.marginRight = "0.8em"
 
     setLayoutClass("gtc-101 gtr-101")
     setSuperLayout("unfold-second-layout")
@@ -37,7 +38,9 @@ function App() {
     setTimeout(() => {
       setLayoutClass2("layout-75")
       document.querySelector("#second-layout").style.border = ""
-    }, 400);
+      document.querySelector("#second-layout").style.marginRight = "0px"
+
+    }, 700);
   }
   useEffect(() => {
     setLayoutClass2("layout-75")

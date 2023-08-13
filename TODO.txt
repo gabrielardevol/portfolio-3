@@ -1,0 +1,8 @@
+LAYOUT
+  -mobile: .stack height fit-content
+  -foto/video contact
+  -projects mobile scroll horitzontal
+  -eliminar marge dret
+  -layout horitzontal mobile:
+    -font-size: més petit en mòbil, com??
+    -project: si el card és mes petit de x, que sols surti la imatge i el títol

@@ -86,7 +86,7 @@ const Card =  (props) => {
   const handleResize = () => { //changes cards appearence (not size) when grid changes
 
     let startTime = performance.now();
-    let duration = 400; // Duration in milliseconds
+    let duration = 700; // Duration in milliseconds
     let interval = 1000 / 15; // Interval in milliseconds (30 frames per second)
 
     const animateLayout = (timestamp) => {

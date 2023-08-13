@@ -4,7 +4,7 @@ import '../style/SecondLayout.css';
 const Layout = React.forwardRef((props, ref) => {
    return (
     <div id="super-layout" className={props.superLayout } >
-      <div ref={ref} id="layout" className={props.layoutClass} style={{  transition: "all 0.4s ease"}}>
+      <div ref={ref} id="layout" className={props.layoutClass} style={{  transition: "all 0.7s ease"}}>
         {props.children}
       </div>
       <SecondLayout hideSecondLayout={props.hideSecondLayout}/>
