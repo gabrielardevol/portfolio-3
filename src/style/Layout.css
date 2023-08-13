@@ -5,10 +5,10 @@
 }
 
 #second-layout, #layout, .card  {
-  transition: width 10.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
 }
 #super-layout > * {
-  transition: width 10.4s ease-in-out; /* should exclude margins */
+  transition: width 0.4s ease-in-out; /* should exclude margins */
 }
 #super-layout {
   overflow: hidden;
@@ -25,7 +25,7 @@
     "card-3 logo card-2"
     "card-3 card-4 card-4";
     gap: 0.8em;
-    transition: all 10.4s ease;
+    transition: all 0.4s ease;
   }
   #super-layout { display: grid; }
   .gtc-101 { grid-template-columns: 1fr 0fr 1fr; }

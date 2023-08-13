@@ -2,9 +2,7 @@ import {useEffect, useRef} from 'react'
 import '../style/Logo.css';
 
 const Chara = (props) => {
-
   const logoRef = useRef()
-
   const transition = 1
   const animation = () => {
     logoRef.current.style.transition = "transform " + transition + "s ease"
@@ -22,30 +20,31 @@ const Chara = (props) => {
     useEffect(() => {
       logoRef.current !== undefined && logoRef.current.addEventListener("mouseover", animation);
       logoRef.current !== undefined && logoRef.current.addEventListener("click", animation);
-
-
-      // hoverElement.addEventListener("mouseout", handleMouseOut);
       return () => {
         logoRef.current !== undefined && logoRef.current.addEventListener("mouseover", animation);
         logoRef.current !== undefined && logoRef.current.addEventListener("click", animation);
-
-
-
-        // logoRef.current.removeEventListener("mouseover", animation);
-        // hoverElement.removeEventListener("mouseout", handleMouseOut);
       };
-    }, []); // Empty dependency array ensures the effect runs once on mount
+    }, []);
 
   if(props.char !== " ") {return (<div className="logo-chara" ref={logoRef} onClick={animation}>{props.char}</div>)} else {return (<div></div>)}
 }
 
 const Logo = (props) => {
-  const string = "gabr   iel ard   èvol";
+  const string = "gabr   iel ";
   const charArray = string.split('');
+  const string2 = "ard   èvol";
+  const charArray2 = string2.split('');
   return (
     <div id="logo" style={{gridArea: "logo"}} onClick={props.resizeLayoutGrid}>
-    {charArray.map((character, index) => <Chara key={index} char={character} />)}
+      <div>
+      {charArray.map((character, index) => <Chara key={index} char={character} />)}
+      {charArray2.map((character, index) => <Chara key={index} char={character} />)}
+      </div>
+        <div style={{textAlign: "center", background: "black", color: "white", borderRadius: "5em", marginTop: "0.4em"}}>
+          web development
+        </div>
     </div>
+
   );
 };
 
