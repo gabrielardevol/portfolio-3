@@ -6,11 +6,11 @@ function getProjectsLayout(width, height) {
   const projectWidth = (width / numberOfColumns) - ((0.75*16)/numberOfColumns) -1
   const projectHeight = projectWidth / ratio
 
-  if(height >= standardHeight*1.2) {
+  if(height >= standardHeight*1.3) {
     const projectsStyle = {gridAutoFlow: "row", gridTemplateColumns: "repeat(" + numberOfColumns + ", 1fr)", overflow: "hidden scroll"}
     return {width: projectWidth, height: projectHeight, style: projectsStyle, addClass: "vertical-p", removeClass: "horizontal-p"}
   }
-  if (height < standardHeight*1.2) {
+  if (height < standardHeight*1.3) {
     const projectsStyle = {gridAutoFlow: "column", overflow: "scroll hidden"}
     return {width: height * ratio, height: (height-0.75*16), style: projectsStyle, addClass: "horizontal-p", removeClass: "vertical-p"}
   }
