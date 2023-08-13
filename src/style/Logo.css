@@ -8,12 +8,6 @@
 
 
 
-.logo-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 3vw);
-  grid-template-rows: 1fr 1fr;
-}
-
 
 .logo-chara {/* DEUTE TÈCNIC */
   margin: auto;
@@ -23,13 +17,26 @@
   display: flex; justify-content: center; align-items: center;
   font-size:larger
 }
+@media only screen and (min-width: 480px) {
 
-
+  .logo-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 3vw);
+    grid-template-rows: 1fr 1fr;
+  }
+}
 @media only screen and (max-width: 480px) {
-  #logo > div:first-child {
+  .logo-grid {
+    display: flex;
+    /* grid-template-columns: repeat(7, 1fr); */
+    /* grid-template-rows: 1fr; */
+  }
+
+
+  /* #logo > div:first-child {
     grid-template-rows: 1fr 1fr;
 
-  }
+  } */
 
   .logo-chara { /* DEUTE TÈCNIC */
     margin: auto;
