@@ -1,7 +1,4 @@
 LAYOUT
-  -how to make logo responsive?
-    -when second-layout unfold, grid 1 0 1
-    -when second-layout hide, grid 1 21vw 1
   -vertical mobile has a margin bottom excluding background
   -how to add grey when loading?
 MEDIA

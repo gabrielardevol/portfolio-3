@@ -7,10 +7,7 @@
 }
 
 
-#logo {
-  transition: all 0.7s ease 0s;
-  width: 18vw
-}
+
 
 .logo-chara {/* DEUTE TÈCNIC */
   margin: auto;
@@ -21,7 +18,10 @@
   font-size:larger
 }
 @media only screen and (min-width: 480px) {
-
+  #logo {
+    transition: all 0.7s ease 0s;
+    width: 18vw
+  }
   .logo-grid {
     display: grid;
     grid-template-columns: repeat(4, 3vw);
