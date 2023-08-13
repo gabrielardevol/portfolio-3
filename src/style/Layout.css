@@ -1,0 +1,108 @@
+/*install sass and set a variable for mobile min-width and another for padding, gap, ...*/
+/* apply overflow hidden to super-layout between x and y width-height;;;;;*/
+* {
+  box-sizing: border-box;
+}
+
+#second-layout, #layout, .card  {
+  transition: width 10.4s ease-in-out;
+}
+#super-layout > * {
+  transition: width 10.4s ease-in-out; /* should exclude margins */
+}
+#super-layout {
+  overflow: hidden;
+}
+
+
+/* LAPTOP */
+@media only screen and (min-width: 480px) {
+  #layout {
+    padding: 0.8em;
+    display: grid;
+    grid-template-areas:
+    "card-1 card-1 card-2"
+    "card-3 logo card-2"
+    "card-3 card-4 card-4";
+    gap: 0.8em;
+    transition: all 10.4s ease;
+  }
+  #super-layout { display: grid; }
+  .gtc-101 { grid-template-columns: 1fr 0fr 1fr; }
+  .gtc-001 { grid-template-columns: 0fr 0fr 1fr; }
+  .gtc-100 { grid-template-columns: 1fr 0fr 0fr; }
+  .gtr-101 { grid-template-rows: 1fr 0fr 1fr; }
+  .gtr-001 { grid-template-rows: 0fr 0fr 1fr; }
+  .gtr-100 { grid-template-rows: 1fr 0fr 0fr; }
+
+  @media screen and (orientation: landscape) {
+    #layout { height: 100vh; margin: auto; background: pink; width: -webkit-fill-available}
+    #second-layout {
+      height: calc(100vh - 1.6em);
+      width: calc(50vw - 0.8em);
+      /* border: 1px solid black; */
+      margin: 0.8em 0.8em 0.8em 0em;
+      border-top-left-radius: 0.8em;
+      border-top-right-radius: 0.8em;
+      border-bottom-left-radius: 0.8em;
+      border-bottom-right-radius: 0.8em;
+    }
+    .hide-second-layout { grid-template-columns: 1fr 0fr; background: rgb(80, 80, 255); }
+    .unfold-second-layout { grid-template-columns: 1fr 0fr; background: orange; }
+    .hide-second-layout > #second-layout { width: 0em; overflow: hidden;}
+
+  }
+
+  @media screen and (orientation: portrait) {
+    #second-layout {height: calc(50vh - 0.8em);
+      margin: 0 0.8em 0.8em 0.8em;
+      border-radius: 0.8em
+    }
+    .unfold-second-layout > #layout { height: 50vh; background: yellow; }
+    .hide-second-layout > #layout { height: 100vh; background: green; }
+    #super-layout {
+      overflow: hidden;
+      height: 100vh
+    }
+  }
+}
+
+@media only screen and (min-width: 1000px) and (orientation: landscape) { /* laptop margins */
+  #layout {
+    max-width: 75vw;
+  }
+  .layout-75 {
+    width: 75vw /*SAFE*/
+  }
+}
+
+
+
+
+/* MOBILE */
+@media only screen and (max-width: 480px) {
+  #layout > .card {
+    margin: 0.8em
+  }
+  #layout {
+    min-height: 100vh;
+    background: khaki
+  }
+  #second-layout {
+    box-sizing: border-box;
+    position: fixed;
+    background: skyblue;
+    /* border: 1px solid black; */
+    border-radius: 0.8em;
+  }
+  #second-layout {
+    position: fixed; top: 0px;
+  }
+  .unfold-second-layout > #second-layout {
+    height: 100vh; width: 100vw;
+    background-color: cyan;
+  }
+  .hide-second-layout > #second-layout {
+    height: 100vh; width: 0vw;  overflow: hidden; left: -1px;
+  }
+}

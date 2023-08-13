@@ -1,0 +1,43 @@
+
+.logo-chara {
+  width: 100px;
+  height: 100px;
+  background-color: #3498db;
+  transition: transform 4s ease; /* Apply a smooth transition for the rotation */
+}
+
+
+
+#logo {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.logo-chara {/* DEUTE TÈCNIC */
+  margin: auto;
+  border: 1px solid black;
+  width: clamp(30px, 3vw, 100px); height: clamp(30px, 3vw, 100px);
+  border-radius: 3em; background-color: black; color: white;
+  display: flex; justify-content: center; align-items: center;
+  font-size:larger
+}
+
+
+@media only screen and (max-width: 480px) {
+  #logo {
+    grid-template-rows: 1fr 1fr;
+
+  }
+
+  .logo-chara { /* DEUTE TÈCNIC */
+    margin: auto;
+    border-radius: 3em; background-color: black; color: white;
+    display: flex; justify-content: center; align-items: center;
+    font-size:larger;
+    width: clamp(38px, calc(100vw/7), 100px); height: clamp(38px, calc(100vw/7), 100px)
+  }
+  #logo > div:not(.logo-chara) {
+    display: none
+  }
+}
