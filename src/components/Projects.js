@@ -9,7 +9,6 @@ const Projects = React.forwardRef((props, ref) => {
     <>
       <div ref={ref} className={"projects"}>
          <div id="projects-container">
-          {props.width}
           {projects.map((project, index) => (
             <Project  unfoldSecondLayout={props.unfoldSecondLayout} key={index} index={index} projectHeight={props.projectHeight} projectWidth={props.projectWidth}></Project>
           ))}

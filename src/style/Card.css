@@ -42,7 +42,7 @@
 @media only screen and (max-width: 480px) {
   .card {
     flex-direction: column;
-    height: 66vh
+    max-height: 66vh
 
   }
   .card >  div:nth-child(2) {

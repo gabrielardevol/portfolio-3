@@ -1,29 +1,11 @@
-/* .one-row {
-  display: grid;
-  grid-auto-flow: column
-}
 
-.two-columns {
-  display: grid;
-  grid-auto-flow: row;
-}
+@media only screen and (min-width: 480px) {
 
-.two-columns {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-.three-columns {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-.four-columns {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-} */
-.projects{
-  width: 100%;
-  display: grid;
-  overflow: auto
+  .projects{
+    width: 100%;
+    display: grid;
+    overflow: auto
+  }
 }
 
 .projects > div:first-child {
@@ -63,4 +45,9 @@
 
 .project h3 {
   font-size: 1em; margin: 0px; padding: 0px
+}
+
+@media only screen and (max-width: 480px) {
+  #projects-container {height: 210px}
+
 }
