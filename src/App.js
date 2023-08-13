@@ -22,6 +22,9 @@ function App() {
   const resizeLayoutGrid = (e) => {
     let layoutGridTemplate = getLayoutGridTemplate(e.currentTarget.dataset.index)
     setLayoutClass(layoutGridTemplate)
+    if(layoutGridTemplate !== "gtc-101 gtr-101") {document.querySelector("#logo").style.width = "12vw"}
+
+    if(layoutGridTemplate == "gtc-101 gtr-101") {document.querySelector("#logo").style.width = "18vw"}
   }
 
   const unfoldSecondLayout = () => {
@@ -40,6 +43,8 @@ function App() {
       document.querySelector("#second-layout").style.border = ""
       document.querySelector("#second-layout").style.marginRight = "0px"
     }, 700);
+    document.querySelector("#logo").style.width = "18vw"
+
   }
   useEffect(() => {
     setLayoutClass2("layout-75")

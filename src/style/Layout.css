@@ -30,7 +30,7 @@
     transition: all 0.7s ease;
   }
   #super-layout { display: grid; }
-  .gtc-101 { grid-template-columns: 1fr 21vw 1fr; }
+  .gtc-101 { grid-template-columns: 1fr 0fr 1fr; }
   .gtc-001 { grid-template-columns: 0fr 0fr 1fr; }
   .gtc-100 { grid-template-columns: 1fr 0fr 0fr; }
   .gtr-101 { grid-template-rows: 1fr 1fr 1fr; }
