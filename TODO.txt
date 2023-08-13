@@ -1,8 +1,6 @@
 LAYOUT
 
   -foto/video contact
-  -
   -layout horitzontal mobile:
-    -font-size: més petit en mòbil, com??
     -project: si el card és mes petit de x, que sols surti la imatge i el títol
   -mobile: contact goes last

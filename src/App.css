@@ -1,3 +1,10 @@
 .padding {
   padding: 0.5em;
 }
+
+@media (max-width: 700px) and (max-height: 400px) {
+
+  #root {
+    font-size: 12px;
+  }
+}
