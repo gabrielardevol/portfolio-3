@@ -1,6 +1,7 @@
 LAYOUT
 
   -foto/video contact
-  -layout horitzontal mobile:
-    -project: si el card és mes petit de x, que sols surti la imatge i el títol
   -mobile: contact goes last
+  -switch toggle is looking too big when mobile is horizontal
+  -clean console
+  -how to make logo responsive?

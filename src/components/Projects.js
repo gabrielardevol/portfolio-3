@@ -23,19 +23,19 @@ const Project = (props) => {
   const hashtags = ["react", "ruby", "API", "Responsiveness","gabriel", "ardèvol", "herrero"]
   return (
     <div onClick={props.unfoldSecondLayout} className="project" style={{height: props.projectHeight, width: props.projectWidth}}>
-      <div style={{ height: "50%" }}>
+      <div style={{  }}>
         <div style={{height: "100%", position: "relative"}}>
-          <div style={{position: "absolute", bottom: 0, display: "flex", flexWrap: "wrap", flexDirection: "row-reverse", alignContent: "flex-start"}}>
+          <div className={"p-hashtags"}>
             {hashtags.map((project, index) => (
             <div style={{background: "black", color: "white", borderRadius: "3em", fontSize: "0.8em", padding: "0em 0.9em"}}>{project}</div>
             ))}
           </div>
         </div>
       </div>
-      <div style={{display: "flex", alignItems: "center", justifyContent: "center", height: "calc(50% - 0.8em)"}}>
+      <div style={{}}>
         <div className="padding">
           <h3> {props.index} Title</h3>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          <p style={{margin: "0px", padding: "0px"}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
       </div>
     </div>
