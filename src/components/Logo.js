@@ -30,14 +30,16 @@ const Chara = (props) => {
 }
 
 const Logo = (props) => {
-  const string = "gabr   iel ";
+  const string = "gabriel ";
   const charArray = string.split('');
-  const string2 = "ard   èvol";
+  const string2 = "ardè vol";
   const charArray2 = string2.split('');
   return (
     <div id="logo" style={{gridArea: "logo"}} onClick={props.resizeLayoutGrid}>
-      <div>
+      <div class="logo-grid" >
       {charArray.map((character, index) => <Chara key={index} char={character} />)}
+      </div>
+      <div class="logo-grid" style={{justifyContent: "right"}}>
       {charArray2.map((character, index) => <Chara key={index} char={character} />)}
       </div>
         <div style={{textAlign: "center", background: "black", color: "white", borderRadius: "5em", marginTop: "0.4em"}}>
