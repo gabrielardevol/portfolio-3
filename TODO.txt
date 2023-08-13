@@ -1,7 +1,7 @@
 LAYOUT
-  -mobile: contact goes last
   -switch toggle is looking too big when mobile is horizontal
   -clean console
   -how to make logo responsive?
+  -vertical mobile has a margin bottom excluding background
 MEDIA
   -foto/video contact

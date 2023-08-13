@@ -1,6 +1,10 @@
 $groc: rgb(255, 255, 255);
 $gris: rgb(0, 0, 0);
 
+@media (max-width: 700px) and (max-height: 400px) {
+  .can-toggle {display: none}
+}
+
 @mixin can-toggle-branding(
   $can-toggle-off-color: #000000,
   $can-toggle-on-color: #5fc054,
