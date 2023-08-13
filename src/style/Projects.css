@@ -31,7 +31,7 @@
 
 
 .project div:nth-child(2) > div:first-child{
-  height: calc(50% - 1em);
+  /* height: calc(50% - 1em); */
   display: -webkit-box;
   max-width: 100%;
   -webkit-line-clamp: 4;
