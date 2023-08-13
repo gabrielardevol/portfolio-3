@@ -27,7 +27,7 @@ const Project = (props) => {
         <div style={{height: "100%", position: "relative"}}>
           <div className={"p-hashtags"}>
             {hashtags.map((project, index) => (
-            <div style={{background: "black", color: "white", borderRadius: "3em", fontSize: "0.8em", padding: "0em 0.9em"}}>{project}</div>
+            <div key={index} style={{background: "black", color: "white", borderRadius: "3em", fontSize: "0.8em", padding: "0em 0.9em"}}>{project}</div>
             ))}
           </div>
         </div>

@@ -15,7 +15,7 @@ import getStackLayout from '../functions/getStackLayout.js'
 //  so theres not too much or too little text.
 
 const Card =  (props) => {
-  const cardRef = useRef(null)
+  const cardRef = useRef()
   const titleRef = useRef() // is it being used?
   const [cardClass, setCardClass] = useState(props.defaultCardClass)
   const projectsRef = useRef()
@@ -101,15 +101,6 @@ const Card =  (props) => {
     };
     requestAnimationFrame(animateLayout);
   };
-
-
-
-
-
-
-
-
-
 
   useEffect(() => {
     handleLayout()

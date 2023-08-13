@@ -53,7 +53,7 @@ function App() {
         <Logo resizeLayoutGrid={resizeLayoutGrid} data-index={0}/>
         <Card defaultCardClass={"horizontal-left"} index={1} title={"about me"}resizeLayoutGrid={resizeLayoutGrid}  />
         <Card defaultCardClass={"vertical-left"} index={2} title={"stack"}resizeLayoutGrid={resizeLayoutGrid} />
-        <Card defaultCardClass={"horizontal-left"} index={4} title={"projects"}resizeLayoutGrid={resizeLayoutGrid} ref={projectsRef} unfoldSecondLayout={unfoldSecondLayout} />
+        <Card defaultCardClass={"horizontal-left"} index={4} title={"projects"}resizeLayoutGrid={resizeLayoutGrid} unfoldSecondLayout={unfoldSecondLayout} />
         <Card defaultCardClass={"vertical-left"} index={3} title={"contact"}resizeLayoutGrid={resizeLayoutGrid}  />
 
       </Layout>

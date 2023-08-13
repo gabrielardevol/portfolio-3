@@ -5,7 +5,6 @@ import "../style/Contact.css"
 const Contact = React.forwardRef((props, ref) => {
   const [containerHeight, setContainerHeight] = useState("")
     const handleContainerResize = () => {
-      console.log("resizing")
       // const headerHeight = document.querySelector("[data-index='3'] div:first-child").height
       // setContainerHeight(ref.current.getBoundingClientRect().height)
       // console.log(document.querySelector("[data-index='3'] div:first-child"))
