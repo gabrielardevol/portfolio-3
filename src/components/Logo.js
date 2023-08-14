@@ -35,7 +35,7 @@ const Logo = (props) => {
   const string2 = "ardè vol";
   const charArray2 = string2.split('');
   return (
-    <div id="logo" style={{gridArea: "logo"}} onClick={props.resizeLayoutGrid}>
+    <div id="logo" className="medium-logo" style={{gridArea: "logo"}} onClick={props.resizeLayoutGrid}>
       <div class="logo-grid" >
       {charArray.map((character, index) => <Chara key={index} char={character} />)}
       </div>
