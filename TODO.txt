@@ -20,5 +20,12 @@ MEDIA
     -fer carpetes amb les imatges de cada projecte
 
 COPY-WRITING
-  -about me
   -projects
+
+
+DONE
+  -about me
+TOMORROW
+  -about me eng
+  -about me esp
+  -about me jp
