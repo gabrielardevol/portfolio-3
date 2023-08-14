@@ -42,7 +42,7 @@ const Logo = (props) => {
       <div class="logo-grid" style={{justifyContent: "right"}}>
       {charArray2.map((character, index) => <Chara key={index} char={character} />)}
       </div>
-        <div style={{textAlign: "center", background: "black", color: "white", borderRadius: "5em", marginTop: "0.4em"}}>
+        <div id="webdev" style={{textAlign: "center", background: "black", color: "white", borderRadius: "5em", marginTop: "0.4em"}}>
           web development
         </div>
     </div>
