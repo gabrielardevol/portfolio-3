@@ -7,17 +7,15 @@
   }
 }
 
-.projects > div:first-child {
-  background: red;
-}
 
 .projects {
   overflow: auto
 }
 
 #projects-container {
+  background: red;
   display: grid;
-  height: fit-content;
+  height:min-content;
   gap: 1px
 }
 
