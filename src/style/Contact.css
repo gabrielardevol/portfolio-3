@@ -102,3 +102,7 @@ content: "-"; color: black
 
   }
 }
+
+@media (max-width: 700px) and (max-height: 400px) {
+#pfp {display:  none}
+}
