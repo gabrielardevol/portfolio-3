@@ -1,12 +1,18 @@
 import {useState, useRef} from 'react';
 import React from 'react';
-import "../style/AboutMe.scss"
+import "../style/AboutMe.scss";
+import { useTranslation } from 'react-i18next';
+import i18n from '../i18n.js'; // no esborrar
+
+
 
 const AboutMe = React.forwardRef((props, ref) => {
   const [longBioStyle, setLongBio] = useState({display: "none"})
   const handleSwitch = (e) => {
    setLongBio( e.currentTarget.checked ? {display: "inline", color: "lavender"} : {display: "none"} )
   }
+  const { t } = useTranslation();
+
   return (
     <>
     <div className="padding" id="about-me">
@@ -17,13 +23,15 @@ const AboutMe = React.forwardRef((props, ref) => {
         </label>
       </div>
       <div style={{marginTop: "1em"}}>
-        Hola, em dic Gabriel! Vaig neixer en un poble molt petit i aillat al mig de les muntanyes.
-        <LongBio style={longBioStyle}> Durant l'adolescència els videojocs van deixar pas al software, i era un púber quan vaig començar amb Photoshop, After Effects i d'altres softwares que em permetien produïr els meus petits projectes d'adolescent friki i pujar-los a youtube, i així m'entretenia en l'entorn rural. </LongBio>
-        Allà, els ordinadors eren la meva finestra al món. I encara ho són, perquè em dedico al desenvolupament web!
-        Ara visc a Barcelona, ja que als divuit anys vaig venir a estudiar un grau universitari en arts i disseny.
-        <LongBio style={longBioStyle}>Durant els quatre anys d'estudi a l'escola Massana vaig desenvolupar tota mena de projectes i també aprendre moltes tècniques diferents. No feiem exàmens sinó que feiem entregues. Com a estudiants desenvolupavem els nostres projectes de forma íntegra, des de la pluja d'idees inicial fins a la presentació: apreníem a estructurar-nos i prendre decisions respecte a cada pas, tot plegat al centre de Barcelona. </LongBio>
-        És un privilegi viure en una ciutat on el sector tecnològic és tant efervescent: Barcelona és el Silicon Valley d'Europa! En definitiva, els meus estudis creatius em van ensenyar a trencar amb lo establert i explorar moltes maneres de fer les coses, mentre que en el desenvolupament web he entès la importància de seguir les fórmules que funcionen quan cal. Si busques un perfil entusiasta i en expansió, que aporti un toc d'originalitat i amb amor per l'artesania i la feina ben feta, endavant!
-        <LongBio style={longBioStyle}> <img src="https://placehold.co/600x400/EEE/31343C" alt="" /> </LongBio>
+        {t('aboutMe.1')}&nbsp;
+        <LongBio style={longBioStyle}>{t('aboutMe.2')}</LongBio>&nbsp;
+        {t('aboutMe.3')}&nbsp;
+        <LongBio style={longBioStyle}>{t('aboutMe.4')}</LongBio>&nbsp;
+        {t('aboutMe.5')}&nbsp;
+        <br/><br/>
+        <LongBio style={longBioStyle}><img src="https://placehold.co/600x400/EEE/31343C" alt=""/></LongBio>
+        <br/><br/>
+
       </div>
     </div>
     </>

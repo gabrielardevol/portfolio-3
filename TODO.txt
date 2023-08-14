@@ -1,5 +1,6 @@
 LAYOUT
   -how to switch languages
+    -install
   -re-factor css files
   -si el logo està al mig, clicar al logo no hauria de trigerejar skelleton
   -clicar el switch toggle no hauria de triggerejar el skelleton

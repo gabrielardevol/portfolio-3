@@ -7,6 +7,9 @@ import Layout from './components/Layout.js'
 import getLayoutGridTemplate from './functions/getLayout';
 import {useRef, useState, useEffect} from 'react';
 
+import { useTranslation } from 'react-i18next';
+
+
 const cardData = [
   {title: "about me", content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.", defaultCardClass: "horizontal-left"},
   {title: "contact", content: "", defaultCardClass: "vertical-left"}
@@ -18,6 +21,8 @@ function App() {
   const [layoutClass, setLayoutClass] = useState("gtc-101 gtr-101")
   const [layoutClass2, setLayoutClass2] = useState("layout-75")
   const projectsRef = useRef()
+
+
 
   const resizeLayoutGrid = (e) => {
     let layoutGridTemplate = getLayoutGridTemplate(e.currentTarget.dataset.index)
@@ -62,9 +67,19 @@ function App() {
 
   }, []);
 
+  const { i18n } = useTranslation();
+  const handleLanguageChange = (language) => {
+    i18n.changeLanguage(language);
+  };
 
   return (
     <>
+      <button onClick={() => handleLanguageChange('en')}>English</button>
+      <button onClick={() => handleLanguageChange('cat')}>Catalan</button>
+      <button onClick={() => handleLanguageChange('esp')}>Spanish</button>
+      <button onClick={() => handleLanguageChange('ja')}>Japanese</button>
+
+
      <Layout ref={layoutRef} layoutClass={layoutClass + " " + layoutClass2} superLayout={superLayout} hideSecondLayout={hideSecondLayout}>
         <Logo resizeLayoutGrid={resizeLayoutGrid} data-index={0}/>
         <Card defaultCardClass={"horizontal-left"} index={1} title={"about me"}resizeLayoutGrid={resizeLayoutGrid}  />
