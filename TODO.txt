@@ -1,7 +1,5 @@
 LAYOUT
   MOBILE
-    -project: text clamp doesn't function in my phone...
-    -remove "web development" from horizontal mobile
     -contact mobile horizontal: remove photo
   -how to add grey when loading?
   -add a placeholder to contact's pic

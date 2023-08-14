@@ -23,7 +23,7 @@ const Contact = React.forwardRef((props, ref) => {
   return (
     <>
       <div id="contact" className={props.contactClass} ref={ref} >
-        <div>
+        <div id="pfp-container">
           <div id="pfp">
             {props.height} <br/>
             {props.width}
