@@ -24,10 +24,20 @@ table { border-spacing: 0px }
   width: 100%;
   /* border: 1px solid black; */
   /* border-right: 1px solid black; */
-  border-bottom: 1px solid black;
   border-collapse: collapse;
   background-color: white;
+}
 
+/* .stack th, td:not(:last-child){ */
+  .stack th, td{
+
+  border-bottom: 1px solid black;
+}
+
+
+.stack div:last-child table:last-child tr:last-child td:last-child{
+
+  border-bottom: 1px solid transparent;
 }
 
 @media only screen and (max-width: 480px) {

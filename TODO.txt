@@ -1,6 +1,5 @@
 LAYOUT
   MOBILE
-    -stack: scrollbar should be sharp in the top
     -stack: there's a black line at the bottom (1px)
     -project: text clamp doesn't function in my phone...
     -remove "web development" from horizontal mobile
