@@ -103,7 +103,8 @@ const Card =  (props) => {
   };
 
   useEffect(() => {
-    handleLayout()
+    // handleLayout()
+    handleResize()
   }, []);
 
   useEffect(() => {
