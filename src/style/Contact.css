@@ -29,7 +29,11 @@
 
 #pfp {
   height: calc(100% - 3em); width: calc(100% - 3em); max-width: 300px;
-  background: lavender; border-radius: 999px
+  background: lavender; border-radius: 999px;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+
 }
 
 #contact ul{

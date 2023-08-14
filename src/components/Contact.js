@@ -24,12 +24,7 @@ const Contact = React.forwardRef((props, ref) => {
     <>
       <div id="contact" className={props.contactClass} ref={ref} >
         <div id="pfp-container">
-          <div id="pfp">
-            {props.height} <br/>
-            {props.width}
-            {props.class}
-
-
+          <div id="pfp" style={{backgroundImage: `url(${process.env.PUBLIC_URL}/pfp.png)`,}}>
           </div>
         </div>
         <div style={{height: containerHeight }}>
