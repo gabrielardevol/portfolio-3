@@ -1,25 +1,13 @@
 import {useState, useRef, useEffect} from 'react';
 import React from 'react';
-import "../style/Contact.css"
+import "../style/Contact.css";
+import { useTranslation } from 'react-i18next';
+import i18n from '../i18n.js'; // no esborrar
 
 const Contact = React.forwardRef((props, ref) => {
-  // const [containerHeight, setContainerHeight] = useState("")
-    // const handleContainerResize = () => {
-      // const headerHeight = document.querySelector("[data-index='3'] div:first-child").height
-      // setContainerHeight(ref.current.getBoundingClientRect().height)
-      // console.log(document.querySelector("[data-index='3'] div:first-child"))
-      // setContainerWidth(ref.current.getBoundingClientRect().width)
-    // }
-    // useEffect(() => {
-    //   window.addEventListener('resize', handleContainerResize);
-    //   window.addEventListener('click', handleContainerResize);
-    //   return () => {
-    //     window.removeEventListener('resize', handleContainerResize);
-    //     window.addEventListener('click', handleContainerResize);
-    //   };
-    // }, []);
+  const { t } = useTranslation();
 
-  // console.log(ref.current.getBoundingClientRect)
+
   return (
     <>
       <div id="contact" className={props.contactClass} ref={ref} >
@@ -35,9 +23,9 @@ const Contact = React.forwardRef((props, ref) => {
             <li>Behance</li>
           </ul>
           <ul>
-            <li>mail: artsdevol@gmail.com</li>
+            <li>{t('contact.mail')}: artsdevol@gmail.com</li>
             <li>whatsapp: +34 646 18 16 10</li>
-            <li>Barcelona, Spain</li>
+            <li>{t('contact.bcnspain')}</li>
           </ul>
         </div>
       </div>

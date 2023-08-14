@@ -227,9 +227,9 @@ $gris: rgb(0, 0, 0);
     @include can-toggle-appearance
     (
       170px, // Toggle width
-      20px,  // Toggle height
+      18px,  // Toggle height
       60px,   // Toggle border radius
-      0px,   // Offset (distance btw switch and box)
+      1px,   // Offset (distance btw switch and box)
       15px,  // Label font size
       15px,  // Switch font size
      // 0 4px 4px rgba(black, 0.4) // Switch shadow on hover/focus

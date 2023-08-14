@@ -10,6 +10,9 @@ import getCardClass from '../functions/getCardClass.js'
 import getProjectsLayout from '../functions/getProjectsLayout.js'
 import getStackLayout from '../functions/getStackLayout.js'
 
+import { useTranslation } from 'react-i18next';
+import i18n from '../i18n.js'; // no esborrar
+
 const Card =  (props) => {
   const cardRef = useRef()
   const titleRef = useRef() // is it being used?
@@ -111,11 +114,14 @@ const Card =  (props) => {
     props.resizeLayoutGrid(e);
   }
 
+  const { t } = useTranslation();
+
   return (
     <div data-index={props.index} onClick={handleCardClick} style={{gridArea: "card-"+props.index}} ref={cardRef} className={"card " + cardClass + " " + skelletonState}>
       <div>
-        <h2 ref={titleRef} style={{whiteSpace: "nowrap"}} className="padding">
+        <h2 ref={titleRef} style={{whiteSpace: "nowrap", rotation: "180deg"}} className="padding">
           {props.title}
+          {t(props.section + '.title')}
         </h2>
       </div>
       { props.index === 1 && <AboutMe ref={aboutMeRef} /> }
