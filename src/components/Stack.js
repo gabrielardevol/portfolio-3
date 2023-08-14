@@ -2,7 +2,14 @@ import {useState, useRef} from 'react';
 import React from 'react';
 import "../style/Stack.css"
 
+import { useTranslation } from 'react-i18next';
+
+import i18n from '../i18n.js'; // no esborrar
+
+
+
 const Stack = React.forwardRef((props, ref) => {
+  const { t } = useTranslation();
 
   return (
     <>
@@ -11,7 +18,7 @@ const Stack = React.forwardRef((props, ref) => {
           <table>
             <thead>
               <tr>
-                <th>Front-end</th>
+                <th> {t('stack.frontEnd')}</th>
               </tr>
             </thead>
             <tbody>
@@ -26,7 +33,7 @@ const Stack = React.forwardRef((props, ref) => {
           <table>
             <thead>
               <tr>
-                <th>Back-end</th>
+              <th> {t('stack.backEnd')}</th>
               </tr>
             </thead>
             <tbody>
@@ -43,7 +50,7 @@ const Stack = React.forwardRef((props, ref) => {
           <table>
             <thead>
               <tr>
-                <th>Workflow</th>
+              <th> {t('stack.workflow')}</th>
               </tr>
             </thead>
             <tbody>
@@ -56,7 +63,7 @@ const Stack = React.forwardRef((props, ref) => {
           <table>
             <thead>
               <tr>
-                <th>Graphic design</th>
+              <th> {t('stack.graphicDesign')}</th>
               </tr>
             </thead>
             <tbody>
@@ -71,13 +78,13 @@ const Stack = React.forwardRef((props, ref) => {
           <table>
             <thead>
               <tr>
-                <th>Currently learning</th>
+              <th> {t('stack.currentlyLearning')}</th>
               </tr>
             </thead>
             <tbody>
               <tr><td>PHP</td></tr>
               <tr><td>API</td></tr>
-              <tr><td>SOLID principles</td></tr>
+              <tr><td>{t('stack.solidPrinciples')}</td></tr>
             </tbody>
           </table>
         </div>

@@ -19,6 +19,15 @@ const resources = {
         title: 'contact',
         mail: "mail",
         bcnspain: "Barcelona, Spain"
+      },
+      stack: {
+        title: 'stack',
+        frontEnd: 'Front-end',
+        backEnd: 'Back-end',
+        workflow: 'Workflow',
+        graphicDesign: 'Graphic Design',
+        currentlyLearning: 'Currently Learning',
+        solidPrinciples: 'SOLID Principles'
       }
     }
   },
@@ -32,12 +41,21 @@ const resources = {
         4: "Durant els quatre anys d'estudi a l'escola Massana vaig desenvolupar tota mena de projectes i també aprendre moltes tècniques diferents. No feiem exàmens sinó que feiem entregues. Com a estudiants desenvolupavem els nostres projectes de forma íntegra, des de la pluja d'idees inicial fins a la presentació: apreníem a estructurar-nos i prendre decisions respecte a cada pas, tot plegat al centre de Barcelona.",
         5: "És un privilegi viure en una ciutat on el sector tecnològic és tant efervescent: Barcelona és el Silicon Valley d'Europa! En definitiva, els meus estudis creatius em van ensenyar a trencar amb lo establert i explorar moltes maneres de fer les coses, mentre que en el desenvolupament web he entès la importància de seguir les fórmules que funcionen quan cal. Si busques un perfil entusiasta i en expansió, que aporti un toc d'originalitat i amb amor per l'artesania i la feina ben feta, endavant!",
         toggle1: "curt",
-        toggle2: "llarg",
+        toggle2: "llarg"
+      },
+      contact: {
+        title: 'contacte',
         mail: "mail",
         bcnspain: "Barcelona"
       },
-      contact: {
-        title: 'contacte'
+      stack: {
+        title: "stack",
+        frontEnd: "Front-end",
+        backEnd: "Back-end",
+        workflow: "Fluxe de treball",
+        graphicDesign: "Disseny gràfic",
+        currentlyLearning: "Aprenent...",
+        solidPrinciples: "Principis SOLID"
       }
     },
   },
@@ -58,6 +76,16 @@ const resources = {
         mail: "mail",
         bcnspain: "Barcelona, España"
       },
+      stack: {
+        title: "stack",
+        frontEnd: "Front-end",
+        backEnd: "Back-end",
+        workflow: "Flujo de trabajo",
+        graphicDesign: "Diseño gráfico",
+        currentlyLearning: "Aprendiendo",
+        solidPrinciples: "Principios SOLID"
+
+      }
     },
   },
   ja: {
@@ -77,6 +105,16 @@ const resources = {
         mail: "メール",
         bcnspain: "バルセロナ、スペイン"
       },
+      stack: {
+        title: "スタック",
+        frontEnd: "フロントエンド",
+        backEnd: "バックエンド",
+        workflow: "ワークフロー",
+        graphicDesign: "グラフィックデザイン",
+        currentlyLearning: "現在学習中",
+        solidPrinciples: "SOLID 原則"
+
+      }
     },
   },
 };
