@@ -1,9 +1,24 @@
 LAYOUT
   -how to switch languages
   -re-factor css files
+  -si el logo està al mig, clicar al logo no hauria de trigerejar skelleton
+  -clicar el switch toggle no hauria de triggerejar el skelleton
+  -toggle switch hauria de tenir outline
+  -toggle switch hauria de veures per sota del show layout
+  -la primera taula del stack deixa una linea de pixels
+  -cursor "ma" al passar per sobre d'alguns elements
+  -separar skelleton en un .css
+  -activar links del contact
+  -transition time to 0.6
+  -al cilar about me en pantalla ocmplerta, el pfp de contact no hauria de veures
+  -en mobil horiztontal, h3 hauria de ser una mica mes petit
+  -en mobil vertical, no hauria d'haver skelleton
+  -en mobil vertical, el second layout no te color de fons
 MEDIA
   -foto/video contact
   -project images
+    -fer carpetes amb les imatges de cada projecte
+
 COPY-WRITING
   -about me
   -projects
