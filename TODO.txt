@@ -1,7 +1,6 @@
 LAYOUT
-  MOBILE
-    -contact mobile horizontal: remove photo
   -how to add grey when loading?
+    -afegir una classe a les cartes, amb un useEffect que elimini aquesta classe de les cartes
   -add a placeholder to contact's pic
 MEDIA
   -foto/video contact

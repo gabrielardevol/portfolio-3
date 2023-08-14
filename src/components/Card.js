@@ -22,6 +22,9 @@ const Card =  (props) => {
   const stackRef = useRef()
   const contactRef = useRef()
   const aboutMeRef = useRef()
+  const [skelletonState, setSkelleton] = useState("skelleton")
+
+
 
 
   const [projectHeight, setProjectHeight] = useState()
@@ -103,9 +106,12 @@ const Card =  (props) => {
   };
 
   useEffect(() => {
-    // handleLayout()
     handleResize()
-  }, []);
+    setTimeout(() => {
+      setSkelleton("non-skelleton");
+
+    }, 100);  },
+    []);
 
   useEffect(() => {
     window.addEventListener('resize', handleResize);
@@ -121,7 +127,7 @@ const Card =  (props) => {
   }
 
   return (
-    <div data-index={props.index} onClick={handleCardClick} style={{gridArea: "card-"+props.index}} ref={cardRef} className={"card " + cardClass}>
+    <div data-index={props.index} onClick={handleCardClick} style={{gridArea: "card-"+props.index}} ref={cardRef} className={"card " + cardClass + " " + skelletonState}>
       <div>
         <h2 ref={titleRef} style={{whiteSpace: "nowrap"}} className="padding">
           {props.title}

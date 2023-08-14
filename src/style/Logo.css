@@ -1,12 +1,5 @@
-
-.logo-chara {
-  /* width: 100px;
-  height: 100px;
-  background-color: #3498db; */
-  transition: transform 4s ease; /* Apply a smooth transition for the rotation */
-}
-
 .logo-chara {/* DEUTE TÈCNIC */
+  transition: transform 4s ease;
   margin: auto;
   border: 1px solid black;
   width: clamp(15px, 3vw, 100px); height: clamp(15px, 3vw, 100px);
@@ -14,18 +7,15 @@
   display: flex; justify-content: center; align-items: center;
   font-size:larger
 }
+#webdev {
+  text-align: center; background: black; color: white; border-radius: 5em; margin-top: 0.4em
+}
+
 @media only screen and (min-width: 480px) {
-
-  .medium-logo {
-    width: 18vw
-  }
-  .smaller-logo {
-    width: 12vw
-  }
-
+  .medium-logo {width: 18vw}
+  .smaller-logo {width: 12vw}
   #logo {
     transition: all 0.7s ease 0s;
-    /* width: 18vw */
   }
   .logo-grid {
     display: grid;
@@ -33,20 +23,11 @@
     grid-template-rows: 1fr 1fr;
   }
 }
-@media only screen and (max-width: 480px) {
 
+@media only screen and (max-width: 480px) {
   .logo-grid {
     display: flex;
-    /* grid-template-columns: repeat(7, 1fr); */
-    /* grid-template-rows: 1fr; */
   }
-
-
-  /* #logo > div:first-child {
-    grid-template-rows: 1fr 1fr;
-
-  } */
-
   .logo-chara { /* DEUTE TÈCNIC */
     margin: auto;
     border-radius: 3em; background-color: black; color: white;
@@ -59,10 +40,6 @@
   }
 }
 
-
-#webdev {
-  text-align: center; background: black; color: white; border-radius: 5em; margin-top: 0.4em
-}
 @media (max-width: 800px) and (max-height: 400px) {
   #webdev{display: none}
 }

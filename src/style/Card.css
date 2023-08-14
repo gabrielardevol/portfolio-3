@@ -50,3 +50,33 @@
     border-top: 1px solid black;
   }
 }
+
+.skelleton * {
+  /* display: none; */
+  /* color: lavender;
+  background: lavender;
+  border: 0px solid lavender; */
+  /* background-color: green */
+  opacity: 0;
+  transition: opacity 0.6s;
+
+}
+
+.skelleton .stack, #contact  {
+  background: lavender;
+}
+.skelleton {
+  border: 1px solid transparent;
+
+  background: lavender;
+
+}
+.skelleton .projects {
+  overflow: hidden
+}
+
+.non-skelleton * {
+  opacity: 1;
+  transition: opacity 0.6s;
+
+}
