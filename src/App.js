@@ -22,9 +22,15 @@ function App() {
   const resizeLayoutGrid = (e) => {
     let layoutGridTemplate = getLayoutGridTemplate(e.currentTarget.dataset.index)
     setLayoutClass(layoutGridTemplate)
-    if(layoutGridTemplate !== "gtc-101 gtr-101") {document.querySelector("#logo").style.width = "12vw"}
 
-    if(layoutGridTemplate == "gtc-101 gtr-101") {document.querySelector("#logo").style.width = "18vw"}
+    if(layoutGridTemplate !== "gtc-101 gtr-101") {
+      document.querySelector("#logo").classList.remove("medium-logo")
+      document.querySelector("#logo").classList.add("smaller-logo")
+    }
+    if(layoutGridTemplate == "gtc-101 gtr-101") {
+      document.querySelector("#logo").classList.add("medium-logo")
+      document.querySelector("#logo").classList.remove("smaller-logo")
+    }
   }
 
   const unfoldSecondLayout = () => {
@@ -34,6 +40,9 @@ function App() {
     setLayoutClass("gtc-101 gtr-101")
     setSuperLayout("unfold-second-layout")
     setLayoutClass2("")
+    document.querySelector("#logo").classList.remove("medium-logo")
+    document.querySelector("#logo").classList.add("smaller-logo")
+
   }
   const hideSecondLayout = () => {
     setLayoutClass("gtc-101 gtr-101")
@@ -43,11 +52,14 @@ function App() {
       document.querySelector("#second-layout").style.border = ""
       document.querySelector("#second-layout").style.marginRight = "0px"
     }, 700);
-    document.querySelector("#logo").style.width = "18vw"
+    document.querySelector("#logo").classList.remove("smaller-logo")
+    document.querySelector("#logo").classList.add("medium-logo")
 
   }
   useEffect(() => {
     setLayoutClass2("layout-75")
+    document.querySelector("#logo").classList.add("medium-logo")
+
   }, []);
 
 

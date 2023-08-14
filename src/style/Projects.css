@@ -3,10 +3,8 @@
   .projects{
     width: 100%;
     display: grid;
-    overflow: auto
   }
 }
-
 
 .projects {
   overflow: auto
@@ -21,9 +19,7 @@
 
 .project > div:first-child {
   background: lavender;   height: 50%
-
 }
-
 
 .project div:nth-child(2) > div:first-child{
   display: -webkit-box;

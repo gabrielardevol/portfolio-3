@@ -18,9 +18,17 @@
   font-size:larger
 }
 @media only screen and (min-width: 480px) {
+
+  .medium-logo {
+    width: 18vw
+  }
+  .smaller-logo {
+    width: 12vw
+  }
+
   #logo {
     transition: all 0.7s ease 0s;
-    width: 18vw
+    /* width: 18vw */
   }
   .logo-grid {
     display: grid;
@@ -29,6 +37,7 @@
   }
 }
 @media only screen and (max-width: 480px) {
+
   .logo-grid {
     display: flex;
     /* grid-template-columns: repeat(7, 1fr); */

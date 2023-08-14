@@ -14,7 +14,9 @@
 
 }
 #super-layout {
-  overflow: hidden;}
+  overflow: hidden;
+  background: goldenrod
+}
 
 
 /* LAPTOP */
@@ -88,7 +90,6 @@
   }
   #layout {
     min-height: 100vh;
-    background: goldenrod
   }
   #second-layout {
     box-sizing: border-box;
@@ -107,4 +108,5 @@
   .hide-second-layout > #second-layout {
     height: 100vh; width: 0vw;  overflow: hidden; left: -1px;
   }
+
 }
