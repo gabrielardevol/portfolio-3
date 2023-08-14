@@ -13,8 +13,18 @@
 
 }
 
+@media only screen and (min-width: 480px) {
+
 .hide-pfp div:nth-child(1) {
   display: none
+}
+
+#contact {
+  height: 100%; width: 100%; background: white; overflow: auto
+}
+.vertical-contact > :nth-child(2) {
+  height: 100%
+}
 }
 
 #pfp {
@@ -58,12 +68,6 @@
   flex:none;
 }
 
-#contact {
-  height: 100%; width: 100%; background: white; overflow: auto
-}
-.vertical-contact > :nth-child(2) {
-  height: 100%
-}
 .vertical-contact > div:nth-child(2) > ul:nth-child(1) {
   display: flex;
   flex-flow: row;
@@ -85,4 +89,16 @@ rotate: 180deg;
 }
 .vertical-contact ul:nth-child(1) > li::after {
 content: "-"; color: black
+}
+
+@media only screen and (max-width: 480px) {
+  #contact > div:first-child {
+    min-height: calc(100vw - 1.6em);
+    background: green;
+  }
+  #pfp {
+    background: orange;
+    height: 66vw; width: 66vw
+
+  }
 }

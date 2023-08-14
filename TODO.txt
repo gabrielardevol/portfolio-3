@@ -1,12 +1,10 @@
 LAYOUT
-  -vertical mobile has a margin bottom excluding background
   MOBILE
-    -when clicking logo, it shrinks to 18vw
     -stack: scrollbar should be sharp in the top
     -stack: there's a black line at the bottom (1px)
     -project: text clamp doesn't function in my phone...
-    -projects: could it be a little more height?
-    -contact: should fix a size for the photo
+    -remove "web development" from horizontal mobile
+    -contact mobile horizontal: remove photo
   -how to add grey when loading?
 MEDIA
   -foto/video contact
