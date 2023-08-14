@@ -48,6 +48,7 @@ function App() {
   }
   useEffect(() => {
     setLayoutClass2("layout-75")
+    hideSecondLayout()
   }, []); // Empty dependency array means this effect runs once after initial render
 
 
