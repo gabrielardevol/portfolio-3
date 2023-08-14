@@ -1,6 +1,5 @@
 LAYOUT
   MOBILE
-    -stack: there's a black line at the bottom (1px)
     -project: text clamp doesn't function in my phone...
     -remove "web development" from horizontal mobile
     -contact mobile horizontal: remove photo
@@ -8,3 +7,8 @@ LAYOUT
   -add a placeholder to contact's pic
 MEDIA
   -foto/video contact
+
+
+LAYOUT
+  MOBILE
+    -contact card needs to height fit-content

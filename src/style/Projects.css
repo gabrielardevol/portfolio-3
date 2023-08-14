@@ -27,6 +27,8 @@
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  font-size: 1em;
+  line-height: 1em;
   height: 6em
 }
 
