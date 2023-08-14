@@ -1,13 +1,10 @@
 
 .logo-chara {
-  width: 100px;
+  /* width: 100px;
   height: 100px;
-  background-color: #3498db;
+  background-color: #3498db; */
   transition: transform 4s ease; /* Apply a smooth transition for the rotation */
 }
-
-
-
 
 .logo-chara {/* DEUTE TÈCNIC */
   margin: auto;
@@ -63,7 +60,9 @@
 }
 
 
-
-@media (max-width: 700px) and (max-height: 400px) {
+#webdev {
+  text-align: center; background: black; color: white; border-radius: 5em; margin-top: 0.4em
+}
+@media (max-width: 800px) and (max-height: 400px) {
   #webdev{display: none}
 }
