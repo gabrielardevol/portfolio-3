@@ -15,7 +15,7 @@
   .medium-logo {width: 18vw}
   .smaller-logo {width: 12vw}
   #logo {
-    transition: all 0.7s ease 0s;
+    transition: all 0.8s ease 0s;
   }
   .logo-grid {
     display: grid;

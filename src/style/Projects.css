@@ -1,5 +1,6 @@
 #projects-container {
-  background: red;
+  /* background: red; */
+  background: black;
   display: grid;
   height:min-content;
   gap: 1px

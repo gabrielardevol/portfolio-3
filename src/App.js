@@ -51,7 +51,7 @@ function App() {
       setLayoutClass2("layout-75")
       document.querySelector("#second-layout").style.border = ""
       document.querySelector("#second-layout").style.marginRight = "0px"
-    }, 700);
+    }, 800);
     document.querySelector("#logo").classList.remove("smaller-logo")
     document.querySelector("#logo").classList.add("medium-logo")
 

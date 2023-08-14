@@ -5,7 +5,8 @@
 #second-layout > div:first-of-type {
   border-top-left-radius: inherit;
   border-top-right-radius: inherit;
-  background: lavender; height: 50%;
+  /* background: lavender;  */
+  height: 50%;
   border-bottom: 1px solid black;
 }
 

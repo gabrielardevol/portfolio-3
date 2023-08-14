@@ -3,21 +3,21 @@ import React from 'react';
 import "../style/Contact.css"
 
 const Contact = React.forwardRef((props, ref) => {
-  const [containerHeight, setContainerHeight] = useState("")
-    const handleContainerResize = () => {
+  // const [containerHeight, setContainerHeight] = useState("")
+    // const handleContainerResize = () => {
       // const headerHeight = document.querySelector("[data-index='3'] div:first-child").height
       // setContainerHeight(ref.current.getBoundingClientRect().height)
       // console.log(document.querySelector("[data-index='3'] div:first-child"))
       // setContainerWidth(ref.current.getBoundingClientRect().width)
-    }
-    useEffect(() => {
-      window.addEventListener('resize', handleContainerResize);
-      window.addEventListener('click', handleContainerResize);
-      return () => {
-        window.removeEventListener('resize', handleContainerResize);
-        window.addEventListener('click', handleContainerResize);
-      };
-    }, []);
+    // }
+    // useEffect(() => {
+    //   window.addEventListener('resize', handleContainerResize);
+    //   window.addEventListener('click', handleContainerResize);
+    //   return () => {
+    //     window.removeEventListener('resize', handleContainerResize);
+    //     window.addEventListener('click', handleContainerResize);
+    //   };
+    // }, []);
 
   // console.log(ref.current.getBoundingClientRect)
   return (
@@ -27,7 +27,7 @@ const Contact = React.forwardRef((props, ref) => {
           <div id="pfp" style={{backgroundImage: `url(${process.env.PUBLIC_URL}/pfp.png)`,}}>
           </div>
         </div>
-        <div style={{height: containerHeight }}>
+        <div >
           <ul>
             <li>LindekIn</li>
             <li>GitHub</li>

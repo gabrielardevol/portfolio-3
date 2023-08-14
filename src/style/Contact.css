@@ -1,67 +1,37 @@
 #contact {
   width: 100%;
-  /* height: 100%; */
   display: flex;
   flex-direction: column;
 }
-
-#contact > :first-child {
-}
-
 .horizontal-contact > :first-child {
   display: flex; align-items: center; justify-content: center; flex: 1
-
 }
-
-@media only screen and (min-width: 480px) {
-
-.hide-pfp div:nth-child(1) {
-  display: none
-}
-
-#contact {
-  height: 100%; width: 100%; overflow: auto
-}
-.vertical-contact > :nth-child(2) {
-  height: 100%
-}
-}
-
 #pfp {
   height: calc(100% - 3em); width: calc(100% - 3em); max-width: 300px;
-  background: lavender; border-radius: 999px;
-
+  border-radius: 999px;
   background-size: cover;
   background-repeat: no-repeat;
-
 }
-
 #contact ul{
   padding: 0px; margin: 0px;
   list-style: none;
 }
-
 .horizontal-contact > div:nth-child(2) > ul:nth-child(1) {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
 }
-
 #contact > div:nth-child(2) > ul:nth-child(1) > li {
   text-align: center;
   padding: 0.1em
 }
-
 .horizontal-contact > div:nth-child(2) > ul:nth-child(2) > li {
   padding: 0.5em;
   border-top: 1px solid black;
 }
-
 .vertical-contact > *{
   writing-mode: vertical-lr; /* vertical right-to-left writing mode */
     text-orientation: mixed; /* enable vertical orientation */
-    /* transform: rotate(-180deg); rotate the text 180 degrees */
-    /* transform-origin: bottom center; set the rotation origin to the bottom center */
     white-space: nowrap;
 }
 .vertical-contact #pfp {
@@ -71,7 +41,6 @@
   display: none;
   flex:none;
 }
-
 .vertical-contact > div:nth-child(2) > ul:nth-child(1) {
   display: flex;
   flex-flow: row;
@@ -83,11 +52,9 @@
 #contact > div:nth-child(2) > ul:nth-child(1) {
   background: black; color: white
 }
-
 ul, li {
   margin: 0px; padding: 0px;
 }
-
 .vertical-contact li {
 rotate: 180deg;
 }
@@ -98,15 +65,24 @@ content: "-"; color: black
 @media only screen and (max-width: 480px) {
   #contact > div:first-child {
     min-height: calc(100vw - 1.6em);
-    background: green;
+    /* background: green; */
   }
   #pfp {
-    background: orange;
+    /* background: orange; */
     height: 66vw; width: 66vw
-
   }
 }
-
 @media (max-width: 800px) and (max-height: 400px) {
   #pfp-container {display:  none}
+}
+@media only screen and (min-width: 480px) {
+  .hide-pfp div:nth-child(1) {
+    display: none
+  }
+  #contact {
+    height: 100%; width: 100%; overflow: auto
+  }
+  .vertical-contact > :nth-child(2) {
+    height: 100%
+  }
 }

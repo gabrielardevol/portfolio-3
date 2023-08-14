@@ -1,11 +1,9 @@
 LAYOUT
-  -how to add grey when loading?
-    -afegir una classe a les cartes, amb un useEffect que elimini aquesta classe de les cartes
-  -add a placeholder to contact's pic
+  -how to switch languages
+  -re-factor css files
 MEDIA
   -foto/video contact
-
-
-LAYOUT
-  MOBILE
-    -contact card needs to height fit-content
+  -project images
+COPY-WRITING
+  -about me
+  -projects
