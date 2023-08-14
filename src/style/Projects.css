@@ -23,7 +23,6 @@
 
 .project div:nth-child(2) > div:first-child{
   max-width: 100%;
-
   overflow: hidden;
   height: 6em
 }
@@ -52,6 +51,8 @@ position: absolute; bottom: 0; display: flex; flex-wrap: wrap; flex-direction: r
   #projects-container , .project {
     height: 230px
   }
+  .project div:nth-child(2) > div:first-child{height: 100%}
+
 }
 
 @media (max-width: 900px) and (max-height: 500px) {
