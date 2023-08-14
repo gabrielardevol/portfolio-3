@@ -22,14 +22,18 @@
 }
 
 .project div:nth-child(2) > div:first-child{
-  display: -webkit-box;
   max-width: 100%;
+
+  overflow: hidden;
+  height: 6em
+}
+
+@media only screen and (min-width: 480px) {
+  .project div:nth-child(2) > div:first-child{
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
-  overflow: hidden;
-  font-size: 1em;
-  line-height: 1em;
-  height: 6em
+  display: -webkit-box;
+}
 }
 
 .project {
