@@ -1,6 +1,7 @@
 LAYOUT
     -estilitzar h4 i br en projectes i en second layout
-    -afegir salts de paragraf
+    -aplicr dangerouslyset a projects container
+    -els links de second layout han d'obrir en una nova finestra
 MEDIA
   -foto/video contact
   -project images
@@ -8,17 +9,6 @@ MEDIA
     -imatge emoji jamón en plan humoristic
 
 COPY-WRITING
-  -projects
-    1 escric el text
-    2 ubico els i18n seccions
-    3 copio i pego a structure de projects js
-    4 tradueixo els textos
-      esclat EDC ESP
-      porfoli ESP
-      esclat EDC ENG
-      porfoli ENG
-      esclat EDC JA
-      porfoli JA
 
 
 DONE
@@ -35,6 +25,19 @@ DONE
   pigs ENG
   celler ardèvol JA
   pigs JA
+-projects
+    1 escric el text
+    2 ubico els i18n seccions
+    3 copio i pego a structure de projects js
+    4 tradueixo els textos
+      esclat EDC ESP
+      porfoli ESP
+      esclat EDC ENG
+      porfoli ENG
+      esclat EDC JA
+      porfoli JA
+          -afegir salts de paragraf
+
 
 
 
