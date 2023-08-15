@@ -17,10 +17,10 @@ const Contact = React.forwardRef((props, ref) => {
         </div>
         <div >
           <ul>
-            <li>LindekIn</li>
-            <li>GitHub</li>
-            <li>CodePen</li>
-            <li>Behance</li>
+            <li><a href="https://www.linkedin.com/in/gabrielardevol/" target="_blank">LindekIn</a></li>
+            <li><a href="https://github.com/gabrielardevol" target="_blank">GitHub</a></li>
+            <li><a href="https://www.behance.net/gabrielardvol" target="_blank">Behance</a></li>
+            <li><a href="https://codepen.io/gabrielardevol/" target="_blank">CodePen</a></li>
           </ul>
           <ul>
             <li>{t('contact.mail')}: artsdevol@gmail.com</li>

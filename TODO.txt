@@ -1,5 +1,4 @@
 LAYOUT
-  -separar skelleton en un .css
   -activar links del contact
   -al cilar about me en pantalla ocmplerta, el pfp de contact no hauria de veures
   -en mobil horiztontal, h3 hauria de ser una mica mes petit
@@ -14,6 +13,7 @@ MEDIA
   -imatge emoji jamón en plan humoristic
 
 DONE
+  -separar skelleton en un .css
   -la primera taula del stack deixa una linea de pixels
   -toggle switch hauria de veures per sota del show layout
   -cursor "ma" al passar per sobre d'alguns elements
