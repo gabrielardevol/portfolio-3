@@ -1,10 +1,10 @@
 LAYOUT
-  -re-factor css files
+  -cursor "ma" al passar per sobre d'alguns elements
+
   -si el logo està al mig, clicar al logo no hauria de trigerejar skelleton
   -clicar el switch toggle no hauria de triggerejar el skelleton
   -toggle switch hauria de veures per sota del show layout
   -la primera taula del stack deixa una linea de pixels
-  -cursor "ma" al passar per sobre d'alguns elements
   -separar skelleton en un .css
   -activar links del contact
   -al cilar about me en pantalla ocmplerta, el pfp de contact no hauria de veures
@@ -12,6 +12,7 @@ LAYOUT
   -en mobil vertical, no hauria d'haver skelleton
   -en mobil vertical, el second layout no te color de fons
   -implementar imatges
+  -h3 secondlayout padding o margin left
 MEDIA
   -foto/video contact
   -project images

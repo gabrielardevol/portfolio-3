@@ -1,0 +1,19 @@
+.card > div:first-child {
+  cursor:pointer
+}
+
+.logo-chara {
+  cursor: default
+}
+
+.projects * {
+  cursor: pointer
+}
+
+.can-toggle__switch{
+  cursor: pointer
+}
+
+button {
+  cursor: pointer
+}

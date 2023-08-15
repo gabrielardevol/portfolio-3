@@ -1,6 +1,8 @@
 import './App.css';
 import './style/scrollbar.css';
 import './style/Layout.css';
+import './style/cursor.css';
+
 import Card from './components/Card.js'
 import Logo from './components/Logo.js'
 import Layout from './components/Layout.js'
