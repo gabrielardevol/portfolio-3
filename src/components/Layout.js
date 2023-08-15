@@ -22,7 +22,7 @@ const SecondLayout = (props) => {
   const project = props.project
   return (
     <div id="second-layout">
-      <div style={{position: "relative"}}>
+      <div style={{position: "relative", background: "black"}}>
         <button id="close-button" onClick={props.hideSecondLayout}>X</button>
         <button id="previmg-button"> &lt; </button>
         <button id="nextimg-button">&gt; </button>

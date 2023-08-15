@@ -18,11 +18,9 @@ MEDIA
 DONE
   -cursor "ma" al passar per sobre d'alguns elements
   -clicar el switch toggle no hauria de triggerejar el skelleton
-
   -mida text project mes petita
-
-    -els links de second layout han d'obrir en una nova finestra
-    -posar links al json
+  -els links de second layout han d'obrir en una nova finestra
+  -posar links al json
   -aplicr dangerouslyset a projects container
   -estilitzar h4 i br en projectes i en second layout
   -implementar hashtags
