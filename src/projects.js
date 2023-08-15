@@ -14,7 +14,7 @@ const projects = {
     date: "12/2022",
     hashtags: ["ruby"],
     links: {
-      "gitHub": ""
+      "gitHub": "a"
     }
 
   },

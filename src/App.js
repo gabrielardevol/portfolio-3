@@ -22,6 +22,7 @@ function App() {
   const [layoutClass2, setLayoutClass2] = useState("layout-75")
   const projectsRef = useRef()
 
+  const [project, setProject] = useState("pigs")
 
 
   const resizeLayoutGrid = (e) => {
@@ -38,7 +39,7 @@ function App() {
     }
   }
 
-  const unfoldSecondLayout = () => {
+  const unfoldSecondLayout = (e) => {
     document.querySelector("#second-layout").style.border = "1px solid black"
     document.querySelector("#second-layout").style.marginRight = "0.8em"
 
@@ -47,6 +48,7 @@ function App() {
     setLayoutClass2("")
     document.querySelector("#logo").classList.remove("medium-logo")
     document.querySelector("#logo").classList.add("smaller-logo")
+    setProject(e.currentTarget.id)
 
   }
   const hideSecondLayout = () => {
@@ -83,7 +85,7 @@ function App() {
       <button onClick={() => handleLanguageChange('cat')}>Catalan</button>
       <button onClick={() => handleLanguageChange('esp')}>Spanish</button>
       <button onClick={() => handleLanguageChange('ja')}>Japanese</button>
-     <Layout ref={layoutRef} layoutClass={layoutClass + " " + layoutClass2} superLayout={superLayout} hideSecondLayout={hideSecondLayout}>
+     <Layout project={project} ref={layoutRef} layoutClass={layoutClass + " " + layoutClass2} superLayout={superLayout} hideSecondLayout={hideSecondLayout}>
         <Logo resizeLayoutGrid={resizeLayoutGrid} data-index={0}/>
         <Card defaultCardClass={"horizontal-left"} index={1} section={"aboutMe"}resizeLayoutGrid={resizeLayoutGrid}  />
         <Card defaultCardClass={"vertical-left"} index={2} section={"stack"}resizeLayoutGrid={resizeLayoutGrid} />

@@ -2,6 +2,8 @@ import React from 'react';
 import '../style/SecondLayout.css';
 import { useTranslation } from 'react-i18next';
 import i18n from '../i18n.js'; // no esborrar
+import projects from '../projects';
+
 
 const Layout = React.forwardRef((props, ref) => {
    return (
@@ -9,7 +11,7 @@ const Layout = React.forwardRef((props, ref) => {
       <div ref={ref} id="layout" className={props.layoutClass} style={{  transition: "all 0.7s ease"}}>
         {props.children}
       </div>
-      <SecondLayout hideSecondLayout={props.hideSecondLayout}/>
+      <SecondLayout project={props.project} hideSecondLayout={props.hideSecondLayout}/>
     </div>
   );
 });
@@ -17,6 +19,8 @@ const Layout = React.forwardRef((props, ref) => {
 const SecondLayout = (props) => {
   const { t } = useTranslation();
 
+  const project = props.project
+  console.log(projects[project])
   return (
     <div id="second-layout">
       <div style={{position: "relative"}}>
@@ -26,18 +30,18 @@ const SecondLayout = (props) => {
       </div>
       <div style={{overflow: "auto", height: "50%"}}>
         <div>
-          <h2>{t('orbits.title')}</h2>
+          <h2>{t('projects.'+project+'.title')}</h2>
           <div>
             <ul id="project-links">
-              <li><a>GitHub</a></li>
-              <li><a>Figma</a></li>
-              <li><a>Codepen</a></li>
+            {Object.keys(projects[project].links).map((linkKey) => (
+              <li style={{width: 100/Object.keys(projects[project].links).length + "%"}}><a href={projects[project].links[linkKey]}>{linkKey}</a></li>
+            ))}
             </ul>
           </div>
         </div>
         <div >
           <p style={{textAlign: "end", color: "grey"}}>00/00/00</p>
-          <p>{t('orbits.title')}</p>
+          <p>{t('projects.'+project+'.content')}</p>
         </div>
       </div>
     </div>

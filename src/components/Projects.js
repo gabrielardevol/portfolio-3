@@ -27,7 +27,6 @@ const Project = (props) => {
   const { t } = useTranslation();
 
   const projectTitle = props.title;
-
   // const projectTitle = projects[props.title].title;
   // const imgPath = projects[props.title].imgPath;
   // const date = projects[props.title].date;
