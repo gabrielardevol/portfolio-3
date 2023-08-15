@@ -1,5 +1,4 @@
 LAYOUT
-  -toggle switch hauria de veures per sota del show layout
   -la primera taula del stack deixa una linea de pixels
   -separar skelleton en un .css
   -activar links del contact
@@ -16,6 +15,7 @@ MEDIA
   -imatge emoji jamón en plan humoristic
 
 DONE
+  -toggle switch hauria de veures per sota del show layout
   -cursor "ma" al passar per sobre d'alguns elements
   -clicar el switch toggle no hauria de triggerejar el skelleton
   -mida text project mes petita
