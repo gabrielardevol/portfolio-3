@@ -16,10 +16,10 @@ const AboutMe = React.forwardRef((props, ref) => {
   return (
     <>
     <div className="padding" id="about-me">
-      <div className="toggle can-toggle demo-rebrand-2" >
-        <input id="e" className="toggle" type="checkbox" onClick={handleSwitch}/>
-        <label htmlFor="e" className="toggle">
-          <div className="toggle can-toggle__switch" style={{}} data-checked=  {t('aboutMe.toggle1')} data-unchecked=  {t('aboutMe.toggle2')}></div>
+      <div className="skip-skelleton can-toggle demo-rebrand-2" >
+        <input id="e" className="skip-skelleton" type="checkbox" onClick={handleSwitch}/>
+        <label htmlFor="e" className="skip-skelleton">
+          <div className="skip-skelleton can-toggle__switch" style={{}} data-checked=  {t('aboutMe.toggle1')} data-unchecked=  {t('aboutMe.toggle2')}></div>
         </label>
       </div>
       <div style={{marginTop: "1em"}}>

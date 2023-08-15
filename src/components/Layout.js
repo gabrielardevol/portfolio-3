@@ -32,8 +32,8 @@ const SecondLayout = (props) => {
     <div id="second-layout">
       <div style={{position: "relative", background: "black", display: "flex", justifyContent: "center"}}>
         <button id="close-button" onClick={props.hideSecondLayout}>X</button>
-        {imageIndex != 0 && <button id="previmg-button" onClick={prevImg}> &lt; </button>}
-        {imageIndex != images.length-1 && <button id="nextimg-button" onClick={nextImg}>&gt; </button>}
+        {imageIndex != 0 && <button className="skip-skelleton" id="previmg-button" onClick={prevImg}> &lt; </button>}
+        {imageIndex != images.length-1 && <button className="skip-skelleton" id="nextimg-button" onClick={nextImg}>&gt; </button>}
         <img ref={imgRef} data-index={imageIndex} style={{maxWidth: "100%", maxHeight: "100%"}} src={images[imageIndex]}></img>
       </div>
       <div style={{overflow: "auto", height: "50%"}}>

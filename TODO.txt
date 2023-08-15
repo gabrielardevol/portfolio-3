@@ -1,6 +1,4 @@
 LAYOUT
-  -h3 secondlayout padding o margin left
-  -la classe toggle, usada per saltar el skelleton, canviar-la per una de mes generica i reutilitable
 MEDIA
   -foto/video contact
   -project images
@@ -8,11 +6,11 @@ MEDIA
   -imatge emoji jamón en plan humoristic
 
 DONE
+  -la classe toggle, usada per saltar el skelleton, canviar-la per una de mes generica i reutilitable
+  -h3 secondlayout padding o margin left
   -implementar imatges
-
   -en mobil vertical, no hauria d'haver skelleton
   -en mobil vertical, el second layout no te color de fons
-
   -al cilar about me en pantalla ocmplerta, el pfp de contact no hauria de veures
   -en mobil horiztontal, h3 hauria de ser una mica mes petit
   -activar links del contact
