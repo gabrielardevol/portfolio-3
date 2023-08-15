@@ -8,7 +8,6 @@ import projects from '../projects';
 // const projects = [1, 2, 3, 4, 5];
 
 const Projects = React.forwardRef((props, ref) => {
-  console.log("test")
   return (
     <>
       <div ref={ref} className={"projects"}>
@@ -17,7 +16,6 @@ const Projects = React.forwardRef((props, ref) => {
             <Project title={projects[projectKey].title} key={index} unfoldSecondLayout={props.unfoldSecondLayout} index={index} projectHeight={props.projectHeight} projectWidth={props.projectWidth}></Project>
            ))}
         </div>
-
       </div>
     </>
   );

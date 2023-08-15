@@ -26,7 +26,7 @@ const Chara = (props) => {
       };
     }, []);
 
-  if(props.char !== " ") {return (<div className="logo-chara" ref={logoRef} onClick={animation}>{props.char}</div>)} else {return (<div></div>)}
+  if(props.char !== " ") {return (<div className="logo-chara logo" ref={logoRef} onClick={animation}>{props.char}</div>)} else {return (<div class="logo"></div>)}
 }
 
 const Logo = (props) => {
@@ -35,14 +35,14 @@ const Logo = (props) => {
   const string2 = "ardè vol";
   const charArray2 = string2.split('');
   return (
-    <div id="logo" className="medium-logo" style={{gridArea: "logo"}} onClick={props.resizeLayoutGrid}>
-      <div class="logo-grid" >
+    <div id="logo" className="medium-logo logo" style={{gridArea: "logo"}} onClick={props.resizeLayoutGrid}>
+      <div class="logo-grid logo" >
       {charArray.map((character, index) => <Chara key={index} char={character} />)}
       </div>
-      <div class="logo-grid" style={{justifyContent: "right"}}>
+      <div class="logo-grid logo" style={{justifyContent: "right"}}>
       {charArray2.map((character, index) => <Chara key={index} char={character} />)}
       </div>
-        <div id="webdev">
+        <div id="webdev" class="logo">
           web development
         </div>
     </div>

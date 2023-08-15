@@ -72,21 +72,29 @@ const Card =  (props) => {
     handleStackLayout()
     handleContactLayout();
   }
-  const handleResize = () => { //changes cards appearence (not size) when grid changes
-    let startTime = performance.now();
-    let duration = 800; // Duration in milliseconds
-    let interval = 800 / 15; // Interval in milliseconds (30 frames per second)
+
+  const skelletOn = () => {
     setSkelleton("skelleton");
     setTimeout(() => {
       setSkelleton("non-skelleton");
     }, 800);
+  }
+  const handleClick = (e) => {
+    skelletOn()
+  }
 
+  const handleResize = () => { //changes cards appearence (not size) when grid changes
+    let startTime = performance.now();
+    let duration = 800; // Duration in milliseconds
+    let interval = 800 / 15; // Interval in milliseconds (30 frames per second)
+
+    skelletOn()
     const animateLayout = (timestamp) => {
       let elapsed = timestamp - startTime;
       if (elapsed < duration) {
         if (elapsed >= interval) {
-            handleLayout();
-            startTime = timestamp;
+          handleLayout();
+          startTime = timestamp;
         }
         requestAnimationFrame(animateLayout);
       }
@@ -96,17 +104,18 @@ const Card =  (props) => {
 
   useEffect(() => {
     handleResize()
-    setTimeout(() => {
-      setSkelleton("non-skelleton");
-    }, 100);  },
-    []);
+    // setTimeout(() => {
+    //   setSkelleton("non-skelleton");
+    // }, 100);
+    },
+  []);
 
   useEffect(() => {
-    window.addEventListener('resize', handleResize);
-    window.addEventListener('click', handleResize);
+    window.addEventListener('resize', handleResize());
+    window.addEventListener('click', (e) => handleClick(e));
     return () => {
-      window.removeEventListener('resize', handleResize);
-      window.addEventListener('click', handleResize);
+      window.removeEventListener('resize', handleResize());
+      window.addEventListener('click', (e) => handleClick(e));
     };
   }, []);
 
@@ -117,7 +126,7 @@ const Card =  (props) => {
   const { t } = useTranslation();
 
   return (
-    <div data-index={props.index} onClick={handleCardClick} style={{gridArea: "card-"+props.index}} ref={cardRef} className={"card " + cardClass + " " + skelletonState}>
+    <div data-index={props.index} onClick={(e) => handleCardClick(e)} style={{gridArea: "card-"+props.index}} ref={cardRef} className={"card " + cardClass + " " + skelletonState}>
       <div>
         <h2 ref={titleRef} style={{whiteSpace: "nowrap", rotation: "180deg"}} className="padding">
           {props.title}

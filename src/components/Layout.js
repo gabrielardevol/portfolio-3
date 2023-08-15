@@ -20,7 +20,6 @@ const SecondLayout = (props) => {
   const { t } = useTranslation();
 
   const project = props.project
-  console.log(projects[project])
   return (
     <div id="second-layout">
       <div style={{position: "relative"}}>

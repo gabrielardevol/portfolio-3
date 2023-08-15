@@ -1,6 +1,4 @@
 LAYOUT
-  -cursor "ma" al passar per sobre d'alguns elements
-
   -si el logo està al mig, clicar al logo no hauria de trigerejar skelleton
   -clicar el switch toggle no hauria de triggerejar el skelleton
   -toggle switch hauria de veures per sota del show layout
@@ -20,6 +18,8 @@ MEDIA
   -imatge emoji jamón en plan humoristic
 
 DONE
+  -cursor "ma" al passar per sobre d'alguns elements
+
   -mida text project mes petita
 
     -els links de second layout han d'obrir en una nova finestra
