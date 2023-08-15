@@ -1,6 +1,6 @@
 LAYOUT
-  -implementar imatges
   -h3 secondlayout padding o margin left
+  -la classe toggle, usada per saltar el skelleton, canviar-la per una de mes generica i reutilitable
 MEDIA
   -foto/video contact
   -project images
@@ -8,6 +8,8 @@ MEDIA
   -imatge emoji jamón en plan humoristic
 
 DONE
+  -implementar imatges
+
   -en mobil vertical, no hauria d'haver skelleton
   -en mobil vertical, el second layout no te color de fons
 

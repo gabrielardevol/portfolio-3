@@ -37,7 +37,6 @@ const SecondLayout = (props) => {
         <img ref={imgRef} data-index={imageIndex} style={{maxWidth: "100%", maxHeight: "100%"}} src={images[imageIndex]}></img>
       </div>
       <div style={{overflow: "auto", height: "50%"}}>
-      {images}
         <div>
           <h2>{t('projects.'+project+'.title')}</h2>
           <div>
