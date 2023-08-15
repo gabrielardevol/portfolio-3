@@ -62,8 +62,9 @@ const Card =  (props) => {
       setContactHeight(height)
       setContactWidth(width)
       setContactClass(()=>{
-        if (width < 160 ){return "vertical-contact"} else if ( height < 200){return "horizontal-contact hide-pfp"}else {return "horizontal-contact"}
+        if (width < 160 ){return "vertical-contact"} else if ( height < 250){return "horizontal-contact hide-pfp"}else {return "horizontal-contact"}
       })
+
     }
   }
   const handleLayout = () => {

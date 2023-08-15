@@ -6,8 +6,6 @@ import i18n from '../i18n.js'; // no esborrar
 
 const Contact = React.forwardRef((props, ref) => {
   const { t } = useTranslation();
-
-
   return (
     <>
       <div id="contact" className={props.contactClass} ref={ref} >
