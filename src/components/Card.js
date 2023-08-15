@@ -80,7 +80,12 @@ const Card =  (props) => {
     }, 800);
   }
   const handleClick = (e) => {
-    skelletOn()
+    if(e.target.classList.contains("toggle") == false){
+      skelletOn()
+    }
+
+    //si estas clicant a toggle switch, no
+    // if(e.target.id !== "e"){    skelletOn()    }else{console.log("no")}
   }
 
   const handleResize = () => { //changes cards appearence (not size) when grid changes

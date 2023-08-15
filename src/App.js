@@ -28,6 +28,7 @@ function App() {
 
 
   const resizeLayoutGrid = (e) => {
+    if(e.target.classList.contains("toggle") == false){
     let layoutGridTemplate = getLayoutGridTemplate(e.currentTarget.dataset.index)
     setLayoutClass(layoutGridTemplate)
 
@@ -39,6 +40,7 @@ function App() {
       document.querySelector("#logo").classList.add("medium-logo")
       document.querySelector("#logo").classList.remove("smaller-logo")
     }
+  }
   }
 
   const unfoldSecondLayout = (e) => {

@@ -1,6 +1,4 @@
 LAYOUT
-  -si el logo està al mig, clicar al logo no hauria de trigerejar skelleton
-  -clicar el switch toggle no hauria de triggerejar el skelleton
   -toggle switch hauria de veures per sota del show layout
   -la primera taula del stack deixa una linea de pixels
   -separar skelleton en un .css
@@ -19,6 +17,7 @@ MEDIA
 
 DONE
   -cursor "ma" al passar per sobre d'alguns elements
+  -clicar el switch toggle no hauria de triggerejar el skelleton
 
   -mida text project mes petita
 
