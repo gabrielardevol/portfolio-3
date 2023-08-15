@@ -30,9 +30,6 @@ const Project = (props) => {
   // const projectTitle = projects[props.title].title;
   // const imgPath = projects[props.title].imgPath;
   // const date = projects[props.title].date;
-
-
-  // const hashtags = ["react", "ruby", "API", "Responsiveness","gabriel", "ardèvol", "herrero"]
   const hashtags = projects[props.title].hashtags
   return (
     <div onClick={props.unfoldSecondLayout} id={projectTitle} className="project" style={{height: props.projectHeight, width: props.projectWidth}}>

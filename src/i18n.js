@@ -58,6 +58,7 @@ const resources = {
         solidPrinciples: "Principis SOLID"
       },
       projects: {
+        title: "projectes",
         orbits: {
           title: "Òrbites",
           content: "Aquesta interfaç representa un sistema planetari, en que cada astre segueix la seva òrbita. Permet que des del costat del client s'afegeixin o es restin planetes, de manera que la composició visual canvia. Està configurat en React, utilitzant elements SVG per a les animacions geomètriques de les òrbites planetàries."

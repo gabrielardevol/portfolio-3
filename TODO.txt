@@ -1,15 +1,13 @@
 LAYOUT
-  -implementar hashtags
   -re-factor css files
+  -implementar data(fecha)
   -si el logo està al mig, clicar al logo no hauria de trigerejar skelleton
   -clicar el switch toggle no hauria de triggerejar el skelleton
-  -toggle switch hauria de tenir outline
   -toggle switch hauria de veures per sota del show layout
   -la primera taula del stack deixa una linea de pixels
   -cursor "ma" al passar per sobre d'alguns elements
   -separar skelleton en un .css
   -activar links del contact
-  -transition time to 0.6
   -al cilar about me en pantalla ocmplerta, el pfp de contact no hauria de veures
   -en mobil horiztontal, h3 hauria de ser una mica mes petit
   -en mobil vertical, no hauria d'haver skelleton
@@ -31,5 +29,11 @@ COPY-WRITING
 
 
 DONE
+  -implementar hashtags
+  -toggle switch hauria de tenir outline
+  -transition time to 0.6
+
+
 
 TOMORROW
+  -mida text project mes petita
