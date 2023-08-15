@@ -27,9 +27,6 @@ const Project = (props) => {
   const { t } = useTranslation();
 
   const projectTitle = props.title;
-  // const projectTitle = projects[props.title].title;
-  // const imgPath = projects[props.title].imgPath;
-  // const date = projects[props.title].date;
   const hashtags = projects[props.title].hashtags
   return (
     <div onClick={props.unfoldSecondLayout} id={projectTitle} className="project" style={{height: props.projectHeight, width: props.projectWidth}}>
@@ -45,7 +42,7 @@ const Project = (props) => {
       <div style={{}}>
         <div className="padding">
           <h3>{t('projects.' + projectTitle + '.title')}</h3>
-          <p style={{margin: "0px", padding: "0px"}}>{t('projects.' + projectTitle + '.content')}</p>
+          <p dangerouslySetInnerHTML={{ __html: t('projects.'+projectTitle+'.content') }} style={{margin: "0px", padding: "0px"}}></p>
         </div>
       </div>
     </div>

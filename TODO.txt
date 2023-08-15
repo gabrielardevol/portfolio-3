@@ -1,6 +1,4 @@
 LAYOUT
-    -estilitzar h4 i br en projectes i en second layout
-    -aplicr dangerouslyset a projects container
     -els links de second layout han d'obrir en una nova finestra
 MEDIA
   -foto/video contact
@@ -12,6 +10,10 @@ COPY-WRITING
 
 
 DONE
+    -aplicr dangerouslyset a projects container
+
+    -estilitzar h4 i br en projectes i en second layout
+
   -implementar hashtags
   -toggle switch hauria de tenir outline
   -transition time to 0.6

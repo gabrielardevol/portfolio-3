@@ -63,3 +63,7 @@ position: absolute; bottom: 0; display: flex; flex-wrap: wrap; flex-direction: r
   .project div:first-child {  height: 100%  }
   .p-hashtags {display: none}
 }
+
+.project h4 {
+  display: none
+}
