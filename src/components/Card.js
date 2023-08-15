@@ -68,6 +68,7 @@ const Card =  (props) => {
     }
   }
   const handleLayout = () => {
+
     setClassToCards()
     handleProjectsLayout()
     handleStackLayout()
@@ -77,8 +78,10 @@ const Card =  (props) => {
   const skelletOn = () => {
     if(window.innerWidth >= 480){
       setSkelleton("skelleton");
+      handleLayout()
       setTimeout(() => {
         setSkelleton("non-skelleton");
+        handleLayout()
       }, 800);
     }
   }
@@ -86,44 +89,47 @@ const Card =  (props) => {
     if(e.target.classList.contains("skip-skelleton") == false){
       skelletOn()
     }
-
-    //si estas clicant a toggle switch, no
-    // if(e.target.id !== "e"){    skelletOn()    }else{console.log("no")}
   }
 
   const handleResize = () => { //changes cards appearence (not size) when grid changes
-    let startTime = performance.now();
-    let duration = 800; // Duration in milliseconds
-    let interval = 800 / 15; // Interval in milliseconds (30 frames per second)
+
+    // let startTime = performance.now();
+    // let duration = 800; // Duration in milliseconds
+    // let interval = 800 / 15; // Interval in milliseconds (30 frames per second)
 
     skelletOn()
-    const animateLayout = (timestamp) => {
-      let elapsed = timestamp - startTime;
-      if (elapsed < duration) {
-        if (elapsed >= interval) {
-          handleLayout();
-          startTime = timestamp;
-        }
-        requestAnimationFrame(animateLayout);
-      }
-    };
-    requestAnimationFrame(animateLayout);
+    // const animateLayout = (timestamp) => {
+    //   let elapsed = timestamp - startTime;
+    //   if (elapsed < duration) {
+    //     if (elapsed >= interval) {
+    //       console.log("handleResize") //EL PROBLEMA ÉS AQUÍ
+
+
+    //       startTime = timestamp;
+    //     }
+    //     requestAnimationFrame(animateLayout);
+    //   }
+    // };
+    // requestAnimationFrame(animateLayout);
   };
 
   useEffect(() => {
-    handleResize()
-    // setTimeout(() => {
-    //   setSkelleton("non-skelleton");
-    // }, 100);
-    },
-  []);
+    console.log("useEffect")
+    handleResize(); // This will run after the initial render
+
+    // Clean-up function (not present in your code)
+    return () => {
+      // Any cleanup code you want to run when the component unmounts
+    };
+  }, []); // Empty dependency array
+
 
   useEffect(() => {
     window.addEventListener('resize', handleResize());
     window.addEventListener('click', (e) => handleClick(e));
     return () => {
       window.removeEventListener('resize', handleResize());
-      window.addEventListener('click', (e) => handleClick(e));
+      window.removeEventListener('click', (e) => handleClick(e));
     };
   }, []);
 

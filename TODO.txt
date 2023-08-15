@@ -1,13 +1,25 @@
 LAYOUT
 MEDIA
   -foto/video contact
-  fotos porfoli
-  fotos porquets
-  fotos esclat
-  fotos celler
-  -imatge emoji jamón en plan humoristic
+  -fix project card , how?
+  -style links
+  -clicking toggle shouldnt trigger layout changes
+  -clicking logo when it's centered should'nt trigger skelleton
+  -img buttons should have a bolder style
+  -configure project cards
+  -at some point, set class to cards will stop working
+    that happens when I go to another tab
+    it's only a specific function
+  -clean console
+  -create classes for secondlayout img
+  -set a margin to place the language switchers
 
 DONE
+  fotos porfoli
+  fotos porquets
+  -imatge emoji jamón en plan humoristic
+  fotos esclat
+  fotos celler
   -fer carpetes amb les imatges de cada projecte
   -la classe toggle, usada per saltar el skelleton, canviar-la per una de mes generica i reutilitable
   -h3 secondlayout padding o margin left
