@@ -34,7 +34,7 @@ const SecondLayout = (props) => {
           <div>
             <ul id="project-links">
             {Object.keys(projects[project].links).map((linkKey) => (
-              <li style={{width: 100/Object.keys(projects[project].links).length + "%"}}><a href={projects[project].links[linkKey]}>{linkKey}</a></li>
+              <li style={{width: 100/Object.keys(projects[project].links).length + "%"}}><a target="_blank" href={projects[project].links[linkKey]}>{linkKey}</a></li>
             ))}
             </ul>
           </div>

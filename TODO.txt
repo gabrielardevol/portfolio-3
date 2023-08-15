@@ -10,10 +10,8 @@ COPY-WRITING
 
 
 DONE
-    -aplicr dangerouslyset a projects container
-
-    -estilitzar h4 i br en projectes i en second layout
-
+  -aplicr dangerouslyset a projects container
+  -estilitzar h4 i br en projectes i en second layout
   -implementar hashtags
   -toggle switch hauria de tenir outline
   -transition time to 0.6
@@ -27,18 +25,18 @@ DONE
   pigs ENG
   celler ardèvol JA
   pigs JA
--projects
-    1 escric el text
-    2 ubico els i18n seccions
-    3 copio i pego a structure de projects js
-    4 tradueixo els textos
-      esclat EDC ESP
-      porfoli ESP
-      esclat EDC ENG
-      porfoli ENG
-      esclat EDC JA
-      porfoli JA
-          -afegir salts de paragraf
+  -projects
+  1 escric el text
+  2 ubico els i18n seccions
+  3 copio i pego a structure de projects js
+  4 tradueixo els textos
+  esclat EDC ESP
+  porfoli ESP
+  esclat EDC ENG
+  porfoli ENG
+  esclat EDC JA
+  porfoli JA
+  -afegir salts de paragraf
 
 
 
