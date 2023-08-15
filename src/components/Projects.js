@@ -32,7 +32,8 @@ const Project = (props) => {
   // const date = projects[props.title].date;
 
 
-  const hashtags = ["react", "ruby", "API", "Responsiveness","gabriel", "ardèvol", "herrero"]
+  // const hashtags = ["react", "ruby", "API", "Responsiveness","gabriel", "ardèvol", "herrero"]
+  const hashtags = projects[props.title].hashtags
   return (
     <div onClick={props.unfoldSecondLayout} id={projectTitle} className="project" style={{height: props.projectHeight, width: props.projectWidth}}>
       <div style={{  }}>
@@ -82,10 +83,10 @@ export default Projects;
 //        aquesta és la web del Celler Ardèvol, la primera pàgina web que he publicat. Està feta en ruby on rails,
 //        i a més de dissenyar-la i codificar-la n'he redactat els textos i seleccionat les imatges, ja que és el celler de la
 //        meva família. És una empresa familiar, petita i propera. Penso que la pàgina web reflexa l'austeritat que la
-//        caracteritza, tret d'autenticitat.
+//        caracteritza, que també és un tret d'autenticitat.
 
 //        Pel disseny utilitzo una graella molt versàtil que alterna text i imatges. Els tons foscos de gris aporten
-//        elegància, complementats amb blanc pel text i groc com a call-to-action.
+//        elegància, complementats amb blanc pel text i groc com a "call-to-action".
 //        Vaig utilitzar Ruby on Rails tant pel front-end com pel back-end, ja que és el primer llenguatge que vaig aprendre
 //        Lo bo de ruby on rails és que t'estructura tots els directoris del projecte, i això t'estalvia
 //        picar codi. El que no em convenç és que, pel front-end, no ofereix tanta llibertat creativa com frameworks de
