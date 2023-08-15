@@ -61,6 +61,22 @@ const resources = {
         orbits: {
           title: "Òrbites",
           content: "Aquesta interfaç representa un sistema planetari, en que cada astre segueix la seva òrbita. Permet que des del costat del client s'afegeixin o es restin planetes, de manera que la composició visual canvia. Està configurat en React, utilitzant elements SVG per a les animacions geomètriques de les òrbites planetàries."
+        },
+        celler: {
+          title: "Celler Ardèvol",
+          content: "Aquesta és la web del Celler Ardèvol, la primera pàgina web que he publicat. Està feta en Ruby on Rails, i a més de dissenyar-la i codificar-la n'he redactat els textos i seleccionat les imatges, ja que és el celler de la meva família. És una empresa familiar, petita i propera. Penso que la pàgina web reflexa l'austeritat que la caracteritza, que també és un tret d'autenticitat. Pel disseny utilitzo una graella molt versàtil que alterna text i imatges. Els tons foscos de gris aporten elegància, complementats amb blanc pel text i groc com a 'call-to-action'.  Vaig fer servir Ruby on Rails tant pel front-end com pel back-end, ja que és el primer llenguatge que vaig aprendre. Lo bo de Ruby on Rails és que t'estructura tots els directoris del projecte, i això t'estalvia picar codi. El que no em convenç és que, pel front-end, no ofereix tanta llibertat creativa com tecnologies de l'estil de React."
+        },
+        porfolio: {
+          title: "Porfoli",
+          content: ""
+        },
+        esclat: {
+          title: "Esclat EDC",
+          content: ""
+        },
+        pigs: {
+          title: "🐺_🐷🐷🐷.rb",
+          content: ""
         }
       }
     },
