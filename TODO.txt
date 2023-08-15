@@ -1,11 +1,14 @@
 LAYOUT
 MEDIA
   -foto/video contact
-  -project images
-  -fer carpetes amb les imatges de cada projecte
+  fotos porfoli
+  fotos porquets
+  fotos esclat
+  fotos celler
   -imatge emoji jamón en plan humoristic
 
 DONE
+  -fer carpetes amb les imatges de cada projecte
   -la classe toggle, usada per saltar el skelleton, canviar-la per una de mes generica i reutilitable
   -h3 secondlayout padding o margin left
   -implementar imatges
