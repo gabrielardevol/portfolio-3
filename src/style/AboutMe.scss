@@ -163,12 +163,12 @@ $gris: rgb(0, 0, 0);
       &:after {
         content: attr(data-unchecked);
         position: absolute;
-        z-index: 5;
         //text-transform: uppercase;
         text-align: center;
         //font-weight: 600;
         background: $groc;
         transform: translate3d(0,0,0);
+        z-index: 0
       }
     }
 
