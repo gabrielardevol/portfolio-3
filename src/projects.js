@@ -1,3 +1,6 @@
+import React from 'react';
+
+
 function importAll(r) {
   return r.keys().map(r);
 }
@@ -13,7 +16,7 @@ const projects = {
     links: {
       "web": "https://orbits-frontend.vercel.app/",
     },
-    images: importAll(require.context('../public/images/orbits', false, /\.(png|PNG|JPE?G|GIF|jpe?g|svg|gif)$/)),
+    images: importAll(require.context(process.env.PUBLIC_URL + '/images/orbits', false, /\.(png|PNG|JPE?G|GIF|jpe?g|svg|gif)$/)),
   },
   "porfolio": {
     title: "porfolio",
@@ -25,7 +28,7 @@ const projects = {
       "github": "https://github.com/gabrielardevol/portfolio-3",
       "figma": "https://www.figma.com/file/ByAFpzhCYu5O2t5gyS99a2/portfolio---march-2023"
     },
-    images: importAll(require.context('../public/images/orbits', false, /\.(png|PNG|JPE?G|GIF|jpe?g|svg|gif)$/)),
+    images: importAll(require.context(${process.env.PUBLIC_URL} + '/images/orbits', false, /\.(png|PNG|JPE?G|GIF|jpe?g|svg|gif)$/)),
   },
   "esclat": {
     title: "esclat",
@@ -37,7 +40,7 @@ const projects = {
       "web": "https://associacioesclat.com/edc.html",
       "github": "https://github.com/gabrielardevol/esclat"
     },
-    images: importAll(require.context('../public/images/orbits', false, /\.(png|PNG|JPE?G|GIF|jpe?g|svg|gif)$/)),
+    images: importAll(require.context(${process.env.PUBLIC_URL} + '/images/orbits', false, /\.(png|PNG|JPE?G|GIF|jpe?g|svg|gif)$/)),
   },
   "celler": {
     title: "celler",
@@ -49,7 +52,7 @@ const projects = {
       "web": "https://cellerardevol.herokuapp.com/",
       "github": "https://github.com/gabrielardevol/celler-ardevol"
     },
-    images: importAll(require.context('../public/images/orbits', false, /\.(png|PNG|JPE?G|GIF|jpe?g|svg|gif)$/)),
+    images: importAll(require.context(${process.env.PUBLIC_URL} + '/images/orbits', false, /\.(png|PNG|JPE?G|GIF|jpe?g|svg|gif)$/)),
   },
   "pigs": {
     title: "pigs",
@@ -60,7 +63,7 @@ const projects = {
     links: {
       "gitHub": "https://github.com/gabrielardevol/els-tres-porquets"
     },
-    images: importAll(require.context('../public/images/orbits', false, /\.(png|PNG|JPE?G|GIF|jpe?g|svg|gif)$/)),
+    images: importAll(require.context(${process.env.PUBLIC_URL} + '/images/orbits', false, /\.(png|PNG|JPE?G|GIF|jpe?g|svg|gif)$/)),
   },
 }
 
