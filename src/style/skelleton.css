@@ -1,0 +1,19 @@
+
+.skelleton * {
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.skelleton .stack, .skelleton #contact  {
+  background: lavender;
+}
+.skelleton {
+  border: 1px solid transparent;
+  background: lavender;
+}
+.skelleton .projects {
+  overflow: hidden
+}
+.non-skelleton * {
+  opacity: 1;
+  transition: opacity 0.2s;
+}

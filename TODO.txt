@@ -1,5 +1,4 @@
 LAYOUT
-  -la primera taula del stack deixa una linea de pixels
   -separar skelleton en un .css
   -activar links del contact
   -al cilar about me en pantalla ocmplerta, el pfp de contact no hauria de veures
@@ -15,6 +14,7 @@ MEDIA
   -imatge emoji jamón en plan humoristic
 
 DONE
+  -la primera taula del stack deixa una linea de pixels
   -toggle switch hauria de veures per sota del show layout
   -cursor "ma" al passar per sobre d'alguns elements
   -clicar el switch toggle no hauria de triggerejar el skelleton

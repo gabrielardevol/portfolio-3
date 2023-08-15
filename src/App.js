@@ -2,6 +2,7 @@ import './App.css';
 import './style/scrollbar.css';
 import './style/Layout.css';
 import './style/cursor.css';
+import './style/skelleton.css';
 
 import Card from './components/Card.js'
 import Logo from './components/Logo.js'
