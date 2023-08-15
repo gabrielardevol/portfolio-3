@@ -1,5 +1,5 @@
 LAYOUT
-
+  -implementar hashtags
   -re-factor css files
   -si el logo està al mig, clicar al logo no hauria de trigerejar skelleton
   -clicar el switch toggle no hauria de triggerejar el skelleton
@@ -21,13 +21,15 @@ MEDIA
 
 COPY-WRITING
   -projects
+    1 escric el text
+    2 ubico els i18n seccions
+    3 copio i pego a structure de projects js
+    4 tradueixo els textos
+      celler ardèvol
+      esclat EDC
+      porfoli
 
 
 DONE
-  -about me
-    -how to switch languages
-    -install
-      -about me eng
-      -about me esp
-      -about me jp
+
 TOMORROW
