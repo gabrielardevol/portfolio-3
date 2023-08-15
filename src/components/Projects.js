@@ -1,17 +1,21 @@
 import {useState, useRef} from 'react';
 import React from 'react';
 import "../style/Projects.css"
+import { useTranslation } from 'react-i18next';
+import i18n from '../i18n.js'; // no esborrar
+import projects from '../projects';
 
-const projects = [1, 2, 3, 4, 5];
+// const projects = [1, 2, 3, 4, 5];
 
 const Projects = React.forwardRef((props, ref) => {
+  console.log("test")
   return (
     <>
       <div ref={ref} className={"projects"}>
          <div id="projects-container">
-          {projects.map((project, index) => (
-            <Project  unfoldSecondLayout={props.unfoldSecondLayout} key={index} index={index} projectHeight={props.projectHeight} projectWidth={props.projectWidth}></Project>
-          ))}
+         {Object.keys(projects).map((projectKey, index) => (
+            <Project title={projects[projectKey].title} key={index} unfoldSecondLayout={props.unfoldSecondLayout} index={index} projectHeight={props.projectHeight} projectWidth={props.projectWidth}></Project>
+           ))}
         </div>
 
       </div>
@@ -20,9 +24,18 @@ const Projects = React.forwardRef((props, ref) => {
 });
 
 const Project = (props) => {
+  const { t } = useTranslation();
+
+  const projectTitle = props.title;
+
+  // const projectTitle = projects[props.title].title;
+  // const imgPath = projects[props.title].imgPath;
+  // const date = projects[props.title].date;
+
+
   const hashtags = ["react", "ruby", "API", "Responsiveness","gabriel", "ardèvol", "herrero"]
   return (
-    <div onClick={props.unfoldSecondLayout} className="project" style={{height: props.projectHeight, width: props.projectWidth}}>
+    <div onClick={props.unfoldSecondLayout} id={projectTitle} className="project" style={{height: props.projectHeight, width: props.projectWidth}}>
       <div style={{  }}>
         <div style={{height: "100%", position: "relative"}}>
           <div className={"p-hashtags"}>
@@ -34,8 +47,8 @@ const Project = (props) => {
       </div>
       <div style={{}}>
         <div className="padding">
-          <h3> {props.index} Title</h3>
-          <p style={{margin: "0px", padding: "0px"}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <h3>{t('projects.' + projectTitle + '.title')}</h3>
+          <p style={{margin: "0px", padding: "0px"}}>{t('projects.' + projectTitle + '.content')}</p>
         </div>
       </div>
     </div>

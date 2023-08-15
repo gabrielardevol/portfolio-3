@@ -69,8 +69,13 @@ function App() {
 
   const { i18n } = useTranslation();
   const handleLanguageChange = (language) => {
-    i18n.changeLanguage(language);
-  };
+    setTimeout(() => {
+      i18n.changeLanguage(language);
+
+    }, 300);
+  }
+
+  ;
 
   return (
     <>
@@ -78,15 +83,12 @@ function App() {
       <button onClick={() => handleLanguageChange('cat')}>Catalan</button>
       <button onClick={() => handleLanguageChange('esp')}>Spanish</button>
       <button onClick={() => handleLanguageChange('ja')}>Japanese</button>
-
-
      <Layout ref={layoutRef} layoutClass={layoutClass + " " + layoutClass2} superLayout={superLayout} hideSecondLayout={hideSecondLayout}>
         <Logo resizeLayoutGrid={resizeLayoutGrid} data-index={0}/>
         <Card defaultCardClass={"horizontal-left"} index={1} section={"aboutMe"}resizeLayoutGrid={resizeLayoutGrid}  />
         <Card defaultCardClass={"vertical-left"} index={2} section={"stack"}resizeLayoutGrid={resizeLayoutGrid} />
         <Card defaultCardClass={"horizontal-left"} index={4} section={"projects"}resizeLayoutGrid={resizeLayoutGrid} unfoldSecondLayout={unfoldSecondLayout} />
         <Card defaultCardClass={"vertical-left"} index={3} section={"contact"}resizeLayoutGrid={resizeLayoutGrid}  />
-
       </Layout>
     </>
   );

@@ -56,6 +56,12 @@ const resources = {
         graphicDesign: "Disseny gràfic",
         currentlyLearning: "Aprenent...",
         solidPrinciples: "Principis SOLID"
+      },
+      projects: {
+        orbits: {
+          title: "Òrbites",
+          content: "Aquesta interfaç representa un sistema planetari, en que cada astre segueix la seva òrbita. Permet que des del costat del client s'afegeixin o es restin planetes, de manera que la composició visual canvia. Està configurat en React, utilitzant elements SVG per a les animacions geomètriques de les òrbites planetàries."
+        }
       }
     },
   },
@@ -110,7 +116,7 @@ const resources = {
         frontEnd: "フロントエンド",
         backEnd: "バックエンド",
         workflow: "ワークフロー",
-        graphicDesign: "グラフィックデザイン",
+        graphicDesign: "グラフィック デザイン",
         currentlyLearning: "現在学習中",
         solidPrinciples: "SOLID 原則"
 
