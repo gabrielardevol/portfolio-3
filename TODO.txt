@@ -1,6 +1,48 @@
 LAYOUT
-  -re-factor css files
+
+MEDIA
+  -foto/video contact
+  -project images
+    -fer carpetes amb les imatges de cada projecte
+    -imatge emoji jamón en plan humoristic
+
+COPY-WRITING
+  -projects
+    1 escric el text
+    2 ubico els i18n seccions
+    3 copio i pego a structure de projects js
+    4 tradueixo els textos
+      esclat EDC ESP
+      porfoli ESP
+      esclat EDC ENG
+      porfoli ENG
+      esclat EDC JA
+      porfoli JA
+
+
+DONE
+  -implementar hashtags
+  -toggle switch hauria de tenir outline
+  -transition time to 0.6
   -implementar data(fecha)
+  orbites ESP
+  orbites ENG
+  orbites JA
+  celler ardèvol ESP
+  pigs ESP
+  celler ardèvol ENG
+  pigs ENG
+  celler ardèvol JA
+  pigs JA
+
+
+
+
+
+
+TOMORROW
+  -mida text project mes petita
+  -re-factor css files
   -si el logo està al mig, clicar al logo no hauria de trigerejar skelleton
   -clicar el switch toggle no hauria de triggerejar el skelleton
   -toggle switch hauria de veures per sota del show layout
@@ -12,28 +54,3 @@ LAYOUT
   -en mobil horiztontal, h3 hauria de ser una mica mes petit
   -en mobil vertical, no hauria d'haver skelleton
   -en mobil vertical, el second layout no te color de fons
-MEDIA
-  -foto/video contact
-  -project images
-    -fer carpetes amb les imatges de cada projecte
-
-COPY-WRITING
-  -projects
-    1 escric el text
-    2 ubico els i18n seccions
-    3 copio i pego a structure de projects js
-    4 tradueixo els textos
-      celler ardèvol
-      esclat EDC
-      porfoli
-
-
-DONE
-  -implementar hashtags
-  -toggle switch hauria de tenir outline
-  -transition time to 0.6
-
-
-
-TOMORROW
-  -mida text project mes petita

@@ -94,18 +94,18 @@ export default Projects;
 //        #Ruby #Rails
 
 //  three pigs 🐺_🐷🐷🐷.rb
-//        ruby on rails va ser la tecnologia amb la que vaig començar a programar. El meu estil d'aprenentatge és molt
+//        Ruby on Rails va ser la tecnologia amb la que vaig començar a programar. El meu estil d'aprenentatge és molt
 //        visual i orientat a resultats, i m'agrada emprendre exercicis creatius amb allò que aprenc. Així és que vaig
 //        fer aquest petit videojoc inspirat en la fàbula dels tres porquets, que s'executa en la línea de comands i
 //        es juga amb la barra espaiadora del teclat. Són dos nivells, un en què els porquets fugen corrents del llop
 //        a través del bosc, i un altre en què el llop bufa i bufa mentre els porquets intenten que la casa no surti
 //        volant. Tot això utilitzant emojis com a element gràfic amb el que composar els diferents escenaris. Va ser
-//        divertit :P
+//        divertit!
 //        #Ruby #Rails #OOP
 //  porfoli
 //        UI: volia un disseny original i diferent a la majoria de webs, ja que quan vaig estudiar arts i disseny
 //        em vaig quedar molt amb la sensació de que fer propostes diferents a lo habitual pot sortir molt bé.
-//        se'm va acudir aquesta disposició, una graella que fa una mena de creu, sense scroll en la versió d'ordinador.
+//        se'm va acudir aquesta disposició, una graella que fa una mena de creu, sense scroll i en disposició de dashboard.
 
 //        Responsiveness: al pensar la UI va ser un repte que cada element pogués expandir-se i contrau-re's mantenint
 //        un bon aspecte. Cada element té diferents versions, en funció de la seva mida. Així procuro que no hi hagi
