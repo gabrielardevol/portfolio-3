@@ -1,5 +1,6 @@
 LAYOUT
-
+    -estilitzar h4 i br en projectes i en second layout
+    -afegir salts de paragraf
 MEDIA
   -foto/video contact
   -project images

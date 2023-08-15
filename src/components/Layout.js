@@ -41,7 +41,8 @@ const SecondLayout = (props) => {
         </div>
         <div >
           <p style={{textAlign: "end", color: "grey"}}>{projects[project].date}</p>
-          <p>{t('projects.'+project+'.content')}</p>
+          <p dangerouslySetInnerHTML={{ __html: t('projects.'+project+'.content') }}></p>
+          {/* <p>{t('projects.'+project+'.content')}</p> */}
         </div>
       </div>
     </div>

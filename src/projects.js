@@ -37,7 +37,7 @@ const projects = {
     structure: "<p>{t('projects.porfolio.content')}</p>",
     imgPath: "images/porfolio",
     date: "1/2023 - 9/2023",
-    hashtags: ["react", "responsive", "UI"],
+    hashtags: ["react", "responsive", "UI", "figma"],
     links: {
       "github": "",
       "figma": ""
