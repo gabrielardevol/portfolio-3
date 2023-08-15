@@ -1,3 +1,7 @@
+function importAll(r) {
+  return r.keys().map(r);
+}
+
 const projects = {
 //han d'anar per ordre cronològic
   "orbits": {
@@ -8,7 +12,8 @@ const projects = {
     hashtags: ["react", "front-end"],
     links: {
       "web": "https://orbits-frontend.vercel.app/",
-    }
+    },
+    images: importAll(require.context('../public/images/orbits', false, /\.(png|PNG|JPE?G|GIF|jpe?g|svg|gif)$/)),
   },
   "porfolio": {
     title: "porfolio",
@@ -19,7 +24,8 @@ const projects = {
     links: {
       "github": "https://github.com/gabrielardevol/portfolio-3",
       "figma": "https://www.figma.com/file/ByAFpzhCYu5O2t5gyS99a2/portfolio---march-2023"
-    }
+    },
+    images: importAll(require.context('../public/images/orbits', false, /\.(png|PNG|JPE?G|GIF|jpe?g|svg|gif)$/)),
   },
   "esclat": {
     title: "esclat",
@@ -30,7 +36,8 @@ const projects = {
     links: {
       "web": "https://associacioesclat.com/edc.html",
       "github": "https://github.com/gabrielardevol/esclat"
-    }
+    },
+    images: importAll(require.context('../public/images/orbits', false, /\.(png|PNG|JPE?G|GIF|jpe?g|svg|gif)$/)),
   },
   "celler": {
     title: "celler",
@@ -41,7 +48,8 @@ const projects = {
     links: {
       "web": "https://cellerardevol.herokuapp.com/",
       "github": "https://github.com/gabrielardevol/celler-ardevol"
-    }
+    },
+    images: importAll(require.context('../public/images/orbits', false, /\.(png|PNG|JPE?G|GIF|jpe?g|svg|gif)$/)),
   },
   "pigs": {
     title: "pigs",
@@ -51,7 +59,8 @@ const projects = {
     hashtags: ["ruby", "OOP"],
     links: {
       "gitHub": "https://github.com/gabrielardevol/els-tres-porquets"
-    }
+    },
+    images: importAll(require.context('../public/images/orbits', false, /\.(png|PNG|JPE?G|GIF|jpe?g|svg|gif)$/)),
   },
 }
 
