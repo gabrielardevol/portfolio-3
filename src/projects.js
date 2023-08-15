@@ -17,8 +17,8 @@ const projects = {
     date: "1/2023 - 9/2023",
     hashtags: ["react", "responsive", "UI", "figma"],
     links: {
-      "github": "",
-      "figma": ""
+      "github": "https://github.com/gabrielardevol/portfolio-3",
+      "figma": "https://www.figma.com/file/ByAFpzhCYu5O2t5gyS99a2/portfolio---march-2023"
     }
   },
   "esclat": {
@@ -50,13 +50,9 @@ const projects = {
     date: "12/2022",
     hashtags: ["ruby", "OOP"],
     links: {
-      "gitHub": "a"
+      "gitHub": "https://github.com/gabrielardevol/els-tres-porquets"
     }
   },
-
-
-
-
 }
 
 export default projects

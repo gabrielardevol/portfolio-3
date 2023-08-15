@@ -1,15 +1,28 @@
 LAYOUT
-    -els links de second layout han d'obrir en una nova finestra
+  -re-factor css files
+  -si el logo està al mig, clicar al logo no hauria de trigerejar skelleton
+  -clicar el switch toggle no hauria de triggerejar el skelleton
+  -toggle switch hauria de veures per sota del show layout
+  -la primera taula del stack deixa una linea de pixels
+  -cursor "ma" al passar per sobre d'alguns elements
+  -separar skelleton en un .css
+  -activar links del contact
+  -al cilar about me en pantalla ocmplerta, el pfp de contact no hauria de veures
+  -en mobil horiztontal, h3 hauria de ser una mica mes petit
+  -en mobil vertical, no hauria d'haver skelleton
+  -en mobil vertical, el second layout no te color de fons
+  -implementar imatges
 MEDIA
   -foto/video contact
   -project images
-    -fer carpetes amb les imatges de cada projecte
-    -imatge emoji jamón en plan humoristic
-
-COPY-WRITING
-
+  -fer carpetes amb les imatges de cada projecte
+  -imatge emoji jamón en plan humoristic
 
 DONE
+  -mida text project mes petita
+
+    -els links de second layout han d'obrir en una nova finestra
+    -posar links al json
   -aplicr dangerouslyset a projects container
   -estilitzar h4 i br en projectes i en second layout
   -implementar hashtags
@@ -45,16 +58,3 @@ DONE
 
 
 TOMORROW
-  -mida text project mes petita
-  -re-factor css files
-  -si el logo està al mig, clicar al logo no hauria de trigerejar skelleton
-  -clicar el switch toggle no hauria de triggerejar el skelleton
-  -toggle switch hauria de veures per sota del show layout
-  -la primera taula del stack deixa una linea de pixels
-  -cursor "ma" al passar per sobre d'alguns elements
-  -separar skelleton en un .css
-  -activar links del contact
-  -al cilar about me en pantalla ocmplerta, el pfp de contact no hauria de veures
-  -en mobil horiztontal, h3 hauria de ser una mica mes petit
-  -en mobil vertical, no hauria d'haver skelleton
-  -en mobil vertical, el second layout no te color de fons

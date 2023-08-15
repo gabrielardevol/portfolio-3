@@ -122,5 +122,8 @@
 }
 
 #second-layout h4 {
-  margin-top: 1em; margin-bottom: 0.5em;
+   margin-bottom: 0.5em;
+}
+#second-layout h4:not(:first-child){
+margin-top: 1em;
 }
