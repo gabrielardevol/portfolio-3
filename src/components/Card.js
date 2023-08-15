@@ -75,10 +75,12 @@ const Card =  (props) => {
   }
 
   const skelletOn = () => {
-    setSkelleton("skelleton");
-    setTimeout(() => {
-      setSkelleton("non-skelleton");
-    }, 800);
+    if(window.innerWidth >= 480){
+      setSkelleton("skelleton");
+      setTimeout(() => {
+        setSkelleton("non-skelleton");
+      }, 800);
+    }
   }
   const handleClick = (e) => {
     if(e.target.classList.contains("toggle") == false){
