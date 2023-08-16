@@ -3,7 +3,6 @@
 
 
   -clicking logo when it's centered should'nt trigger skelleton
-  -configure project cards
 
   -clean console
   -create classes for secondlayout img

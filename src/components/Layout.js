@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import '../style/SecondLayout.css';
 import { useTranslation } from 'react-i18next';
 import i18n from '../i18n.js'; // no esborrar
@@ -24,9 +24,25 @@ const SecondLayout = (props) => {
   let [imageIndex, setImageIndex] = useState(0)
   const nextImg = () => {
     const newIndex = imageIndex + 1;
-    setImageIndex(newIndex);  }
+    setImageIndex(newIndex);
+  }
   const prevImg = () => {   const newIndex = imageIndex - 1;
-    setImageIndex(newIndex); }
+    setImageIndex(newIndex);
+  }
+
+  const resetImgIndex = (e) => {
+    if (e.target.classList.contains("prj")) {
+      setImageIndex(0)
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('click', (e) => resetImgIndex(e));
+    return () => {
+      window.removeEventListener('click', (e) => resetImgIndex(e));
+    };
+  }, []);
+
 
   return (
     <div id="second-layout">

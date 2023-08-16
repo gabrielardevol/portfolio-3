@@ -29,7 +29,6 @@ function App() {
 
 
   const resizeLayoutGrid = (e) => {
-    console.log(e.target)
     if(e.target.classList.contains("toggle") == false){
     let layoutGridTemplate = getLayoutGridTemplate(e.currentTarget.dataset.index)
     setLayoutClass(layoutGridTemplate)
