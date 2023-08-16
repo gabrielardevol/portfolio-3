@@ -123,7 +123,6 @@ const Card =  (props) => {
   };
 
   useEffect(() => {
-    console.log("useEffect")
     handleResize(); // This will run after the initial render
 
     // Clean-up function (not present in your code)
