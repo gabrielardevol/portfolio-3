@@ -1,5 +1,3 @@
-LAYOUT
-MEDIA
   -foto/video contact
   -fix project card , how?
   -style links
@@ -23,6 +21,10 @@ MEDIA
   -ipad vertical: issues amb .projects
 
 DONE
+
+TOMORROW
+
+16/8/2023
   -at some point, set class to cards will stop working
     that happens when I go to another tab
     it's only a specific function
@@ -75,11 +77,3 @@ DONE
   esclat EDC JA
   porfoli JA
   -afegir salts de paragraf
-
-
-
-
-
-
-
-TOMORROW

@@ -2,6 +2,7 @@
 .skelleton * {
   opacity: 0;
   transition: opacity 0.2s;
+  border: 1px solid transparent
 }
 .skelleton .stack, .skelleton #contact  {
   background: lavender;

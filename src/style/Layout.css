@@ -135,3 +135,13 @@
 #second-layout h4:not(:first-child){
 margin-top: 1em;
 }
+
+
+#languages > button {
+  border: none;
+  background: transparent;
+  text-decoration: underline;
+}
+#languages {
+  height: 0.8em
+}
