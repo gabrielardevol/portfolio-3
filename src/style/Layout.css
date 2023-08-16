@@ -141,7 +141,13 @@ margin-top: 1em;
   border: none;
   background: transparent;
   text-decoration: underline;
+
 }
 #languages {
   height: 0.8em
+}
+
+#second-layout button {
+  font-weight: 900;
+  font-size: medium
 }

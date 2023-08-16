@@ -4,7 +4,6 @@
 
   -clicking toggle shouldnt trigger layout changes
   -clicking logo when it's centered should'nt trigger skelleton
-  -img buttons should have a bolder style
   -configure project cards
 
   -clean console
@@ -20,9 +19,10 @@
   -ipad vertical: issues amb .projects
 
 DONE
+  -img buttons should have a bolder style
+
   -apply skelleton to second-layout
   -style links
-
   -style language buttons
 
 TOMORROW
