@@ -87,11 +87,14 @@ function App() {
 
   return (
     <>
-      <button onClick={() => handleLanguageChange('en')}>English</button>
-      <button onClick={() => handleLanguageChange('cat')}>Catalan</button>
-      <button onClick={() => handleLanguageChange('esp')}>Spanish</button>
-      <button onClick={() => handleLanguageChange('ja')}>Japanese</button>
-     <Layout project={project} ref={layoutRef} layoutClass={layoutClass + " " + layoutClass2} superLayout={superLayout} hideSecondLayout={hideSecondLayout}>
+
+      <Layout project={project} ref={layoutRef} layoutClass={layoutClass + " " + layoutClass2} superLayout={superLayout} hideSecondLayout={hideSecondLayout}>
+      <div id="languages" style={{gridArea: "languages"}} >
+        <button onClick={() => handleLanguageChange('en')}>English</button>
+        <button onClick={() => handleLanguageChange('cat')}>Catalan</button>
+        <button onClick={() => handleLanguageChange('esp')}>Spanish</button>
+        <button onClick={() => handleLanguageChange('ja')}>Japanese</button>
+      </div>
         <Logo resizeLayoutGrid={resizeLayoutGrid} data-index={0}/>
         <Card defaultCardClass={"horizontal-left"} index={1} section={"aboutMe"}resizeLayoutGrid={resizeLayoutGrid}  />
         <Card defaultCardClass={"vertical-left"} index={2} section={"stack"}resizeLayoutGrid={resizeLayoutGrid} />

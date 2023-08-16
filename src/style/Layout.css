@@ -23,6 +23,7 @@
     padding: 0.8em;
     display: grid;
     grid-template-areas:
+    "languages languages languages"
     "card-1 card-1 card-2"
     "card-3 logo card-2"
     "card-3 card-4 card-4";
@@ -30,17 +31,24 @@
     transition: all 0.8s ease;
   }
   #super-layout { display: grid; }
-  .gtc-101 { grid-template-columns: 1fr 0fr 1fr; }
+  /* .gtc-101 { grid-template-columns: 1fr 0fr 1fr; }
   .gtc-001 { grid-template-columns: 0fr 0fr 1fr; }
   .gtc-100 { grid-template-columns: 1fr 0fr 0fr; }
   .gtr-101 { grid-template-rows: 1fr 0fr 1fr; }
   .gtr-001 { grid-template-rows: 0fr 0fr 1fr; }
-  .gtr-100 { grid-template-rows: 1fr 0fr 0fr; }
+  .gtr-100 { grid-template-rows: 1fr 0fr 0fr; } */
+  .gtc-101 { grid-template-columns: 1fr 0fr 1fr; }
+  .gtc-001 { grid-template-columns: 0fr 0fr 1fr; }
+  .gtc-100 { grid-template-columns: 1fr 0fr 0fr; }
+  .gtr-101 { grid-template-rows: 0fr 1fr 0fr 1fr; }
+  .gtr-001 { grid-template-rows: 0fr 0fr 0fr 1fr; }
+  .gtr-100 { grid-template-rows: 0fr 1fr 0fr 0fr; }
 
   @media screen and (orientation: landscape) {
     #layout {
       height: 100vh;
-      margin: auto;
+      margin-block-start: auto;
+      margin-inline: auto;
       /* background: pink;  */
       width: -webkit-fill-available
     }

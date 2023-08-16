@@ -3,18 +3,29 @@ MEDIA
   -foto/video contact
   -fix project card , how?
   -style links
+  -style language buttons
   -clicking toggle shouldnt trigger layout changes
   -clicking logo when it's centered should'nt trigger skelleton
   -img buttons should have a bolder style
   -configure project cards
-  -at some point, set class to cards will stop working
-    that happens when I go to another tab
-    it's only a specific function
+
   -clean console
   -create classes for secondlayout img
   -set a margin to place the language switchers
 
+  -image index should go back to 0 when switching projects
+  -apply skelleton to second-layout
+  -mobile about-me appears larger than intended
+  -projects vertical
+  -mobile horizontal: second-layout appear per sobre del first, com quan en vertical
+
+  -mobile horizontal: contacte - pfp
+  -ipad vertical: issues amb .projects
+
 DONE
+  -at some point, set class to cards will stop working
+    that happens when I go to another tab
+    it's only a specific function
   fotos porfoli
   fotos porquets
   -imatge emoji jamón en plan humoristic
