@@ -86,3 +86,8 @@ content: "-"; color: black
     height: 100%
   }
 }
+
+
+#contact a {
+  color: white;
+}

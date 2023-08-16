@@ -1,6 +1,7 @@
   -foto/video contact
   -fix project card , how?
-  -style links
+
+
   -clicking toggle shouldnt trigger layout changes
   -clicking logo when it's centered should'nt trigger skelleton
   -img buttons should have a bolder style
@@ -11,7 +12,6 @@
   -set a margin to place the language switchers
 
   -image index should go back to 0 when switching projects
-  -apply skelleton to second-layout
   -mobile about-me appears larger than intended
   -projects vertical
   -mobile horizontal: second-layout appear per sobre del first, com quan en vertical
@@ -20,6 +20,9 @@
   -ipad vertical: issues amb .projects
 
 DONE
+  -apply skelleton to second-layout
+  -style links
+
   -style language buttons
 
 TOMORROW
