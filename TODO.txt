@@ -1,7 +1,6 @@
   -foto/video contact
   -fix project card , how?
   -style links
-  -style language buttons
   -clicking toggle shouldnt trigger layout changes
   -clicking logo when it's centered should'nt trigger skelleton
   -img buttons should have a bolder style
@@ -21,6 +20,7 @@
   -ipad vertical: issues amb .projects
 
 DONE
+  -style language buttons
 
 TOMORROW
 

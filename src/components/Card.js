@@ -79,12 +79,16 @@ const Card =  (props) => {
     if(window.innerWidth >= 480){
       setSkelleton("skelleton");
       handleLayout()
+      document.querySelector("#second-layout").classList.remove("non-skelleton")
+      document.querySelector("#second-layout").classList.add("skelleton")
+
       setTimeout(() => {
         handleLayout()
-
       }, 700);
 
       setTimeout(() => {
+        document.querySelector("#second-layout").classList.remove("skelleton")
+        document.querySelector("#second-layout").classList.add("non-skelleton")
         setSkelleton("non-skelleton");
         handleLayout()
       }, 800);
