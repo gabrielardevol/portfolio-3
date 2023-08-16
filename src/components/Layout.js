@@ -34,7 +34,7 @@ const SecondLayout = (props) => {
         <button id="close-button" onClick={props.hideSecondLayout}>X</button>
         {imageIndex != 0 && <button className="skip-skelleton" id="previmg-button" onClick={prevImg}> &lt; </button>}
         {imageIndex != images.length-1 && <button className="skip-skelleton" id="nextimg-button" onClick={nextImg}>&gt; </button>}
-        <img ref={imgRef} data-index={imageIndex} style={{maxWidth: "100%", height: "fit-content"}} src={images[imageIndex]}></img>
+        <img id="second-layout-image" ref={imgRef} data-index={imageIndex} style={{maxWidth: "100%", height: "fit-content"}} src={images[imageIndex]}></img>
       </div>
       <div style={{overflow: "auto", height: "50%"}}>
         <div>

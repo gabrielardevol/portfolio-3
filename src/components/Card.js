@@ -95,7 +95,7 @@ const Card =  (props) => {
     }
   }
   const handleClick = (e) => {
-    if(e.target.classList.contains("skip-skelleton") == false){
+    if(e.target.classList.contains("skip-skelleton") == false ){
       skelletOn()
     }
   }

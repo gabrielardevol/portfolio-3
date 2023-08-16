@@ -29,7 +29,7 @@ function App() {
 
 
   const resizeLayoutGrid = (e) => {
-    console.log("App.js")
+    console.log(e.target)
     if(e.target.classList.contains("toggle") == false){
     let layoutGridTemplate = getLayoutGridTemplate(e.currentTarget.dataset.index)
     setLayoutClass(layoutGridTemplate)
@@ -55,7 +55,6 @@ function App() {
     document.querySelector("#logo").classList.remove("medium-logo")
     document.querySelector("#logo").classList.add("smaller-logo")
     setProject(e.currentTarget.id)
-
   }
   const hideSecondLayout = () => {
     setLayoutClass("gtc-101 gtr-101")

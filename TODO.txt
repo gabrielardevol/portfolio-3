@@ -2,13 +2,11 @@
   -fix project card , how?
 
 
-  -clicking toggle shouldnt trigger layout changes
   -clicking logo when it's centered should'nt trigger skelleton
   -configure project cards
 
   -clean console
   -create classes for secondlayout img
-  -set a margin to place the language switchers
 
   -image index should go back to 0 when switching projects
   -mobile about-me appears larger than intended
@@ -19,8 +17,10 @@
   -ipad vertical: issues amb .projects
 
 DONE
-  -img buttons should have a bolder style
+  -clicking toggle shouldnt trigger layout changes
 
+  -img buttons should have a bolder style
+  -set a margin to place the language switchers
   -apply skelleton to second-layout
   -style links
   -style language buttons
