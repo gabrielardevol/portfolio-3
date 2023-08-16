@@ -80,6 +80,11 @@ const Card =  (props) => {
       setSkelleton("skelleton");
       handleLayout()
       setTimeout(() => {
+        handleLayout()
+
+      }, 700);
+
+      setTimeout(() => {
         setSkelleton("non-skelleton");
         handleLayout()
       }, 800);
