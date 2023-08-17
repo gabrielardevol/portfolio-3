@@ -100,37 +100,13 @@ const Card =  (props) => {
     }
   }
 
-  const handleResize = () => { //changes cards appearence (not size) when grid changes
-
-    // let startTime = performance.now();
-    // let duration = 800; // Duration in milliseconds
-    // let interval = 800 / 15; // Interval in milliseconds (30 frames per second)
-
+  const handleResize = () => {
     skelletOn()
-    // const animateLayout = (timestamp) => {
-    //   let elapsed = timestamp - startTime;
-    //   if (elapsed < duration) {
-    //     if (elapsed >= interval) {
-    //       console.log("handleResize") //EL PROBLEMA ÉS AQUÍ
-
-
-    //       startTime = timestamp;
-    //     }
-    //     requestAnimationFrame(animateLayout);
-    //   }
-    // };
-    // requestAnimationFrame(animateLayout);
   };
 
   useEffect(() => {
-    handleResize(); // This will run after the initial render
-
-    // Clean-up function (not present in your code)
-    return () => {
-      // Any cleanup code you want to run when the component unmounts
-    };
-  }, []); // Empty dependency array
-
+    handleResize();
+  }, []);
 
   useEffect(() => {
     window.addEventListener('resize', handleResize());

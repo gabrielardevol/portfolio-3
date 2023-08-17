@@ -2,11 +2,13 @@
   /* background: red; */
   background: black;
   display: grid;
-  height:min-content;
+  height: 50vh;
   gap: 1px
 }
 
+
 .projects {
+  height: 50vh;
   overflow: auto
 }
 
@@ -49,8 +51,14 @@ position: absolute; bottom: 0; display: flex; flex-wrap: wrap; flex-direction: r
 }
 
 @media only screen and (max-width: 480px) {
+  #projects-container {
+    /* background: red; */
+    display: block;
+    height: 50vh;
+  }
   #projects-container , .project {
-    height: 230px
+    width: 100%;
+    /* height: 230px */
   }
   .project div:nth-child(2) > div:first-child{height: 100%}
 }

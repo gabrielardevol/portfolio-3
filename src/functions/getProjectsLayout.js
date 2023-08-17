@@ -1,10 +1,10 @@
 function getProjectsLayout(width, height) {
-  const standardWidth = 250
+  const standardWidth = 220
   const standardHeight = 187.5
   const ratio = 1.333 // like screens, 3:4 (1.333), 16:9 (1.777)...
   let numberOfColumns = Math.floor(width / standardWidth)
-  const projectWidth = (width / numberOfColumns) - ((0.75*16)/numberOfColumns) -1
-  const projectHeight = projectWidth / ratio
+  const projectWidth = Math.ceil((width / numberOfColumns) - ((0.75*16)/numberOfColumns) -1)
+  const projectHeight = Math.ceil(projectWidth / ratio)
 
   if(height >= standardHeight*1.3) {
     const projectsStyle = {gridAutoFlow: "row", gridTemplateColumns: "repeat(" + numberOfColumns + ", 1fr)", overflow: "hidden scroll"}

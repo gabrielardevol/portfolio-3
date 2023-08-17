@@ -8,7 +8,7 @@ const Contact = React.forwardRef((props, ref) => {
   const { t } = useTranslation();
   return (
     <>
-      <div id="contact" className={props.contactClass} ref={ref} >
+      <div id="contact"  className={props.contactClass} ref={ref} >
         <div id="pfp-container">
           <div id="pfp" style={{backgroundImage: `url(${process.env.PUBLIC_URL}/pfp.png)`,}}>
           </div>
