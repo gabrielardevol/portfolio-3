@@ -1,17 +1,17 @@
-export default function getLayoutGridTemplate(cardIndex) {
+export default function getLayout(cardIndex) {
   let gridTemplate;
 
-  switch (parseInt(cardIndex)) {
-    case 1:
+  switch (cardIndex) {
+    case "aboutMe":
       gridTemplate = "gtc-100 gtr-100";
       break;
-    case 2:
+    case "stack":
       gridTemplate =  "gtc-001 gtr-100";
       break;
-    case 3:
+    case "contact":
       gridTemplate =  "gtc-100 gtr-001";
       break;
-    case 4:
+    case "projects":
       gridTemplate =  "gtc-001 gtr-001";
       break;
     default:
