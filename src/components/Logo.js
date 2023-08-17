@@ -1,6 +1,6 @@
 import {useEffect, useRef} from 'react'
 import '../style/Logo.css';
-
+import React from 'react';
 const Chara = (props) => {
   const logoRef = useRef()
   const transition = 1
@@ -29,7 +29,7 @@ const Chara = (props) => {
   if(props.char !== " ") {return (<div className="logo-chara logo" ref={logoRef} onClick={animation}>{props.char}</div>)} else {return (<div className="logo"></div>)}
 }
 
-const Logo = (props) => {
+const Logo = React.forwardRef((props, ref) => {
   const string = "gabriel ";
   const charArray = string.split('');
   const string2 = "ardè vol";
@@ -48,6 +48,6 @@ const Logo = (props) => {
     </div>
 
   );
-};
+});
 
 export default Logo;

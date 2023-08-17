@@ -42,18 +42,6 @@ const Card =  (props) => {
     setClassToCards()
   }
 
-  // const handleProjectsLayout = () => {
-  //   if (props.index === 4) {
-  //   const pLayout = getProjectsLayout(projectsRef.current.getBoundingClientRect().width, projectsRef.current.getBoundingClientRect().height)
-  //   setProjectHeight(pLayout.height)
-  //   setProjectWidth(pLayout.width)
-  //   document.querySelector("#projects-container").style.gridTemplateColumns = pLayout.style.gridTemplateColumns
-  //   document.querySelector(".projects").classList.add(pLayout.addClass)
-  //   document.querySelector(".projects").classList.remove(pLayout.removeClass)
-  //   document.querySelector(".projects").style.overflow = pLayout.style.overflow
-  //   document.querySelector("#projects-container").style.gridAutoFlow = pLayout.style.gridAutoFlow
-  //   }
-  // }
   // const handleStackLayout = () => {
   //   if (props.index === 2) {
   //     const sLayout = getStackLayout(stackRef.current.getBoundingClientRect().width, stackRef.current.getBoundingClientRect().height)
@@ -123,13 +111,11 @@ const Card =  (props) => {
   //   };
   }, []);
 
-  const handleCardClick = (e) => {
-     props.resizeLayoutGrid(e);
-  }
+
 
 
   return (
-    <div data-index={props.section} onClick={(e) => handleCardClick(e)} style={{gridArea: "card-"+props.index}} ref={cardRef} className={"card " + cardClass + " " + skelletonState}>
+    <div data-index={props.section} onClick={(e) => props.resizeLayoutGrid(e)} style={{gridArea: "card-"+props.index}} ref={cardRef} className={"card " + cardClass + " " + skelletonState}>
       <div>
         <h2 ref={titleRef} style={{whiteSpace: "nowrap", rotation: "180deg"}} className="padding">
           {props.title}

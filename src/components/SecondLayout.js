@@ -6,7 +6,7 @@ import i18n from '../i18n.js'; // no esborrar
 
 import projects from '../projects';
 
-const SecondLayout = (props) => {
+const SecondLayout = React.forwardRef((props, ref) => {
   const { t } = useTranslation();
   const project = props.project
   const imgRef = useRef()
@@ -38,7 +38,7 @@ const SecondLayout = (props) => {
 
 
   return (
-    <div id="second-layout" style={{gridArea: "second-layout"}}>
+    <div ref={ref} id="second-layout" style={{gridArea: "second-layout"}} className="fold">
     <div style={{position: "relative", background: "black", display: "flex", justifyContent: "center", overflow: "auto", alignItems: "center"}}>
         <button id="close-button" onClick={props.hideSecondLayout}>X</button>
         {imageIndex != 0 && <button className="skip-skelleton" id="previmg-button" onClick={prevImg}> &lt; </button>}
@@ -63,6 +63,6 @@ const SecondLayout = (props) => {
       </div>
     </div>
   )
-}
+})
 
 export default SecondLayout

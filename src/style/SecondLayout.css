@@ -1,7 +1,12 @@
 @media screen and (orientation: landscape) {
-  #second-layout {
-    width: 50vw
+  /* .hidden {
+    width: 0vw;
   }
+  .shown {
+    width: 50vw;
+  }
+  #second-layout {
+  } */
 }
 @media screen and (orientation: portrait) {
   #second-layout {

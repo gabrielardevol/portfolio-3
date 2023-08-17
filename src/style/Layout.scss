@@ -1,6 +1,8 @@
-$seconds: 5.8s;
+$seconds: 0.8s;
 * {
   box-sizing: border-box;
+  transition: all $seconds ease;
+
 }
 
 // #second-layout, #layout, .card  {
@@ -17,13 +19,12 @@ $seconds: 5.8s;
 #layout {
   width: 100vw;
   height: 100vh;
-  transition: all $seconds ease;
-
 }
 
 
 
 @media screen and (orientation: landscape) {
+
   #layout {
     max-height: 100vh;
     // padding: 0.8em;
@@ -34,6 +35,13 @@ $seconds: 5.8s;
     "card-3 logo card-2 second-layout"
     "card-3 card-4 card-4 second-layout";
     // gap: 0.8em;
+  }
+
+  .fold {
+    width: 0vw;
+  }
+  .unfold {
+    width: 50vw;
   }
   // #super-layout { display: grid; }
   $fr: 2.5em;
@@ -82,12 +90,12 @@ $seconds: 5.8s;
       // gap: 0.8em;
     }
 
-    .gtc-101 { grid-template-columns: 1fr 0fr 1fr 0fr; }
-    .gtc-001 { grid-template-columns: 0fr 0fr 1fr 0fr; }
-    .gtc-100 { grid-template-columns: 1fr 0fr 0fr 0fr; }
-    .gtr-101 { grid-template-rows: 1fr 0fr 1fr 0fr; }
-    .gtr-001 { grid-template-rows: 0fr 0fr 1fr 0fr; }
-    .gtr-100 { grid-template-rows: 1fr 0fr 0fr 0fr; }
+    .gtc-101 { grid-template-columns: 1fr 0fr 1fr; }
+    .gtc-001 { grid-template-columns: 0.05fr 0fr 1fr; } //projects, stack
+    .gtc-100 { grid-template-columns: 1fr 0fr 0.05fr; } //contact, qui soc
+    .gtr-101 { grid-template-rows: 0fr 1fr 0fr 1fr; }
+    .gtr-001 { grid-template-rows: 0fr 0.1fr 0fr 1fr; } //contact, projects
+    .gtr-100 { grid-template-rows: 0fr 1fr 0fr 0.1fr; } //qui soc, stack
     // #second-layout {height: calc(50vh - 0.8em);
     //   margin: 0 0.8em 0.8em 0.8em;
     //   border-radius: 0.5em

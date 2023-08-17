@@ -2,13 +2,14 @@
   /* background: red; */
   background: black;
   display: grid;
-  height: 50vh;
+  /* height: 50vh; */
+  width: 100%; height: 100%;
   gap: 1px
 }
 
 
 .projects {
-  height: 50vh;
+  height: 100%; width: 100%;
   overflow: auto
 }
 
