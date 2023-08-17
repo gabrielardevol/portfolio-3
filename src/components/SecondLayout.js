@@ -38,7 +38,7 @@ const SecondLayout = (props) => {
 
 
   return (
-    <div id="second-layout">
+    <div id="second-layout" style={{gridArea: "second-layout"}}>
     <div style={{position: "relative", background: "black", display: "flex", justifyContent: "center", overflow: "auto", alignItems: "center"}}>
         <button id="close-button" onClick={props.hideSecondLayout}>X</button>
         {imageIndex != 0 && <button className="skip-skelleton" id="previmg-button" onClick={prevImg}> &lt; </button>}

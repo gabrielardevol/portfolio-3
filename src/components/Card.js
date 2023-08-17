@@ -32,11 +32,15 @@ const Card =  (props) => {
   // const [contactClass, setContactClass] = useState("horizontal")
 
 
-  // const setClassToCards = () => {
-  //   const cardSizes = cardRef.current.getBoundingClientRect();
-  //   const newCardClass = getCardClass(cardSizes);
-  //   setCardClass(newCardClass);
-  // }
+  const setClassToCards = () => {
+    const cardSizes = cardRef.current.getBoundingClientRect();
+    const newCardClass = getCardClass(cardSizes);
+    setCardClass(newCardClass);
+  }
+
+  const handleLayout = () => {
+    setClassToCards()
+  }
 
   // const handleProjectsLayout = () => {
   //   if (props.index === 4) {
@@ -109,14 +113,15 @@ const Card =  (props) => {
   //   handleResize();
   // }, []);
 
-  // useEffect(() => {
+  useEffect(() => {
   //   window.addEventListener('resize', handleResize());
   //   window.addEventListener('click', (e) => handleClick(e));
+    window.addEventListener('click', handleLayout)
   //   return () => {
   //     window.removeEventListener('resize', handleResize());
   //     window.removeEventListener('click', (e) => handleClick(e));
   //   };
-  // }, []);
+  }, []);
 
   const handleCardClick = (e) => {
      props.resizeLayoutGrid(e);

@@ -1,12 +1,17 @@
+
 .card {
-  border-radius: 0.5em;
   border: 1px solid black;
-  display: flex;
-  overflow: hidden;
-  min-height: 2.25em;
-  min-width: 2.25em;
+  border-radius: 0.5em;
+
 }
+
 @media only screen and (min-width: 480px) {
+  .card {
+    display: flex;
+    overflow: hidden;
+    /* min-height: 2.25em; */
+    /* min-width: 2.25em; */
+  } /*
   .hidden >  div:nth-child(2) {
     display: none;
   }
@@ -20,15 +25,17 @@
   .vertical-left > div:first-of-type > *:first-child {
     writing-mode: vertical-rl;
     /* rotate: 180deg; */
-  }
+   /* }
   .horizontal-top >  div:nth-child(2) {
     border-top: 1px solid black;
   }
   .vertical-left > div:nth-child(2),
   .horizontal-left > div:nth-child(2) {
     border-left: 1px solid black;
-  }
+  }  */
+
 }
+/*
 @media only screen and (max-width: 480px) {
   .card {
     flex-direction: column;
@@ -42,4 +49,4 @@
   h2 {
     font-size: 0.9em;
   }
-}
+} */

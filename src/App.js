@@ -1,6 +1,6 @@
 import './App.css';
 import './style/scrollbar.css';
-import './style/Layout.css';
+import './style/Layout.scss';
 import './style/cursor.css';
 import './style/skelleton.css';
 
@@ -86,9 +86,9 @@ function App() {
   return (
     <>
         {/* <div id="super-layout" className={props.superLayout } > */}
-        <div id="super-layout">
+        <div id="layout" class={layoutClass}>
 
-      <Layout ref={layoutRef} layoutClass={layoutClass + " " + layoutClass2} superLayout={superLayout} hideSecondLayout={hideSecondLayout}>
+      {/* <Layout ref={layoutRef} layoutClass={layoutClass + " " + layoutClass2} superLayout={superLayout} hideSecondLayout={hideSecondLayout}> */}
         <div id="languages" style={{gridArea: "languages"}} >
           <button onClick={() => handleLanguageChange('en')}>ENG</button>
           <button onClick={() => handleLanguageChange('cat')}>CAT</button>
@@ -96,13 +96,13 @@ function App() {
           <button onClick={() => handleLanguageChange('ja')}>JA</button>
         </div>
         <Logo ref={logoRef} logoSize={logoSize} resizeLayoutGrid={resizeLayout} data-index={0}/>
-        <Card defaultCardClass={"horizontal-left"} index={1} section={"aboutMe"}resizeLayoutGrid={resizeLayout}  >
+        <Card index={1} section={"aboutMe"}resizeLayoutGrid={resizeLayout}  >
           <AboutMe ref={aboutMeRef} />
         </Card>
-        <Card defaultCardClass={"vertical-left"} index={2} section={"stack"}resizeLayoutGrid={resizeLayout} >
+        <Card index={2} section={"stack"}resizeLayoutGrid={resizeLayout} >
           <Stack ref={stackRef} />
         </Card>
-        <Card defaultCardClass={"horizontal-left"} index={4} section={"projects"}resizeLayoutGrid={resizeLayout} unfoldSecondLayout={unfoldSecondLayout} >
+        <Card index={4} section={"projects"}resizeLayoutGrid={resizeLayout} unfoldSecondLayout={unfoldSecondLayout} >
           <Projects ref={projectsRef}  >
 
             {Object.keys(projects).map((projectKey, index) => (
@@ -111,11 +111,11 @@ function App() {
 
           </Projects>
         </Card>
-        <Card defaultCardClass={"vertical-left"} index={3} section={"contact"}resizeLayoutGrid={resizeLayout}  >
+        <Card index={3} section={"contact"}resizeLayoutGrid={resizeLayout}  >
           <Contact ref={contactRef} />
         </Card>
 
-      </Layout>
+      {/* </Layout> */}
       <SecondLayout project={project} hideSecondLayout={hideSecondLayout}/>
       </div>
     </>

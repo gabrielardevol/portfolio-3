@@ -7,7 +7,7 @@ import SecondLayout from './SecondLayout';
 
 const Layout = React.forwardRef((props, ref) => {
    return (
-      <div ref={ref} id="layout" className={props.layoutClass} style={{  transition: "all 0.7s ease"}}>
+      <div ref={ref}>
         {props.children}
       </div>
 
