@@ -1,4 +1,4 @@
-import {useState, useRef} from 'react';
+import {useState, useRef, useEffect} from 'react';
 import React from 'react';
 import "../style/Stack.css"
 
@@ -6,14 +6,27 @@ import { useTranslation } from 'react-i18next';
 
 import i18n from '../i18n.js'; // no esborrar
 
+import getStackLayout from '../functions/getStackLayout';
+
 
 
 const Stack = React.forwardRef((props, ref) => {
   const { t } = useTranslation();
+  const stackRef = useRef()
 
+  const handleStackLayout = () => {
+    if (props.index === 2) {
+      const sLayout = getStackLayout(stackRef.current.getBoundingClientRect().width, stackRef.current.getBoundingClientRect().height)
+      stackRef.current.style.flexFlow = sLayout.flexFlow
+    }
+  }
+  useEffect(() => {
+    window.addEventListener('click', handleStackLayout);
+    window.addEventListener('resize', handleStackLayout)
+  }, []);
   return (
     <>
-      <div ref={ref} className={"stack"} >
+      <div ref={stackRef} className={"stack"} >
         <div>
           <table>
             <thead>

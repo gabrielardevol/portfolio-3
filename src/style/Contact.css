@@ -3,8 +3,34 @@
   display: flex;
   flex-direction: column;
 }
+
+#contact-links {
+  background: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#contact li {
+  color: red;
+  padding: 0.3em
+}
+#contact-list li:not(:last-child) {
+  border-bottom: 1px solid black;
+}
+#contact-links li a {
+  text-decoration: none;
+}
+
+
+
+
+/*
 .horizontal-contact > :first-child {
   display: flex; align-items: center; justify-content: center; flex: 1
+} */
+#pfp-container {
+  height: 100%; display: flex; justify-content: center; align-items: center;
 }
 #pfp {
   height: calc(100% - 3em); width: calc(100% - 3em); max-width: 300px;
@@ -16,22 +42,24 @@
   padding: 0px; margin: 0px;
   list-style: none;
 }
-.horizontal-contact > div:nth-child(2) > ul:nth-child(1) {
+ .horizontal-contact > div:nth-child(2) > ul:nth-child(1) {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
 }
-#contact > div:nth-child(2) > ul:nth-child(1) > li {
+ #contact > div:nth-child(2) > ul:nth-child(1) > li {
   text-align: center;
   padding: 0.1em
 }
+
+/*
 .horizontal-contact > div:nth-child(2) > ul:nth-child(2) > li {
   padding: 0.5em;
   border-top: 1px solid black;
 }
 .vertical-contact > *{
-  writing-mode: vertical-lr; /* vertical right-to-left writing mode */
-    text-orientation: mixed; /* enable vertical orientation */
+  writing-mode: vertical-lr;
+    text-orientation: mixed;
     white-space: nowrap;
 }
 .vertical-contact #pfp {
@@ -48,19 +76,17 @@
 .vertical-contact > div:nth-child(2) > ul:nth-child(2) > li {
   padding: 0.5em;
   border-right: 1px solid black;
-}
-#contact > div:nth-child(2) > ul:nth-child(1) {
-  background: black; color: white
-}
+} */
+
 ul, li {
   margin: 0px; padding: 0px;
 }
-.vertical-contact li {
+/* .vertical-contact li {
 rotate: 180deg;
 }
 .vertical-contact ul:nth-child(1) > li::after {
 content: "-"; color: black
-}
+} */
 
 @media only screen and (max-width: 480px) {
   #contact > div:first-child {

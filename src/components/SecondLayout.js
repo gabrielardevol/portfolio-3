@@ -38,14 +38,14 @@ const SecondLayout = React.forwardRef((props, ref) => {
 
 
   return (
-    <div ref={ref} id="second-layout" style={{gridArea: "second-layout"}} className="fold">
-    <div style={{position: "relative", background: "black", display: "flex", justifyContent: "center", overflow: "auto", alignItems: "center"}}>
+    <div ref={ref} id="second-layout" style={{gridArea: "second-layout"}} >
+      <div id="img-container" >
         <button id="close-button" onClick={props.hideSecondLayout}>X</button>
         {imageIndex != 0 && <button className="skip-skelleton" id="previmg-button" onClick={prevImg}> &lt; </button>}
         {imageIndex != images.length-1 && <button className="skip-skelleton" id="nextimg-button" onClick={nextImg}>&gt; </button>}
-        <img id="second-layout-image" ref={imgRef} data-index={imageIndex} style={{maxWidth: "100%", height: "fit-content"}} src={images[imageIndex]}></img>
+        <img id="second-layout-image" ref={imgRef} data-index={imageIndex} src={images[imageIndex]}></img>
       </div>
-      <div style={{overflow: "auto", height: "50%"}}>
+      <div id="txt-container" >
         <div>
           <h2>{t('projects.'+project+'.title')}</h2>
           <div>

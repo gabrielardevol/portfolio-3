@@ -17,8 +17,12 @@ $seconds: 0.8s;
 //   overflow: hidden;
 // }
 #layout {
-  width: 100vw;
+  // width: 100vw;
+  // height: 100vh;
   height: 100vh;
+  gap: 0.6em;
+  padding: 0.8em;
+
 }
 
 
@@ -26,23 +30,14 @@ $seconds: 0.8s;
 @media screen and (orientation: landscape) {
 
   #layout {
-    max-height: 100vh;
-    // padding: 0.8em;
     display: grid;
     grid-template-areas:
     "languages languages languages second-layout"
     "card-1 card-1 card-2 second-layout"
     "card-3 logo card-2 second-layout"
     "card-3 card-4 card-4 second-layout";
-    // gap: 0.8em;
   }
 
-  .fold {
-    width: 0vw;
-  }
-  .unfold {
-    width: 50vw;
-  }
   // #super-layout { display: grid; }
   $fr: 2.5em;
   .gtc-101 { grid-template-columns: 1fr 0fr 1fr 0fr; }
@@ -55,7 +50,6 @@ $seconds: 0.8s;
   #layout {
       margin-block-start: auto;
       margin-inline: auto;
-      width: -webkit-fill-available
   }
     // #second-layout {
     //   height: calc(100vh - 1.6em);
@@ -116,10 +110,10 @@ $seconds: 0.8s;
 
 @media only screen and (min-width: 1100px) and (orientation: landscape) { /* laptop margins */
   // #layout {
-  //   max-width: 75vw;
+  //    max-width: 75vw;
   // }
   // .layout-75 {
-  //   width: 75vw
+  //    width: 75vw
   // }
 }
 
@@ -156,15 +150,20 @@ $seconds: 0.8s;
 // }
 
 
-// #languages > button {
-//   border: none;
-//   background: transparent;
-//   text-decoration: underline;
+#languages > button {
+  border: none;
+  background: transparent;
+  text-decoration: underline;
+  transition: none;
 
-// }
-// #languages {
-//   height: 0.8em
-// }
+}
+#languages > button:hover {
+  font-weight: 700;
+}
+
+#languages {
+  height: 0.8em
+}
 
 // #second-layout button {
 //   font-weight: 900;

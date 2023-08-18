@@ -1,4 +1,55 @@
-@media screen and (orientation: landscape) {
+.border {
+  border: 1px solid black;
+}
+#second-layout {
+  height: 100%;
+  overflow: hidden;
+  border-radius: 0.5em
+}
+#img-container {
+  background: black;
+  height: 50%;
+  overflow: auto;
+  position: relative;
+  display: flex;
+}
+  #close-button {position: absolute; top: 0; right: 0px;}
+  #nextimg-button {position: absolute; top: 50%; right: 0px;}
+  #previmg-button {position: absolute; top: 50%; left: 0px;}
+#txt-container {
+  height: 50%;
+  overflow: auto;
+  background: white;
+}
+#second-layout-image {
+  max-width: 100%; height: fit-content;
+  margin: auto
+}
+@media screen and (orientation: portrait) {
+  #second-layout {
+    height: 50vh
+  }
+}
+@media only screen and (max-width: 700px) and (orientation: landscape) {
+  #second-layout {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .unfold #second-layout {
+    width: 100vw;
+    height: 100vh;
+  }
+  .fold #second-layout {
+    width: 0vw;
+  }
+}
+
+
+
+
+
+/* @media screen and (orientation: landscape) { */
   /* .hidden {
     width: 0vw;
   }
@@ -7,16 +58,12 @@
   }
   #second-layout {
   } */
-}
-@media screen and (orientation: portrait) {
-  #second-layout {
-    height: 50vh
-  }
-}
+/* } */
+
 
 /* #second-layout {
   position: relative;
-}
+} */
 
 #second-layout > div:first-of-type {
   border-top-left-radius: inherit;
@@ -32,16 +79,6 @@
 }
 #second-layout > div:nth-of-type(2) > div:first-of-type {
   border-bottom: 1px solid black
-}
-
-#close-button {
-  position: absolute; top: 0; right: 0px;
-}
-#nextimg-button {
-  position: absolute; top: 50%; right: 0px;
-}
-#previmg-button {
-  position: absolute; top: 50%; left: 0px;
 }
 
 #second-layout h2 {
@@ -84,9 +121,9 @@
   padding: 1.2rem
 }
 
-
+/*
 @media only screen and (max-width: 480px) {
   #second-layout {
     position: fixed
   }
-} */
+}  */

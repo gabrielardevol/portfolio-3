@@ -12,15 +12,21 @@ const Projects = React.forwardRef((props, ref) => {
   const [projectsClass, setProjectsClass] = useState()
 
   const handleProjectLayout = () => {
-    const width = projectsRef.current.getBoundingClientRect().width
-    const height = projectsRef.current.getBoundingClientRect().height
-    const projectsLayout = getProjectsLayout(width, height)
-    setProjectHeight(projectsLayout.height)
-    setProjectWidth(projectsLayout.width)
-    setProjectsClass(projectsLayout.addClass)
-    projectsRef.current.style.gridAutoFlow = projectsLayout.style.gridAutoFlow
-    projectsRef.current.style.gridTemplateColumns = projectsLayout.style.gridTemplateColumns
-    projectsRef.current.style.overflow = projectsLayout.style.overflow
+    const projectsLayout = () => {
+      const width = projectsRef.current.getBoundingClientRect().width
+      const height = projectsRef.current.getBoundingClientRect().height
+      const projectsLayout = getProjectsLayout(width, height)
+      setProjectHeight(projectsLayout.height)
+      setProjectWidth(projectsLayout.width)
+      setProjectsClass(projectsLayout.addClass)
+      projectsRef.current.style.gridAutoFlow = projectsLayout.style.gridAutoFlow
+      projectsRef.current.style.gridTemplateColumns = projectsLayout.style.gridTemplateColumns
+      projectsRef.current.style.overflow = projectsLayout.style.overflow
+    }
+
+    projectsLayout();
+    setTimeout(projectsLayout, 400);
+    setTimeout(projectsLayout, 800);
   }
 
   useEffect(() => {

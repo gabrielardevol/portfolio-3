@@ -3,6 +3,7 @@ import './style/scrollbar.css';
 import './style/Layout.scss';
 import './style/cursor.css';
 import './style/skelleton.css';
+import './style/fold-unfold.css';
 
 import Card from './components/Card.js';
 import Logo from './components/Logo.js';
@@ -35,7 +36,7 @@ function App() {
   };
 
   const stackRef = useRef()
-  const contactRef = useRef()
+  // const contactRef = useRef()
   const aboutMeRef = useRef()
   const layoutRef = useRef()
   const logoRef = useRef()
@@ -43,30 +44,31 @@ function App() {
 
   const [superLayout, setSuperLayout] = useState("hide-second-layout")
   const [layoutClass, setLayoutClass] = useState("gtc-101 gtr-101")
-  const [layoutClass2, setLayoutClass2] = useState("layout-75")
   const [project, setProject] = useState("pigs")
   const [logoSize, setLogo] = useState("")
-
+  const [foldUnfold, setFoldUnfold] = useState("fold")
   useEffect(() => {
-    setLayoutClass2("layout-75")
+
 
     // logoRef.classList.add("medium-logo")
   }, []);
 
   const resizeLayout = (e) => {
     if(e.target.classList.contains("toggle") == false){
-      let layoutGridTemplate = getLayout(e.currentTarget.dataset.index)
-      setLayoutClass(layoutGridTemplate)
-      setLogo(resizeLogo(layoutClass))
+      if (e.target.classList.contains("logo") && layoutClass == "gtc-101 gtr-101"){}else{
+      const handleLayout = () => {
+        let layoutGridTemplate = getLayout(e.currentTarget.dataset.index)
+        setLayoutClass(layoutGridTemplate)
+        setLogo(resizeLogo(layoutClass))
+        console.log(layoutClass)
+      }
+      handleLayout(e)
     }
-  }
+  }}
 
   const unfoldSecondLayout = (e) => {
-    console.log(secondLayoutRef.current)
-    // secondLayoutRef.current.style.width = "50vw"
-    secondLayoutRef.current.classList.add("unfold")
-    secondLayoutRef.current.classList.remove("fold")
-
+    setFoldUnfold("unfold")
+    secondLayoutRef.current.classList.add("border")
 
   //   document.querySelector("#second-layout").style.border = "1px solid black"
   //   document.querySelector("#second-layout").style.marginRight = "0.8em"
@@ -78,8 +80,11 @@ function App() {
   //   setProject(e.currentTarget.id)
   }
   const hideSecondLayout = () => {
-    secondLayoutRef.current.classList.add("fold")
-    secondLayoutRef.current.classList.remove("unfold")
+    // console.log("hide second layout")
+    setFoldUnfold("fold")
+    secondLayoutRef.current.classList.remove("border")
+
+
 
 
     // secondLayoutRef.current.style.width = "0vw"
@@ -88,7 +93,6 @@ function App() {
   //   setLayoutClass("gtc-101 gtr-101")
   //   setSuperLayout("hide-second-layout")
   //   setTimeout(() => {
-  //     setLayoutClass2("layout-75")
   //     document.querySelector("#second-layout").style.border = ""
   //     document.querySelector("#second-layout").style.marginRight = "0px"
   //   }, 800);
@@ -102,7 +106,7 @@ function App() {
   return (
     <>
         {/* <div id="super-layout" className={props.superLayout } > */}
-        <div id="layout" className={layoutClass}>
+        <div ref={layoutRef} id="layout" className={layoutClass + " " + foldUnfold }>
       {/* <Layout ref={layoutRef} layoutClass={layoutClass + " " + layoutClass2} superLayout={superLayout} hideSecondLayout={hideSecondLayout}> */}
         <div id="languages" style={{gridArea: "languages"}} >
           <button onClick={() => handleLanguageChange('en')}>ENG</button>
@@ -121,10 +125,10 @@ function App() {
           <Projects unfoldSecondLayout={unfoldSecondLayout} />
         </Card>
         <Card index={3} section={"contact"}resizeLayoutGrid={resizeLayout}  >
-          <Contact ref={contactRef} />
+          <Contact />
         </Card>
       {/* </Layout> */}
-      <SecondLayout ref={secondLayoutRef} project={project} hideSecondLayout={hideSecondLayout}/>
+      <SecondLayout foldUnfold={foldUnfold} ref={secondLayoutRef} project={project} hideSecondLayout={hideSecondLayout}/>
       </div>
     </>
   );

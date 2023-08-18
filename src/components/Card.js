@@ -20,26 +20,26 @@ const Card =  (props) => {
   const [cardClass, setCardClass] = useState(props.defaultCardClass)
   // const projectsRef = useRef()
   // const stackRef = useRef()
-  // const contactRef = useRef()
   // const aboutMeRef = useRef()
   const [skelletonState, setSkelleton] = useState("non-skelleton") // CANVIAR A "skelleton"
 
   // const [projectHeight, setProjectHeight] = useState()
   // const [projectWidth, setProjectWidth] = useState()
 
-  // const [contactHeight, setContactHeight] = useState()
-  // const [contactWidth, setContactWidth] = useState()
-  // const [contactClass, setContactClass] = useState("horizontal")
 
 
   const setClassToCards = () => {
     const cardSizes = cardRef.current.getBoundingClientRect();
     const newCardClass = getCardClass(cardSizes);
     setCardClass(newCardClass);
+
+
   }
 
   const handleLayout = () => {
     setClassToCards()
+    setTimeout(setClassToCards, 400);
+    setTimeout(setClassToCards, 800);
   }
 
   // const handleStackLayout = () => {

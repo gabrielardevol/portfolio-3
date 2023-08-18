@@ -1,0 +1,43 @@
+@media screen and (min-width: 700px) and (orientation: landscape) {
+  .fold > #second-layout{
+    width: 0vw;
+  }
+  .unfold  > #second-layout {
+    width: 50vw;
+  }
+  .fold {width: 75vw}
+  .unfold {width: 100vw}
+}
+
+@media screen and (orientation: portrait) {
+  .fold > #second-layout{
+    height: 0vh;
+  }
+  .unfold  > #second-layout {
+    height: 50vh;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #second-layout {
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    background: white;
+  }
+  .unfold > #second-layout {
+    height: 100vh
+  }
+
+  .unfold #img-container {
+    position: relative;
+ display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%
+  }
+  .unfold #txt-container {
+    height: 50%;
+    background: white
+  }
+}
