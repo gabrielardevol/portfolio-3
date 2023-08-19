@@ -8,6 +8,7 @@ import './style/color/aboutMe.scss';
 import './style/color/projects.scss';
 import './style/color/stack.scss';
 import './style/color/contact.scss';
+import './style/color/dark.scss';
 
 
 import Card from './components/Card.js';

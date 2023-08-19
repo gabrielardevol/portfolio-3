@@ -28,7 +28,9 @@
     /* rotate: 180deg; */
     }
   .horizontal-top >  div:nth-child(2) {
-    border-top: 1px solid;
+    /* border-top: 1px solid; */
+    border-top-width: 1px;
+    border-top-style: solid;
   }
   .vertical-left > div:nth-child(2),
   .horizontal-left > div:nth-child(2) {

@@ -46,8 +46,8 @@ const SecondLayout = React.forwardRef((props, ref) => {
         <img id="second-layout-image" ref={imgRef} data-index={imageIndex} src={images[imageIndex]}></img>
       </div>
       <div id="txt-container" >
-        <div>
-          <h2>{t('projects.'+project+'.title')}</h2>
+        <div >
+          <h2 id="title-container">{t('projects.'+project+'.title')}</h2>
           <div>
             <ul id="project-links">
             {Object.keys(projects[project].links).map((linkKey) => (
