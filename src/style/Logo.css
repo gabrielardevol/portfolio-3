@@ -1,22 +1,43 @@
-.logo-chara {/* DEUTE TÈCNIC */
+/* Base Styles */
+.logo-chara {
   transition: transform 4s ease;
   margin: auto;
-  border: 1px solid black;
-  width: clamp(15px, 3vw, 100px); height: clamp(15px, 3vw, 100px);
-  border-radius: 3em; background-color: black; color: white;
-  display: flex; justify-content: center; align-items: center;
-  font-size:larger
-}
-#webdev {
-  text-align: center; background: black; color: white; border-radius: 5em; margin-top: 0.4em
+  /* border: 1px solid black; */
+  width: clamp(15px, 3vw, 100px);
+  height: clamp(15px, 3vw, 100px);
+  border-radius: 3em;
+  background-color: BLACK;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: larger;
+  font-weight: 700;
+  color: white
 }
 
+#webdev {
+  text-align: center;
+  background: black;
+  color: white;
+  border-radius: 5em;
+  margin-top: 0.4em;
+}
+
+/* Media Queries */
 @media only screen and (min-width: 480px) {
-  .medium-logo {width: 18vw}
-  .smaller-logo {width: 12vw}
+  .medium-logo {
+    width: 18vw;
+  }
+
+  .smaller-logo {
+    width: 12vw;
+  }
+
   #logo {
     transition: all 0.8s ease 0s;
   }
+
   .logo-grid {
     display: grid;
     grid-template-columns: repeat(4, 3vw);
@@ -28,18 +49,19 @@
   .logo-grid {
     display: flex;
   }
-  .logo-chara { /* DEUTE TÈCNIC */
-    margin: auto;
-    border-radius: 3em; background-color: black; color: white;
-    display: flex; justify-content: center; align-items: center;
-    font-size:larger;
-    width: clamp(38px, calc(100vw/7), 100px); height: clamp(38px, calc(100vw/7), 100px)
+
+  .logo-chara {
+    width: clamp(38px, calc(100vw / 7), 100px);
+    height: clamp(38px, calc(100vw / 7), 100px);
   }
+
   #logo > div:first-child > div:not(.logo-chara) {
-    display: none
+    display: none;
   }
 }
 
 @media (max-width: 800px) and (max-height: 400px) {
-  #webdev{display: none}
+  #webdev {
+    display: none;
+  }
 }

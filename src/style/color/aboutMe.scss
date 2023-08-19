@@ -1,0 +1,39 @@
+$color: lightcoral;
+$color2: pink;
+.can-toggle.demo-rebrand-2 label .can-toggle__switch {
+  background: $color;
+}
+div[data-index="aboutMe"] h2 {
+  color: $color
+}
+
+div[data-index="aboutMe"] span {
+  color: $color
+}
+
+div[data-index="aboutMe"] > div:first-child {
+  // border-color: $color;
+}
+
+div[data-index="aboutMe"] {
+  border: 1px solid $color
+}
+
+div[data-index="aboutMe"].skelleton {
+  background: rgb(255, 226, 226)
+}
+#about-me::-webkit-scrollbar-track {
+  background: $color
+}
+#about-me::-webkit-scrollbar-thumb {
+  border-left: 1px solid $color;
+}
+
+#about-me {
+  // background: $color;
+  border-color: $color;
+}
+
+.can-toggle {
+  color: $color
+}

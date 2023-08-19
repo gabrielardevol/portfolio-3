@@ -27,6 +27,8 @@ const Projects = React.forwardRef((props, ref) => {
     projectsLayout();
     setTimeout(projectsLayout, 400);
     setTimeout(projectsLayout, 800);
+    setTimeout(projectsLayout, 1000);
+
   }
 
   useEffect(() => {
@@ -36,15 +38,15 @@ const Projects = React.forwardRef((props, ref) => {
   }, []);
   return (
     <>
-      <div  className={"projects " + projectsClass}>
-        <div id="projects-container" ref={projectsRef}>
+      {/* <div  > */}
+        <div id="projects-container" ref={projectsRef} className={"projects " + projectsClass}>
         {Object.keys(projects).map((projectKey, index) => (
               <Project title={projects[projectKey].title} key={index} unfoldSecondLayout={props.unfoldSecondLayout} index={index}
               projectHeight={projectHeight} projectWidth={projectWidth}
               />
             ))}
         </div>
-      </div>
+      {/* </div> */}
     </>
   );
 });

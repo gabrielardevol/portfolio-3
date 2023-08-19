@@ -13,15 +13,15 @@ import getStackLayout from '../functions/getStackLayout.js'
 import { useTranslation } from 'react-i18next';
 import i18n from '../i18n.js'; // no esborrar
 
-const Card =  (props) => {
+const Card = React.forwardRef((props, ref) => {
   const { t } = useTranslation();
-  const cardRef = useRef()
+  const cardRef = ref
   const titleRef = useRef() // is it being used?
   const [cardClass, setCardClass] = useState(props.defaultCardClass)
+  const [skelletonClass, setSkelletonClass] = useState("")
   // const projectsRef = useRef()
   // const stackRef = useRef()
   // const aboutMeRef = useRef()
-  const [skelletonState, setSkelleton] = useState("non-skelleton") // CANVIAR A "skelleton"
 
   // const [projectHeight, setProjectHeight] = useState()
   // const [projectWidth, setProjectWidth] = useState()
@@ -37,9 +37,15 @@ const Card =  (props) => {
   }
 
   const handleLayout = () => {
-    setClassToCards()
-    setTimeout(setClassToCards, 400);
+    // setClassToCards()
+    // setTimeout(setClassToCards, 400);
     setTimeout(setClassToCards, 800);
+
+    //   setSkelletonClass("skelleton")
+    // setTimeout(() => {
+    //   setSkelletonClass("non-skelleton")
+    // }, 900);
+    // }
   }
 
   // const handleStackLayout = () => {
@@ -115,9 +121,9 @@ const Card =  (props) => {
 
 
   return (
-    <div data-index={props.section} onClick={(e) => props.resizeLayoutGrid(e)} style={{gridArea: "card-"+props.index}} ref={cardRef} className={"card " + cardClass + " " + skelletonState}>
+    <div data-index={props.section} onClick={(e) => props.resizeLayoutGrid(e)} style={{gridArea: props.section}} ref={cardRef} className={"card " + cardClass + " " + skelletonClass}>
       <div>
-        <h2 ref={titleRef} style={{whiteSpace: "nowrap", rotation: "180deg"}} className="padding">
+        <h2 ref={titleRef} style={{whiteSpace: "nowrap", rotation: "180deg"}} className="padding ">
           {props.title}
           {t(props.section + '.title')}
         </h2>
@@ -125,6 +131,6 @@ const Card =  (props) => {
       {props.children}
         </div>
   )
-}
+})
 
 export default Card

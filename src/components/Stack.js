@@ -15,14 +15,22 @@ const Stack = React.forwardRef((props, ref) => {
   const stackRef = useRef()
 
   const handleStackLayout = () => {
-    if (props.index === 2) {
-      const sLayout = getStackLayout(stackRef.current.getBoundingClientRect().width, stackRef.current.getBoundingClientRect().height)
-      stackRef.current.style.flexFlow = sLayout.flexFlow
-    }
+    const sLayout = getStackLayout(stackRef.current.getBoundingClientRect().width, stackRef.current.getBoundingClientRect().height)
+    stackRef.current.style.flexFlow = sLayout.flexFlow
+
   }
+
+  const handleLayout = () => {
+    handleStackLayout()
+    setTimeout(handleStackLayout, 400);
+    setTimeout(handleStackLayout, 800);
+
+  }
+
+
   useEffect(() => {
-    window.addEventListener('click', handleStackLayout);
-    window.addEventListener('resize', handleStackLayout)
+    window.addEventListener('click', handleLayout);
+    window.addEventListener('resize', handleLayout)
   }, []);
   return (
     <>

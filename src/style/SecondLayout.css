@@ -25,6 +25,16 @@
   max-width: 100%; height: fit-content;
   margin: auto
 }
+
+@media screen and (orientation: landscape) and (min-width: 700px){
+  .unfold > #second-layout {
+    margin-right: 0.8em;
+  }
+  .fold > #second-layout {
+    margin-right: 0em;
+  }
+
+}
 @media screen and (orientation: portrait) {
   #second-layout {
     height: 50vh

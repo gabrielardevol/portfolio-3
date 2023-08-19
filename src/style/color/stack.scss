@@ -1,0 +1,26 @@
+$color: mediumturquoise;
+// $color2: pink;
+
+
+div[data-index="stack"] {
+  // background: $color;
+  border-color: $color;
+}
+
+div[data-index="stack"] h2 {
+  color: $color
+}
+
+.stack th, td{
+  border-bottom: 1px solid $color;
+}
+
+.stack {
+  background: $color;
+  border-color: $color;
+  border-top-color: $color
+}
+
+div[data-index="stack"].skelleton {
+  background: rgb(226, 255, 241)
+}

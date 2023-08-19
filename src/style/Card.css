@@ -1,6 +1,7 @@
 
 .card {
-  border: 1px solid black;
+  border-style: solid;
+  border-width: 1px;
   border-radius: 0.5em;
 
 }
@@ -27,11 +28,12 @@
     /* rotate: 180deg; */
     }
   .horizontal-top >  div:nth-child(2) {
-    border-top: 1px solid black;
+    border-top: 1px solid;
   }
   .vertical-left > div:nth-child(2),
   .horizontal-left > div:nth-child(2) {
-    border-left: 1px solid black;
+    border-left-width: 1px;
+    border-left-style: solid;
   }
 
 }

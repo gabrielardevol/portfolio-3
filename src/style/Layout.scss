@@ -21,9 +21,41 @@ $seconds: 0.8s;
   // height: 100vh;
   height: 100vh;
   gap: 0.6em;
-  padding: 0.8em;
+  padding: 0.8em 0em 0.8em 0.8em;
 
 }
+
+@media screen and (orientation: landscape) and (min-width: 900px) {
+  .unfold.gtc-101 { grid-template-columns: 1fr 0fr 1fr 0fr; }
+  .unfold.gtc-001 { grid-template-columns: 0.09fr 0fr 1fr 0fr; }
+  .unfold.gtc-100 { grid-template-columns: 1fr 0fr 0.09fr 0fr; }
+  .unfold.gtr-101 { grid-template-rows: 0fr 1fr 0fr 1fr; }
+  .unfold.gtr-001 { grid-template-rows: 0fr 0.12fr 0fr 1fr; }
+  .unfold.gtr-100 { grid-template-rows: 0fr 1fr 0fr 0.12fr; }
+
+  .fold.gtc-101 { grid-template-columns: 1fr 0fr 1fr 0fr; }
+  .fold.gtc-001 { grid-template-columns: 0.05fr 0fr 1fr 0fr; }
+  .fold.gtc-100 { grid-template-columns: 1fr 0fr 0.05fr 0fr; }
+  .fold.gtr-101 { grid-template-rows: 0fr 1fr 0fr 1fr; }
+  .fold.gtr-001 { grid-template-rows: 0fr 0.12fr 0fr 1fr; }
+  .fold.gtr-100 { grid-template-rows: 0fr 1fr 0fr 0.12fr; }
+}
+
+// @media screen and (orientation: landscape) and (min-width: 600px) {
+//   .unfold.gtc-101 { grid-template-columns: 1fr 0fr 1fr 0fr; }
+//   .unfold.gtc-001 { grid-template-columns: 0.09fr 0fr 1fr 0fr; }
+//   .unfold.gtc-100 { grid-template-columns: 1fr 0fr 0.09fr 0fr; }
+//   .unfold.gtr-101 { grid-template-rows: 0fr 1fr 0fr 1fr; }
+//   .unfold.gtr-001 { grid-template-rows: 0fr 0.12fr 0fr 1fr; }
+//   .unfold.gtr-100 { grid-template-rows: 0fr 1fr 0fr 0.12fr; }
+
+//   .fold.gtc-101 { grid-template-columns: 1fr 0fr 1fr 0fr; }
+//   .fold.gtc-001 { grid-template-columns: 0.05fr 0fr 1fr 0fr; }
+//   .fold.gtc-100 { grid-template-columns: 1fr 0fr 0.05fr 0fr; }
+//   .fold.gtr-101 { grid-template-rows: 0fr 1fr 0fr 1fr; }
+//   .fold.gtr-001 { grid-template-rows: 0fr 0.12fr 0fr 1fr; }
+//   .fold.gtr-100 { grid-template-rows: 0fr 1fr 0fr 0.12fr; }
+// }
 
 
 
@@ -33,19 +65,13 @@ $seconds: 0.8s;
     display: grid;
     grid-template-areas:
     "languages languages languages second-layout"
-    "card-1 card-1 card-2 second-layout"
-    "card-3 logo card-2 second-layout"
-    "card-3 card-4 card-4 second-layout";
+    "aboutMe aboutMe stack second-layout"
+    "contact logo stack second-layout"
+    "contact projects projects second-layout";
   }
 
   // #super-layout { display: grid; }
-  $fr: 2.5em;
-  .gtc-101 { grid-template-columns: 1fr 0fr 1fr 0fr; }
-  .gtc-001 { grid-template-columns: 0.1fr 0fr 1fr 0fr; }
-  .gtc-100 { grid-template-columns: 1fr 0fr 0.1fr 0fr; }
-  .gtr-101 { grid-template-rows: 0fr 1fr 0fr 1fr; }
-  .gtr-001 { grid-template-rows: 0fr 0.1fr 0fr 1fr; }
-  .gtr-100 { grid-template-rows: 0fr 1fr 0fr 0.1fr; }
+
 
   #layout {
       margin-block-start: auto;
@@ -162,7 +188,7 @@ $seconds: 0.8s;
 }
 
 #languages {
-  height: 0.8em
+  height: 1em
 }
 
 // #second-layout button {

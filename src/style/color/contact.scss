@@ -1,0 +1,39 @@
+$color: khaki;
+// $color2: pink;
+
+
+div[data-index="contact"] {
+  // background: $color;
+  border-color: $color;
+}
+
+div[data-index="contact"] h2 {
+  color: $color
+}
+
+
+.contact {
+  background: $color;
+  border-color: $color
+}
+
+div[data-index="contact"].skelleton {
+  background: rgb(255, 251, 226)
+}
+
+#contact-links {
+  background: $color
+}
+
+#contact {
+  border-color: $color
+}
+
+
+// #contact-list {
+//   border-bottom-color: $color
+// }
+
+#contact-list li:not(:last-child) {
+  border-bottom-color: $color
+}

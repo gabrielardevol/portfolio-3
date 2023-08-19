@@ -1,5 +1,4 @@
 const resizeLogo = (layoutGridTemplate) => {
-  console.log(layoutGridTemplate)
   if(layoutGridTemplate === "gtc-101 gtr-101") {
     return "smaller-logo"
   }

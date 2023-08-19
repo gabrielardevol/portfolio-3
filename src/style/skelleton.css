@@ -18,3 +18,11 @@
   opacity: 1;
   transition: opacity 0.2s;
 }
+
+.skelleton > *  {
+  opacity: 0
+}
+
+.skelleton.card {
+  border: 1px solid transparent
+}

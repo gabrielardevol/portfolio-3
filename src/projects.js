@@ -1,4 +1,9 @@
 import React from 'react';
+import celler from "./images/thumbnails/celler.png"
+import esclat from "./images/thumbnails/esclat.png"
+import orbits from "./images/thumbnails/orbits.gif"
+import pigs from "./images/thumbnails/pigs.gif"
+import porfolio from "./images/thumbnails/porfoli.png"
 
 
 function importAll(r) {
@@ -17,6 +22,7 @@ const projects = {
       "web": "https://orbits-frontend.vercel.app/",
     },
     images: importAll(require.context(`./images/orbits`, false, /\.(png|PNG|JPE?G|GIF|jpe?g|svg|gif)$/)),
+    thumbnail: orbits
   },
   "porfolio": {
     title: "porfolio",
@@ -29,6 +35,7 @@ const projects = {
       "figma": "https://www.figma.com/file/ByAFpzhCYu5O2t5gyS99a2/portfolio---march-2023"
     },
     images: importAll(require.context(`./images/porfolio`, false, /\.(png|PNG|JPE?G|GIF|jpe?g|svg|gif)$/)),
+    thumbnail: porfolio
   },
   "esclat": {
     title: "esclat",
@@ -41,6 +48,7 @@ const projects = {
       "github": "https://github.com/gabrielardevol/esclat"
     },
     images: importAll(require.context(`./images/esclat`, false, /\.(png|PNG|JPE?G|GIF|jpe?g|svg|gif)$/)),
+    thumbnail: esclat
   },
   "celler": {
     title: "celler",
@@ -53,6 +61,7 @@ const projects = {
       "github": "https://github.com/gabrielardevol/celler-ardevol"
     },
     images: importAll(require.context(`./images/celler`, false, /\.(png|PNG|JPE?G|GIF|jpe?g|svg|gif)$/)),
+    thumbnail: celler
   },
   "pigs": {
     title: "pigs",
@@ -64,6 +73,7 @@ const projects = {
       "gitHub": "https://github.com/gabrielardevol/els-tres-porquets"
     },
     images: importAll(require.context(`./images/pigs`, false, /\.(png|PNG|JPE?G|GIF|jpe?g|svg|gif)$/)),
+    thumbnail: pigs
   },
 }
 

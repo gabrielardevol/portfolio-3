@@ -3,24 +3,25 @@ import { useTranslation } from 'react-i18next';
 import projects from '../projects.js';
 import React from 'react';
 import {useState, useRef, useEffect} from 'react';
-import getProjectsLayout from '../functions/getProjectsLayout.js'
+import getProjectsLayout from '../functions/getProjectsLayout.js';
+
 
 const Project = React.forwardRef((props, ref) => {
   const { t } = useTranslation();
-
   const projectTitle = props.title;
   const hashtags = projects[props.title].hashtags
-
   const projectRef = useRef()
 
   return (
     <div ref={projectRef} onClick={props.unfoldSecondLayout} id={projectTitle} className="project prj" style={{height: props.projectHeight, width: props.projectWidth}}>
 
       <div style={{  }} className="prj">
-        <div className="prj" style={{height: "100%", position: "relative"}}>
+        <div className="prj" style={{height: "100%", position: "relative", overflow: "hidden"}}>
+          {/* <img src={"../images/thumbnails/" + projectTitle}></img> */}
+          <img alt="" src={projects[projectTitle].thumbnail} style={{width: "100%", opacity: 0.8}}></img>
           <div className={"prj p-hashtags"}>
             {hashtags.map((project, index) => (
-            <div key={index} className="prj" style={{background: "black", color: "white", borderRadius: "3em", fontSize: "0.8em", padding: "0em 0.9em"}}>{project}</div>
+            <div key={index} className="prj">{project}</div>
             ))}
           </div>
         </div>

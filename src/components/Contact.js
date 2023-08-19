@@ -7,13 +7,15 @@ import i18n from '../i18n.js'; // no esborrar
 
 
 const Contact = React.forwardRef((props, ref) => {
+
   const { t } = useTranslation();
-  // const contactRef = useRef()
+  const contactRef = useRef()
   // const [contactHeight, setContactHeight] = useState()
   // const [contactWidth, setContactWidth] = useState()
   // const [contactClass, setContactClass] = useState("horizontal")
 
-  // const handleContactLayout = () => {
+  const handleContactLayout = () => {
+
   //   if (props.index === 3) {
   //     const width = contactRef.current.getBoundingClientRect().width
   //     const height = contactRef.current.getBoundingClientRect().height
@@ -23,16 +25,17 @@ const Contact = React.forwardRef((props, ref) => {
   //       if (width < 160 ){return "vertical-contact"} else if ( height < 250){return "horizontal-contact hide-pfp"}else {return "horizontal-contact"}
   //     })
   //   }
-  // }
+  }
 
-  // useEffect(() => {
-  //   window.addEventListener('click', handleContactLayout);
-  //   window.addEventListener('resize', handleContactLayout)
-  // }, []);
+  useEffect(() => {
+    window.addEventListener('click', handleContactLayout);
+    window.addEventListener('resize', handleContactLayout)
+  }, []);
   return (
     <>
       <div id="contact"
-      // className={contactClass} ref={contactRef}
+      // className={contactClass}
+      ref={contactRef}
        >
         <div id="pfp-container">
           <div id="pfp" style={{backgroundImage: `url(${process.env.PUBLIC_URL}/pfp.png)`,}}>

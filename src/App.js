@@ -4,6 +4,11 @@ import './style/Layout.scss';
 import './style/cursor.css';
 import './style/skelleton.css';
 import './style/fold-unfold.css';
+import './style/color/aboutMe.scss';
+import './style/color/projects.scss';
+import './style/color/stack.scss';
+import './style/color/contact.scss';
+
 
 import Card from './components/Card.js';
 import Logo from './components/Logo.js';
@@ -24,7 +29,6 @@ import { useTranslation } from 'react-i18next';
 import projects from './projects.js';
 
 
-
 function App() {
 
   const { i18n } = useTranslation();
@@ -36,8 +40,9 @@ function App() {
   };
 
   const stackRef = useRef()
-  // const contactRef = useRef()
+  const contactRef = useRef()
   const aboutMeRef = useRef()
+  const projectsRef = useRef()
   const layoutRef = useRef()
   const logoRef = useRef()
   const secondLayoutRef = useRef()
@@ -60,7 +65,6 @@ function App() {
         let layoutGridTemplate = getLayout(e.currentTarget.dataset.index)
         setLayoutClass(layoutGridTemplate)
         setLogo(resizeLogo(layoutClass))
-        console.log(layoutClass)
       }
       handleLayout(e)
     }
@@ -69,6 +73,15 @@ function App() {
   const unfoldSecondLayout = (e) => {
     setFoldUnfold("unfold")
     secondLayoutRef.current.classList.add("border")
+    setProject(e.currentTarget.id)
+    secondLayoutRef.current.classList.add("skelleton")
+    setTimeout(() => {
+      secondLayoutRef.current.classList.remove("skelleton")
+      secondLayoutRef.current.classList.add("non-skelleton")
+
+    }, 900);
+
+
 
   //   document.querySelector("#second-layout").style.border = "1px solid black"
   //   document.querySelector("#second-layout").style.marginRight = "0.8em"
@@ -79,14 +92,17 @@ function App() {
   //   document.querySelector("#logo").classList.add("smaller-logo")
   //   setProject(e.currentTarget.id)
   }
+
   const hideSecondLayout = () => {
-    // console.log("hide second layout")
     setFoldUnfold("fold")
     secondLayoutRef.current.classList.remove("border")
+    secondLayoutRef.current.classList.add("skelleton")
+    setTimeout(() => {
+      secondLayoutRef.current.classList.remove("skelleton")
+      secondLayoutRef.current.classList.add("non-skelleton")
+    }, 900);
 
-
-
-
+    skelletonSections()
     // secondLayoutRef.current.style.width = "0vw"
 
 
@@ -100,7 +116,35 @@ function App() {
   //   document.querySelector("#logo").classList.add("medium-logo")
 }
 
+  const skelletonSections = () => {
+    const sections = [
+      projectsRef.current,
+      stackRef.current,
+      aboutMeRef.current,
+      contactRef.current
+    ];
 
+    sections.forEach(section => {
+      section.classList.add("skelleton");
+      section.classList.remove("non-skelleton");
+    });
+
+    setTimeout(() => {
+      sections.forEach(section => {
+        section.classList.add("non-skelleton");
+        section.classList.remove("skelleton");
+      });
+    }, 900);
+  }
+
+  const handleSectionsClick = (e) => {
+    skelletonSections()
+  }
+
+  useEffect(() => {
+    window.addEventListener('click', (e) => handleSectionsClick(e));
+    window.addEventListener('resize', (e) => handleSectionsClick(e))
+  }, []);
 
 
   return (
@@ -115,16 +159,16 @@ function App() {
           <button onClick={() => handleLanguageChange('ja')}>JA</button>
         </div>
         <Logo ref={logoRef} logoSize={logoSize} resizeLayoutGrid={resizeLayout} data-index={0}/>
-        <Card index={1} section={"aboutMe"}resizeLayoutGrid={resizeLayout}  >
-          <AboutMe ref={aboutMeRef} />
+        <Card ref={aboutMeRef} section={"aboutMe"}resizeLayoutGrid={resizeLayout}  >
+          <AboutMe  />
         </Card>
-        <Card index={2} section={"stack"}resizeLayoutGrid={resizeLayout} >
-          <Stack ref={stackRef} />
+        <Card ref={stackRef} section={"stack"}resizeLayoutGrid={resizeLayout} >
+          <Stack />
         </Card>
-        <Card index={4} section={"projects"} resizeLayoutGrid={resizeLayout} unfoldSecondLayout={unfoldSecondLayout} >
+        <Card ref={projectsRef} section={"projects"} resizeLayoutGrid={resizeLayout} unfoldSecondLayout={unfoldSecondLayout} >
           <Projects unfoldSecondLayout={unfoldSecondLayout} />
         </Card>
-        <Card index={3} section={"contact"}resizeLayoutGrid={resizeLayout}  >
+        <Card ref={contactRef} section={"contact"}resizeLayoutGrid={resizeLayout}  >
           <Contact />
         </Card>
       {/* </Layout> */}

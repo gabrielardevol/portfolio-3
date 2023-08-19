@@ -1,0 +1,40 @@
+$color: cornflowerblue;
+
+div[data-index="projects"].skelleton {
+  background: rgb(226, 231, 255)
+}
+div[data-index="projects"] h2 {
+  color: $color
+}
+
+div[data-index="projects"] > * {
+  // background: $color;
+  border-color: $color;
+}
+
+div[data-index="projects"] {
+  border-color: $color
+}
+
+#projects-container {
+  background: $color
+}
+
+.project > div:first-child {
+  background: $color;
+}
+
+
+.p-hashtags > * {
+  background: $color;
+
+}
+
+#projects-container::-webkit-scrollbar-track {
+  background: $color
+}
+#projects-container::-webkit-scrollbar-thumb {
+  border-left: 1px solid $color;
+  border-top-color: $color;
+
+}

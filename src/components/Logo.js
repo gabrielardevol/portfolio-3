@@ -11,7 +11,7 @@ const Chara = (props) => {
     if(logoRef.current.style.transform == "" || logoRef.current.style.transform == "rotateY(0deg)") {logoRef.current.style.transform = "rotateY(180deg)"};
 
     setTimeout(() =>  {
-      const colors = ['lavender', "white", "black"];
+      const colors = ['lightcoral', "mediumturquoise",  "khaki", "cornflowerblue"];
       const randomIndex = Math.floor(Math.random() * colors.length);
       logoRef.current.style.background =  colors[randomIndex]
     }, transition * 200);
@@ -30,9 +30,9 @@ const Chara = (props) => {
 }
 
 const Logo = React.forwardRef((props, ref) => {
-  const string = "gabriel ";
+  const string = "GABRIEL ";
   const charArray = string.split('');
-  const string2 = "ardè vol";
+  const string2 = "ARDÈ VOL";
   const charArray2 = string2.split('');
   return (
     <div id="logo" data-index="logo" className={" logo "+props.logoSize} style={{gridArea: "logo"}} onClick={props.resizeLayoutGrid}>

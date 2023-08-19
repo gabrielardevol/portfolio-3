@@ -9,7 +9,7 @@ import i18n from '../i18n.js'; // no esborrar
 const AboutMe = React.forwardRef((props, ref) => {
   const [longBioStyle, setLongBio] = useState({display: "none"})
   const handleSwitch = (e) => {
-   setLongBio( e.currentTarget.checked ? {display: "inline", color: "lavender"} : {display: "none"} )
+   setLongBio( e.currentTarget.checked ? {display: "inline"} : {display: "none"} )
   }
   const { t } = useTranslation();
 
