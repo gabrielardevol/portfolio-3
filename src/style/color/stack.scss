@@ -30,3 +30,8 @@ div[data-index="stack"].skelleton {
 .stack::-webkit-scrollbar-thumb {
   border-left: 1px solid $color;
 }
+
+.stack *::selection {
+  background-color: $color;
+  color: white
+}

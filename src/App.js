@@ -10,7 +10,6 @@ import './style/color/stack.scss';
 import './style/color/contact.scss';
 import './style/color/dark.scss';
 
-
 import Card from './components/Card.js';
 import Logo from './components/Logo.js';
 import Layout from './components/Layout.js';

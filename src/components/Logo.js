@@ -26,7 +26,7 @@ const Chara = (props) => {
       };
     }, []);
 
-  if(props.char !== " ") {return (<div className="logo-chara logo" ref={logoRef} onClick={animation}>{props.char}</div>)} else {return (<div className="logo"></div>)}
+  if(props.char !== " ") {return (<div className="chara-container"><div className="logo-chara logo" ref={logoRef} onClick={animation}>{props.char}</div></div>)} else {return (<div className="logo"></div>)}
 }
 
 const Logo = React.forwardRef((props, ref) => {

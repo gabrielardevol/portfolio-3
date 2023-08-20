@@ -1,11 +1,16 @@
-   -mobile about-me appears larger than intended
+SEBAS
+  toggle - curiosidades
+  disseny -> profundidad (sobras paralelas)
+  cards -> desplegar una a la vegada
+  limon con gengibre y miel
+
+
 
   -foto/video contact
   -fix project card , how?
 
   -clicking logo when it's centered should'nt trigger skelleton
-
-  -create classes for secondlayout img
+  -skelleton functions should be placed on App.js
 
   -projects vertical
   -mobile horizontal: second-layout appear per sobre del first, com quan en vertical
@@ -14,6 +19,8 @@
   -ipad vertical: issues amb .projects
 
 DONE
+  -create classes for secondlayout img
+
   -clicking toggle shouldnt trigger layout changes
   -image index should go back to 0 when switching projects
   -clean console

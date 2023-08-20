@@ -12,3 +12,7 @@ $color2: #632f2f;
   background: $color2;
   color: white;
 }
+
+.chara-container, .card{
+  filter: drop-shadow(0.25em 0.2em 0 $color);
+}
