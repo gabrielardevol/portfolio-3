@@ -33,7 +33,8 @@ const Projects = React.forwardRef((props, ref) => {
 
   useEffect(() => {
     window.addEventListener('click', handleProjectLayout);
-    window.addEventListener('resize', handleProjectLayout)
+    window.addEventListener('resize', handleProjectLayout);
+    handleProjectLayout()
 
   }, []);
   return (

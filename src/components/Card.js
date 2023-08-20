@@ -18,7 +18,7 @@ const Card = React.forwardRef((props, ref) => {
   const cardRef = ref
   const titleRef = useRef() // is it being used?
   const [cardClass, setCardClass] = useState(props.defaultCardClass)
-  const [skelletonClass, setSkelletonClass] = useState("")
+  const [skelletonClass, setSkelletonClass] = useState("skelleton")
   // const projectsRef = useRef()
   // const stackRef = useRef()
   // const aboutMeRef = useRef()
@@ -74,38 +74,11 @@ const Card = React.forwardRef((props, ref) => {
   //   handleContactLayout();
   // }
 
-  // const skelletOn = () => {
-  //   if(window.innerWidth >= 480){
-  //     setSkelleton("skelleton");
-  //     handleLayout()
-  //     document.querySelector("#second-layout").classList.remove("non-skelleton")
-  //     document.querySelector("#second-layout").classList.add("skelleton")
+  useEffect(() => {
+    handleLayout();
+    setSkelletonClass("non-skelleton");
 
-  //     setTimeout(() => {
-  //       handleLayout()
-  //     }, 700);
-
-  //     setTimeout(() => {
-  //       document.querySelector("#second-layout").classList.remove("skelleton")
-  //       document.querySelector("#second-layout").classList.add("non-skelleton")
-  //       setSkelleton("non-skelleton");
-  //       handleLayout()
-  //     }, 800);
-  //   }
-  // }
-  // const handleClick = (e) => {
-  //   if(e.target.classList.contains("skip-skelleton") == false && e.target.classList.contains("toggle") == false){
-  //     skelletOn()
-  //   }
-  // }
-
-  // const handleResize = () => {
-  //   skelletOn()
-  // };
-
-  // useEffect(() => {
-  //   handleResize();
-  // }, []);
+  }, []);
 
   useEffect(() => {
   //   window.addEventListener('resize', handleResize());

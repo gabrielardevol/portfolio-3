@@ -4,19 +4,14 @@ SEBAS
   cards -> desplegar una a la vegada
   limon con gengibre y miel
 
-  default logo colors in mobile
   fix logo in mobile
-
   -foto/video contact
-
   -clicking logo when it's centered should'nt trigger skelleton
   -skelleton functions should be placed on App.js
-
-  -projects vertical
   -mobile horizontal: second-layout appear per sobre del first, com quan en vertical
-
   -mobile horizontal: contacte - pfp
-  -ipad vertical: issues amb .projects
+  -skelleton shouldnt be trigered in mobile version
 
 DONE
   -fix project card , how?
+    default logo colors in mobile
