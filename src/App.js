@@ -1,6 +1,8 @@
 import './App.css';
 import './style/scrollbar.css';
 import './style/Layout.scss';
+import './style/SecondLayout.css';
+
 import './style/cursor.css';
 import './style/skelleton.css';
 import './style/fold-unfold.css';
@@ -12,7 +14,6 @@ import './style/color/dark.scss';
 
 import Card from './components/Card.js';
 import Logo from './components/Logo.js';
-import Layout from './components/Layout.js';
 import SecondLayout from './components/SecondLayout.js';
 
 import Projects from './components/Projects';
@@ -60,37 +61,41 @@ function App() {
 
   const resizeLayout = (e) => {
     if(e.target.classList.contains("toggle") == false){
-      if (e.target.classList.contains("logo") && layoutClass == "gtc-101 gtr-101"){}else{
-      const handleLayout = () => {
+      if (layoutRef.current.classList.contains("gtc-101") && layoutRef.current.classList.contains("gtr-101")){
         let layoutGridTemplate = getLayout(e.currentTarget.dataset.index)
         setLayoutClass(layoutGridTemplate)
-        setLogo(resizeLogo(layoutClass))
+        e.currentTarget.classList.add("current")
+        skelletonSections()
       }
-      handleLayout(e)
+      else {
+        e.currentTarget.classList.contains("current") == false && setLayoutClass("gtc-101 gtr-101")
+        e.currentTarget.classList.contains("current") == false && skelletonSections()
+      }
     }
-  }}
+      // if (e.target.classList.contains("logo") && layoutClass == "gtc-101 gtr-101"){}else{
+      // const handleLayout = () => {
+      //   let layoutGridTemplate = getLayout(e.currentTarget.dataset.index)
+      //   setLayoutClass(layoutGridTemplate)
+      //   setLogo(resizeLogo(layoutClass))
+      // }
+      // handleLayout(e)
+    // }
+  // }
+  }
 
   const unfoldSecondLayout = (e) => {
+    const project = e.currentTarget.id
     setFoldUnfold("unfold")
     secondLayoutRef.current.classList.add("border")
-    setProject(e.currentTarget.id)
+    setTimeout((e) => {
+      setProject(project)
+    }, 300);
+
     secondLayoutRef.current.classList.add("skelleton")
     setTimeout(() => {
       secondLayoutRef.current.classList.remove("skelleton")
       secondLayoutRef.current.classList.add("non-skelleton")
-
     }, 900);
-
-
-
-  //   document.querySelector("#second-layout").style.border = "1px solid black"
-  //   document.querySelector("#second-layout").style.marginRight = "0.8em"
-  //   setLayoutClass("gtc-101 gtr-101")
-  //   setSuperLayout("unfold-second-layout")
-  //   setLayoutClass2("")
-  //   document.querySelector("#logo").classList.remove("medium-logo")
-  //   document.querySelector("#logo").classList.add("smaller-logo")
-  //   setProject(e.currentTarget.id)
   }
 
   const hideSecondLayout = () => {
@@ -101,20 +106,8 @@ function App() {
       secondLayoutRef.current.classList.remove("skelleton")
       secondLayoutRef.current.classList.add("non-skelleton")
     }, 900);
-
     skelletonSections()
-    // secondLayoutRef.current.style.width = "0vw"
-
-
-  //   setLayoutClass("gtc-101 gtr-101")
-  //   setSuperLayout("hide-second-layout")
-  //   setTimeout(() => {
-  //     document.querySelector("#second-layout").style.border = ""
-  //     document.querySelector("#second-layout").style.marginRight = "0px"
-  //   }, 800);
-  //   document.querySelector("#logo").classList.remove("smaller-logo")
-  //   document.querySelector("#logo").classList.add("medium-logo")
-}
+  }
 
   const skelletonSections = () => {
     const sections = [
@@ -138,7 +131,7 @@ function App() {
   }
 
   const handleSectionsClick = (e) => {
-    skelletonSections()
+    // skelletonSections()
   }
 
   useEffect(() => {
@@ -158,17 +151,17 @@ function App() {
           <button onClick={() => handleLanguageChange('en')}>ENG</button>
           <button onClick={() => handleLanguageChange('cat')}>CAT</button>
         </div>
-        <Logo ref={logoRef} logoSize={logoSize} resizeLayoutGrid={resizeLayout} data-index={0}/>
-        <Card ref={aboutMeRef} section={"aboutMe"}resizeLayoutGrid={resizeLayout}  >
+        <Logo ref={logoRef} logoSize={logoSize} resizeLayout={resizeLayout} data-index={0}/>
+        <Card ref={aboutMeRef} section={"aboutMe"}resizeLayout={resizeLayout}  >
           <AboutMe  />
         </Card>
-        <Card ref={stackRef} section={"stack"}resizeLayoutGrid={resizeLayout} >
+        <Card ref={stackRef} section={"stack"}resizeLayout={resizeLayout} >
           <Stack />
         </Card>
-        <Card ref={projectsRef} section={"projects"} resizeLayoutGrid={resizeLayout} unfoldSecondLayout={unfoldSecondLayout} >
+        <Card ref={projectsRef} section={"projects"} resizeLayout={resizeLayout} unfoldSecondLayout={unfoldSecondLayout} >
           <Projects unfoldSecondLayout={unfoldSecondLayout} />
         </Card>
-        <Card ref={contactRef} section={"contact"}resizeLayoutGrid={resizeLayout}  >
+        <Card ref={contactRef} section={"contact"}resizeLayout={resizeLayout}  >
           <Contact />
         </Card>
       {/* </Layout> */}

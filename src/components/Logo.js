@@ -40,7 +40,7 @@ const Logo = React.forwardRef((props, ref) => {
   const string2 = "ARDÈ VOL";
   const charArray2 = string2.split('');
   return (
-    <div id="logo" data-index="logo" className={" logo "+props.logoSize} style={{gridArea: "logo"}} onClick={props.resizeLayoutGrid}>
+    <div id="logo" data-index="logo" className={" logo "+props.logoSize} style={{gridArea: "logo"}} >
       <div className="logo-grid logo" >
       {charArray.map((character, index) => <Chara key={index} char={character} />)}
       </div>

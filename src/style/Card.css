@@ -3,7 +3,8 @@
   border-style: solid;
   border-width: 1px;
   border-radius: 0.5em;
-  background: white
+  background: white;
+  min-width: 2.2em; min-height: 2.2em;
 }
 
 

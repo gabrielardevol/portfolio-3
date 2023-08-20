@@ -23,19 +23,16 @@ const Projects = React.forwardRef((props, ref) => {
       projectsRef.current.style.gridTemplateColumns = projectsLayout.style.gridTemplateColumns
       projectsRef.current.style.overflow = projectsLayout.style.overflow
     }
-
     projectsLayout();
     setTimeout(projectsLayout, 400);
     setTimeout(projectsLayout, 800);
     setTimeout(projectsLayout, 1000);
-
   }
 
   useEffect(() => {
     window.addEventListener('click', handleProjectLayout);
     window.addEventListener('resize', handleProjectLayout);
     handleProjectLayout()
-
   }, []);
   return (
     <>

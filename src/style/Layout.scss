@@ -27,18 +27,18 @@ $seconds: 0.8s;
 
 @media screen and (orientation: landscape) {
   .unfold.gtc-101 { grid-template-columns: 1fr 0fr 1fr 0fr; }
-  .unfold.gtc-001 { grid-template-columns: 0.09fr 0fr 1fr 0fr; }
-  .unfold.gtc-100 { grid-template-columns: 1fr 0fr 0.09fr 0fr; }
+  .unfold.gtc-001 { grid-template-columns: 0fr 0fr 1fr 0fr; }
+  .unfold.gtc-100 { grid-template-columns: 1fr 0fr 0fr 0fr; }
   .unfold.gtr-101 { grid-template-rows: 0fr 1fr 0fr 1fr; }
-  .unfold.gtr-001 { grid-template-rows: 0fr 0.12fr 0fr 1fr; }
-  .unfold.gtr-100 { grid-template-rows: 0fr 1fr 0fr 0.12fr; }
+  .unfold.gtr-001 { grid-template-rows: 0fr 0fr 0fr 1fr; }
+  .unfold.gtr-100 { grid-template-rows: 0fr 1fr 0fr 0fr; }
 
   .fold.gtc-101 { grid-template-columns: 1fr 0fr 1fr 0fr; }
-  .fold.gtc-001 { grid-template-columns: 0.05fr 0fr 1fr 0fr; }
-  .fold.gtc-100 { grid-template-columns: 1fr 0fr 0.05fr 0fr; }
+  .fold.gtc-001 { grid-template-columns: 0fr 0fr 1fr 0fr; }
+  .fold.gtc-100 { grid-template-columns: 1fr 0fr 0fr 0fr; }
   .fold.gtr-101 { grid-template-rows: 0fr 1fr 0fr 1fr; }
-  .fold.gtr-001 { grid-template-rows: 0fr 0.12fr 0fr 1fr; }
-  .fold.gtr-100 { grid-template-rows: 0fr 1fr 0fr 0.12fr; }
+  .fold.gtr-001 { grid-template-rows: 0fr 0fr 0fr 1fr; }
+  .fold.gtr-100 { grid-template-rows: 0fr 1fr 0fr 0fr; }
 }
 
 // @media screen and (orientation: landscape) and (min-width: 600px) {
@@ -111,8 +111,8 @@ $seconds: 0.8s;
     }
 
     .gtc-101 { grid-template-columns: 1fr 0fr 1fr; }
-    .gtc-001 { grid-template-columns: 0.05fr 0fr 1fr; } //projects, stack
-    .gtc-100 { grid-template-columns: 1fr 0fr 0.05fr; } //contact, qui soc
+    .gtc-001 { grid-template-columns: 0fr 0fr 1fr; } //projects, stack
+    .gtc-100 { grid-template-columns: 1fr 0fr 0fr; } //contact, qui soc
     .gtr-101 { grid-template-rows: 0fr 1fr 0fr 1fr; }
     .gtr-001 { grid-template-rows: 0fr 0.1fr 0fr 1fr; } //contact, projects
     .gtr-100 { grid-template-rows: 0fr 1fr 0fr 0.1fr; } //qui soc, stack

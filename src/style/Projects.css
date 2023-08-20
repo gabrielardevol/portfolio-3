@@ -7,6 +7,9 @@
   gap: 1px
 }
 
+.hidden #projects-container {
+  display: none
+}
 
 .projects {
   height: 100%; width: 100%;

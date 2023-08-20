@@ -19,7 +19,7 @@
 }
 table { border-spacing: 0px }
 
-.stack th, td {
+.stack td {
   text-align: center;
   width: 100%;
   /* border: 1px solid black; */
