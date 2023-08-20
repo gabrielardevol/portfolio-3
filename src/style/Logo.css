@@ -58,6 +58,10 @@
     width: clamp(38px, calc(100vw / 7), 100px);
     height: clamp(38px, calc(100vw / 7), 100px);
   }
+
+  #logo {
+    margin: 1em 0em 1.7em 0em;
+  }
 }
 
 @media (max-width: 800px) and (max-height: 400px) {
