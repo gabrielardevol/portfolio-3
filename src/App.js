@@ -51,7 +51,7 @@ function App() {
   const [superLayout, setSuperLayout] = useState("hide-second-layout")
   const [layoutClass, setLayoutClass] = useState("gtc-101 gtr-101")
   const [project, setProject] = useState("pigs")
-  const [logoSize, setLogo] = useState("")
+  const [logoSize, setLogo] = useState("medium-logo")
   const [foldUnfold, setFoldUnfold] = useState("fold")
   useEffect(() => {
 
@@ -60,16 +60,30 @@ function App() {
   }, []);
 
   const resizeLayout = (e) => {
+    console.log("resizeLayout")
     if(e.target.classList.contains("toggle") == false){
-      if (layoutRef.current.classList.contains("gtc-101") && layoutRef.current.classList.contains("gtr-101")){
+
+      if (layoutRef.current.classList.contains("gtc-101") && layoutRef.current.classList.contains("gtr-101") && e.currentTarget.classList.contains("logo") == false){
+        console.log("resizeLayout 1")
         let layoutGridTemplate = getLayout(e.currentTarget.dataset.index)
         setLayoutClass(layoutGridTemplate)
         e.currentTarget.classList.add("current")
         skelletonSections()
+        setLogo("smaller-logo")
       }
-      else {
+      // else if (layoutRef.current.classList.contains("logo")){setLayoutClass("gtr-101 gtc-101")}
+
+      else if ( e.currentTarget.classList.contains("logo") == false){
+        console.log("resizeLayout 2")
         e.currentTarget.classList.contains("current") == false && setLayoutClass("gtc-101 gtr-101")
         e.currentTarget.classList.contains("current") == false && skelletonSections()
+        setLogo("medium-logo")
+      }
+      else if ( e.currentTarget.classList.contains("logo") && (layoutRef.current.classList.contains("gtc-101") == false || layoutRef.current.classList.contains("gtr-101") == false)){
+        setLayoutClass("gtc-101 gtr-101")
+        setLogo("medium-logo")
+
+        skelletonSections()
       }
     }
       // if (e.target.classList.contains("logo") && layoutClass == "gtc-101 gtr-101"){}else{
