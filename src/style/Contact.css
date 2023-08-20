@@ -33,10 +33,11 @@
   height: 100%; display: flex; justify-content: center; align-items: center;
 }
 #pfp {
-  height: calc(100% - 3em); width: calc(100% - 3em); max-width: 300px;
-  border-radius: 999px;
+  height: 100%; width: calc(100% - 0em); max-width: 200px; max-height: 300px;
+  /* border-radius: 999px; */
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center top;
 }
 #contact ul{
   padding: 0px; margin: 0px;
@@ -91,11 +92,12 @@ content: "-"; color: black
 @media only screen and (max-width: 480px) {
   #contact > div:first-child {
     min-height: calc(100vw - 1.6em);
+
     /* background: green; */
   }
   #pfp {
     /* background: orange; */
-    height: 66vw; width: 66vw
+    height: 66vw; width: 66vw;
   }
 }
 @media (max-width: 800px) and (max-height: 400px) {
