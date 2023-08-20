@@ -48,7 +48,6 @@ function App() {
   const logoRef = useRef()
   const secondLayoutRef = useRef()
 
-  const [superLayout, setSuperLayout] = useState("hide-second-layout")
   const [layoutClass, setLayoutClass] = useState("gtc-101 gtr-101")
   const [project, setProject] = useState("pigs")
   const [logoSize, setLogo] = useState("medium-logo")
@@ -69,7 +68,7 @@ function App() {
         setLayoutClass(layoutGridTemplate)
         e.currentTarget.classList.add("current")
         skelletonSections()
-        setLogo("smaller-logo")
+        foldUnfold == "unfold" && setLogo("smaller-logo")
       }
       // else if (layoutRef.current.classList.contains("logo")){setLayoutClass("gtr-101 gtc-101")}
 
@@ -77,11 +76,11 @@ function App() {
         console.log("resizeLayout 2")
         e.currentTarget.classList.contains("current") == false && setLayoutClass("gtc-101 gtr-101")
         e.currentTarget.classList.contains("current") == false && skelletonSections()
-        setLogo("medium-logo")
+        foldUnfold == "fold" && setLogo("medium-logo")
       }
       else if ( e.currentTarget.classList.contains("logo") && (layoutRef.current.classList.contains("gtc-101") == false || layoutRef.current.classList.contains("gtr-101") == false)){
         setLayoutClass("gtc-101 gtr-101")
-        setLogo("medium-logo")
+        foldUnfold == "fold" && setLogo("medium-logo")
 
         skelletonSections()
       }
@@ -100,6 +99,7 @@ function App() {
   const unfoldSecondLayout = (e) => {
     const project = e.currentTarget.id
     setFoldUnfold("unfold")
+    setLogo("smaller-logo")
     secondLayoutRef.current.classList.add("border")
     setTimeout((e) => {
       setProject(project)
@@ -114,6 +114,7 @@ function App() {
 
   const hideSecondLayout = () => {
     setFoldUnfold("fold")
+    setLogo("medium-logo")
     secondLayoutRef.current.classList.remove("border")
     secondLayoutRef.current.classList.add("skelleton")
     setTimeout(() => {
