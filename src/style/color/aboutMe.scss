@@ -37,3 +37,8 @@ div[data-index="aboutMe"].skelleton {
 .can-toggle {
   color: $color
 }
+
+#about-me *::selection {
+  background-color: $color;
+  color: white
+}

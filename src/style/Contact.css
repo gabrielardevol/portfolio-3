@@ -39,7 +39,7 @@
   background-repeat: no-repeat;
   background-position: center top;
   background-image: url(../images/pfp.png);
-  transition: background-image 1s ease-in-out;
+  transition: background-image 0.65s ease-in-out;
 }
 
 #pfp:hover {

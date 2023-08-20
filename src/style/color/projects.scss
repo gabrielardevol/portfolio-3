@@ -38,3 +38,7 @@ div[data-index="projects"] {
   border-top-color: $color;
 
 }
+.projects *::selection {
+  background-color: $color;
+  color: white
+}

@@ -29,6 +29,12 @@ div[data-index="contact"].skelleton {
   border-color: $color
 }
 
+#contact *::selection {
+  background-color: $color;
+  color: white
+}
+
+
 
 // #contact-list {
 //   border-bottom-color: $color
