@@ -32,7 +32,7 @@
 
 @media only screen and (min-width: 480px) {
   .project div:nth-child(2) > div:first-child{
-  -webkit-line-clamp: 4;
+  /* -webkit-line-clamp: 4; */
   -webkit-box-orient: vertical;
   display: -webkit-box;
 }
