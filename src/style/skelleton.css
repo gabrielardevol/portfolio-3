@@ -1,28 +1,29 @@
+@media screen and (min-width: 400px) {
+  .skelleton * {
+    opacity: 0;
+    transition: opacity 0.2s;
+    border: 1px solid transparent
+  }
+  .skelleton .stack, .skelleton #contact  {
+    background: lavender;
+  }
+  .skelleton {
+    border: 1px solid transparent;
+    background: lavender;
+  }
+  .skelleton .projects {
+    overflow: hidden
+  }
+  .non-skelleton * {
+    opacity: 1;
+    transition: opacity 0.2s;
+  }
 
-.skelleton * {
-  opacity: 0;
-  transition: opacity 0.2s;
-  border: 1px solid transparent
-}
-.skelleton .stack, .skelleton #contact  {
-  background: lavender;
-}
-.skelleton {
-  border: 1px solid transparent;
-  background: lavender;
-}
-.skelleton .projects {
-  overflow: hidden
-}
-.non-skelleton * {
-  opacity: 1;
-  transition: opacity 0.2s;
-}
+  .skelleton > *  {
+    opacity: 0
+  }
 
-.skelleton > *  {
-  opacity: 0
-}
-
-.skelleton.card {
-  border: 1px solid transparent
+  .skelleton.card {
+    border: 1px solid transparent
+  }
 }

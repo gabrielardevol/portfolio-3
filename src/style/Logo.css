@@ -43,20 +43,20 @@
     grid-template-columns: repeat(4, 3vw);
     grid-template-rows: 1fr 1fr;
   }
+  .logo-grid:nth-child(2) {
+    justify-content: right
+  }
 }
 
 @media only screen and (max-width: 480px) {
   .logo-grid {
     display: flex;
+    justify-content: center;
   }
 
   .logo-chara {
     width: clamp(38px, calc(100vw / 7), 100px);
     height: clamp(38px, calc(100vw / 7), 100px);
-  }
-
-  #logo > div:first-child > div:not(.logo-chara) {
-    display: none;
   }
 }
 

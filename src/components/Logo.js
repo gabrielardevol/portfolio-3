@@ -44,7 +44,7 @@ const Logo = React.forwardRef((props, ref) => {
       <div className="logo-grid logo" >
       {charArray.map((character, index) => <Chara key={index} char={character} />)}
       </div>
-      <div className="logo-grid logo" style={{justifyContent: "right"}}>
+      <div className="logo-grid logo">
       {charArray2.map((character, index) => <Chara key={index} char={character} />)}
       </div>
         <div id="webdev" className="logo">
