@@ -4,6 +4,12 @@ import React from 'react';
 const Chara = (props) => {
   const logoRef = useRef()
   const transition = 1
+
+  const randomColor = () => {
+    const colors = ['lightcoral', "mediumturquoise",  "khaki", "cornflowerblue"];
+    const randomIndex = Math.floor(Math.random() * colors.length);
+    return colors[randomIndex]
+  }
   const animation = () => {
     logoRef.current.style.transition = "transform " + transition + "s ease"
     if(logoRef.current.style.transform == "rotateY(360deg)") {logoRef.current.style.transform = "rotateY(0deg)"}
@@ -11,9 +17,8 @@ const Chara = (props) => {
     if(logoRef.current.style.transform == "" || logoRef.current.style.transform == "rotateY(0deg)") {logoRef.current.style.transform = "rotateY(180deg)"};
 
     setTimeout(() =>  {
-      const colors = ['lightcoral', "mediumturquoise",  "khaki", "cornflowerblue"];
-      const randomIndex = Math.floor(Math.random() * colors.length);
-      logoRef.current.style.background =  colors[randomIndex]
+
+      logoRef.current.style.background =  randomColor()
     }, transition * 200);
   }
 
@@ -26,7 +31,7 @@ const Chara = (props) => {
       };
     }, []);
 
-  if(props.char !== " ") {return (<div className="chara-container"><div className="logo-chara logo" ref={logoRef} onClick={animation}>{props.char}</div></div>)} else {return (<div className="logo"></div>)}
+  if(props.char !== " ") {return (<div className="chara-container"><div className="logo-chara logo" style={{backgroundColor: randomColor()}} ref={logoRef} onClick={animation}>{props.char}</div></div>)} else {return (<div className="logo"></div>)}
 }
 
 const Logo = React.forwardRef((props, ref) => {

@@ -152,11 +152,11 @@ function App() {
         {/* <div id="super-layout" className={props.superLayout } > */}
         <div ref={layoutRef} id="layout" className={layoutClass + " " + foldUnfold }>
       {/* <Layout ref={layoutRef} layoutClass={layoutClass + " " + layoutClass2} superLayout={superLayout} hideSecondLayout={hideSecondLayout}> */}
-        <div id="languages" style={{gridArea: "languages"}} >
+        <div id="languages"  >
+          <button onClick={() => handleLanguageChange('ja')}>JA</button>
+          <button onClick={() => handleLanguageChange('esp')}>ES</button>
           <button onClick={() => handleLanguageChange('en')}>ENG</button>
           <button onClick={() => handleLanguageChange('cat')}>CAT</button>
-          <button onClick={() => handleLanguageChange('esp')}>ES</button>
-          <button onClick={() => handleLanguageChange('ja')}>JA</button>
         </div>
         <Logo ref={logoRef} logoSize={logoSize} resizeLayoutGrid={resizeLayout} data-index={0}/>
         <Card ref={aboutMeRef} section={"aboutMe"}resizeLayoutGrid={resizeLayout}  >

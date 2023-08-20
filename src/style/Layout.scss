@@ -149,7 +149,11 @@ $seconds: 0.8s;
   // }
   #layout {
   //   min-height: 100vh;
-    display: block
+    display: block;
+    padding: 0.8em
+  }
+  .card {
+    margin-bottom: 0.8em;
   }
   // #second-layout {
   //   box-sizing: border-box;

@@ -8,3 +8,7 @@
     font-size: 12px;
   }
 }
+
+#languages {
+  grid-area: languages; display: flex; flex-direction: row-reverse
+}

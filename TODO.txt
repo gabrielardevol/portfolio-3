@@ -4,10 +4,10 @@ SEBAS
   cards -> desplegar una a la vegada
   limon con gengibre y miel
 
-
+  default logo colors in mobile
+  fix logo in mobile
 
   -foto/video contact
-  -fix project card , how?
 
   -clicking logo when it's centered should'nt trigger skelleton
   -skelleton functions should be placed on App.js
@@ -19,70 +19,4 @@ SEBAS
   -ipad vertical: issues amb .projects
 
 DONE
-  -create classes for secondlayout img
-
-  -clicking toggle shouldnt trigger layout changes
-  -image index should go back to 0 when switching projects
-  -clean console
-
-  -img buttons should have a bolder style
-  -set a margin to place the language switchers
-  -apply skelleton to second-layout
-  -style links
-  -style language buttons
-
-TOMORROW
-
-16/8/2023
-  -at some point, set class to cards will stop working
-    that happens when I go to another tab
-    it's only a specific function
-  fotos porfoli
-  fotos porquets
-  -imatge emoji jamón en plan humoristic
-  fotos esclat
-  fotos celler
-  -fer carpetes amb les imatges de cada projecte
-  -la classe toggle, usada per saltar el skelleton, canviar-la per una de mes generica i reutilitable
-  -h3 secondlayout padding o margin left
-  -implementar imatges
-  -en mobil vertical, no hauria d'haver skelleton
-  -en mobil vertical, el second layout no te color de fons
-  -al cilar about me en pantalla ocmplerta, el pfp de contact no hauria de veures
-  -en mobil horiztontal, h3 hauria de ser una mica mes petit
-  -activar links del contact
-  -separar skelleton en un .css
-  -la primera taula del stack deixa una linea de pixels
-  -toggle switch hauria de veures per sota del show layout
-  -cursor "ma" al passar per sobre d'alguns elements
-  -clicar el switch toggle no hauria de triggerejar el skelleton
-  -mida text project mes petita
-  -els links de second layout han d'obrir en una nova finestra
-  -posar links al json
-  -aplicr dangerouslyset a projects container
-  -estilitzar h4 i br en projectes i en second layout
-  -implementar hashtags
-  -toggle switch hauria de tenir outline
-  -transition time to 0.6
-  -implementar data(fecha)
-  orbites ESP
-  orbites ENG
-  orbites JA
-  celler ardèvol ESP
-  pigs ESP
-  celler ardèvol ENG
-  pigs ENG
-  celler ardèvol JA
-  pigs JA
-  -projects
-  1 escric el text
-  2 ubico els i18n seccions
-  3 copio i pego a structure de projects js
-  4 tradueixo els textos
-  esclat EDC ESP
-  porfoli ESP
-  esclat EDC ENG
-  porfoli ENG
-  esclat EDC JA
-  porfoli JA
-  -afegir salts de paragraf
+  -fix project card , how?
