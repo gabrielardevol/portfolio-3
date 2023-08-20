@@ -38,7 +38,16 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
+  background-image: url(../images/pfp.png);
+  transition: background-image 1s ease-in-out;
 }
+
+#pfp:hover {
+  background-image: url(../images/skelleton.png);   transition: background-image 3s ease-in-out;
+
+
+}
+
 #contact ul{
   padding: 0px; margin: 0px;
   list-style: none;

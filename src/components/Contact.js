@@ -38,7 +38,7 @@ const Contact = React.forwardRef((props, ref) => {
       ref={contactRef}
        >
         <div id="pfp-container">
-          <div id="pfp" style={{backgroundImage: `url(${process.env.PUBLIC_URL}/pfp.png)`,}}>
+          <div id="pfp" style={{}}>
           </div>
         </div>
         <div >
