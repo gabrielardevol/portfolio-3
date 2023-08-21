@@ -73,7 +73,6 @@ function App() {
     const project = e.currentTarget.id
     setFoldUnfold("unfold")
     setLogo("smaller-logo")
-    secondLayoutRef.current.classList.add("border")
     setTimeout((e) => {
       setProject(project)
     }, 300);
@@ -81,10 +80,13 @@ function App() {
     setTimeout(() => {
       secondLayoutRef.current.classList.remove("skelleton")
       secondLayoutRef.current.classList.add("non-skelleton")
+      secondLayoutRef.current.classList.add("border")
+
     }, 900);
   }
 
   const hideSecondLayout = () => {
+    secondLayoutRef.current.classList.remove("border")
     setFoldUnfold("fold")
     setLogo("medium-logo")
     secondLayoutRef.current.classList.remove("border")

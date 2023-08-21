@@ -5,23 +5,11 @@ $seconds: 0.8s;
 
 }
 
-// #second-layout, #layout, .card  {
-//   transition: all $seconds ease-in-out;
-// }
-
-// #super-layout > * {
-//   transition: all $seconds ease-in-out;
-// }
-
-// #super-layout {
-//   overflow: hidden;
-// }
 #layout {
   // width: 100vw;
   // height: 100vh;
   height: 100vh;
   gap: 0.6em;
-  padding: 0.8em 0em 0.8em 0.8em;
 
 }
 
@@ -41,27 +29,12 @@ $seconds: 0.8s;
   .fold.gtr-100 { grid-template-rows: 0fr 1fr 0fr 0fr; }
 }
 
-// @media screen and (orientation: landscape) and (min-width: 600px) {
-//   .unfold.gtc-101 { grid-template-columns: 1fr 0fr 1fr 0fr; }
-//   .unfold.gtc-001 { grid-template-columns: 0.09fr 0fr 1fr 0fr; }
-//   .unfold.gtc-100 { grid-template-columns: 1fr 0fr 0.09fr 0fr; }
-//   .unfold.gtr-101 { grid-template-rows: 0fr 1fr 0fr 1fr; }
-//   .unfold.gtr-001 { grid-template-rows: 0fr 0.12fr 0fr 1fr; }
-//   .unfold.gtr-100 { grid-template-rows: 0fr 1fr 0fr 0.12fr; }
-
-//   .fold.gtc-101 { grid-template-columns: 1fr 0fr 1fr 0fr; }
-//   .fold.gtc-001 { grid-template-columns: 0.05fr 0fr 1fr 0fr; }
-//   .fold.gtc-100 { grid-template-columns: 1fr 0fr 0.05fr 0fr; }
-//   .fold.gtr-101 { grid-template-rows: 0fr 1fr 0fr 1fr; }
-//   .fold.gtr-001 { grid-template-rows: 0fr 0.12fr 0fr 1fr; }
-//   .fold.gtr-100 { grid-template-rows: 0fr 1fr 0fr 0.12fr; }
-// }
-
-
 
 @media screen and (orientation: landscape) {
 
   #layout {
+    padding: 0.8em 0em 0.8em 0.8em;
+
     display: grid;
     grid-template-areas:
     "languages languages languages second-layout"
@@ -77,29 +50,13 @@ $seconds: 0.8s;
       margin-block-start: auto;
       margin-inline: auto;
   }
-    // #second-layout {
-    //   height: calc(100vh - 1.6em);
-    //   width: calc(50vw - 0.8em);
-    //   margin: 0.8em 0em 0.8em 0em;
-    //   border-top-left-radius: 0.5em;
-    //   border-top-right-radius: 0.5em;
-    //   border-bottom-left-radius: 0.5em;
-    //   border-bottom-right-radius: 0.5em;
-    // }
-    // .hide-second-layout {
-    //   grid-template-columns: 1fr 0fr;
-    // }
-    // .unfold-second-layout {
-    //     grid-template-columns: 1fr 0fr;
-    //   }
-    // .hide-second-layout > #second-layout { width: 0em; overflow: hidden;}
 
   }
 
   @media screen and (orientation: portrait) {
     #layout {
 
-      // padding: 0.8em;
+      padding: 0.8em;
       display: grid;
       grid-template-areas:
       "languages languages languages"
@@ -116,69 +73,22 @@ $seconds: 0.8s;
     .gtr-101 { grid-template-rows: 0fr 1fr 0fr 1fr; }
     .gtr-001 { grid-template-rows: 0fr 0.1fr 0fr 1fr; } //contact, projects
     .gtr-100 { grid-template-rows: 0fr 1fr 0fr 0.1fr; } //qui soc, stack
-    // #second-layout {height: calc(50vh - 0.8em);
-    //   margin: 0 0.8em 0.8em 0.8em;
-    //   border-radius: 0.5em
-    // }
-    // .unfold-second-layout > #layout {
-    //   height: 50vh;
-    // }
-    // .hide-second-layout > #layout {
-    //   height: 100vh;
-    //   /* background: green;  */
-    // }
-    // #super-layout {
-    //   overflow: hidden;
-    //   height: 100vh
-    // }
+
   }
 
 
-@media only screen and (min-width: 1100px) and (orientation: landscape) { /* laptop margins */
-  // #layout {
-  //    max-width: 75vw;
-  // }
-  // .layout-75 {
-  //    width: 75vw
-  // }
-}
 
 @media only screen and (max-width: 480px) {
-  // #layout > .card {
-  //   margin: 0.5em
-  // }
+
   #layout {
-  //   min-height: 100vh;
     display: block;
     padding: 0.8em
   }
   .card {
     margin-bottom: 0.8em;
   }
-  // #second-layout {
-  //   box-sizing: border-box;
-  //   position: fixed;
-  //   border-radius: 0.5em;
-  // }
-  // #second-layout {
-  //   position: fixed; top: 0px;
-  // }
-  // .unfold-second-layout > #second-layout {
-  //   height: 100vh; width: 100vw;
-  // }
-  // .hide-second-layout > #second-layout {
-  //   height: 100vh; width: 0vw;  overflow: hidden; left: -1px;
-  // }
 
 }
-
-// #second-layout h4 {
-//    margin-bottom: 0.5em;
-// }
-// #second-layout h4:not(:first-child){
-// margin-top: 1em;
-// }
-
 
 #languages > button {
   border: none;
@@ -195,7 +105,13 @@ $seconds: 0.8s;
   height: 1em
 }
 
-// #second-layout button {
-//   font-weight: 900;
-//   font-size: small
+
+// @media screen and (orientation: landscape) {
+//   #layout.fold {
+//     max-width: 800px; max-height: 800px;
+//   }
+//   #layout.unfold {
+//     max-height: 800px; max-width: 1200px
+//   }
+
 // }
