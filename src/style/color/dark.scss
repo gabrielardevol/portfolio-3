@@ -1,4 +1,4 @@
-$color: #450000;
+$color: #2e1a1a;
 $color2: #632f2f;
 
 * {
@@ -28,5 +28,10 @@ $color2: #632f2f;
   background: $color;
 }
 #txt-container::-webkit-scrollbar-track {
+  background: $color;
+}
+
+
+#img-container {
   background: $color;
 }

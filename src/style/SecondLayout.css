@@ -7,8 +7,8 @@
   overflow: hidden;
   border-radius: 0.5em
 }
+
 #img-container {
-  background: black;
   height: 50%;
   overflow: hidden;
   position: relative;
@@ -56,26 +56,6 @@
   }
 }
 
-
-
-
-
-/* @media screen and (orientation: landscape) { */
-  /* .hidden {
-    width: 0vw;
-  }
-  .shown {
-    width: 50vw;
-  }
-  #second-layout {
-  } */
-/* } */
-
-
-/* #second-layout {
-  position: relative;
-} */
-
 #second-layout > div:first-of-type {
   border-top-left-radius: inherit;
   border-top-right-radius: inherit;
@@ -120,21 +100,15 @@
 
 #second-layout button {
   border-radius: 100px;
-  background: black;
+  background: white;
   width: 2rem;
   height: 2rem;
-  color: white;
-  border: none;
+  color: black;
+  border: 3px solid black;
   margin: 0.5rem;
+  font-weight: 900;
 }
 
 #second-layout p {
   padding: 1.2rem
 }
-
-/*
-@media only screen and (max-width: 480px) {
-  #second-layout {
-    position: fixed
-  }
-}  */
