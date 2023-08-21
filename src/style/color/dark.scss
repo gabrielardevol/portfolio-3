@@ -35,3 +35,13 @@ $color2: #632f2f;
 #img-container {
   background: $color;
 }
+
+#second-layout *::selection {
+  background-color: $color;
+  color: white
+}
+
+.card h2::selection {
+  background-color: $color;
+  color: white
+}
