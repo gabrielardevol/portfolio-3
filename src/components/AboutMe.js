@@ -28,7 +28,7 @@ const AboutMe = React.forwardRef((props, ref) => {
         {t('aboutMe.3')}&nbsp;
         <LongBio style={longBioStyle}>{t('aboutMe.4')}</LongBio>&nbsp;
         {t('aboutMe.5')}&nbsp;
-        <LongBio style={longBioStyle}><br/><br/><img src="https://placehold.co/600x400/EEE/31343C" alt=""/><br/><br/></LongBio>
+        {/* <LongBio style={longBioStyle}><br/><br/><img src="https://placehold.co/600x400/EEE/31343C" alt=""/><br/><br/></LongBio> */}
 
       </div>
     </div>

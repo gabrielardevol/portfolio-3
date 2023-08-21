@@ -1,13 +1,11 @@
 $seconds: 0.8s;
+
 * {
   box-sizing: border-box;
   transition: all $seconds ease;
-
 }
 
 #layout {
-  // width: 100vw;
-  // height: 100vh;
   height: 100vh;
   gap: 0.6em;
 
@@ -29,12 +27,10 @@ $seconds: 0.8s;
   .fold.gtr-100 { grid-template-rows: 0fr 1fr 0fr 0fr; }
 }
 
-
 @media screen and (orientation: landscape) {
 
   #layout {
     padding: 0.8em 0em 0.8em 0.8em;
-
     display: grid;
     grid-template-areas:
     "languages languages languages second-layout"
@@ -42,20 +38,14 @@ $seconds: 0.8s;
     "contact logo stack second-layout"
     "contact projects projects second-layout";
   }
-
-  // #super-layout { display: grid; }
-
-
-  #layout {
+    #layout {
       margin-block-start: auto;
       margin-inline: auto;
-  }
-
+    }
   }
 
   @media screen and (orientation: portrait) {
     #layout {
-
       padding: 0.8em;
       display: grid;
       grid-template-areas:
@@ -64,7 +54,6 @@ $seconds: 0.8s;
       "contact logo stack"
       "contact projects projects"
       "second-layout second-layout second-layout";
-      // gap: 0.8em;
     }
 
     .gtc-101 { grid-template-columns: 1fr 0fr 1fr; }
@@ -73,10 +62,7 @@ $seconds: 0.8s;
     .gtr-101 { grid-template-rows: 0fr 1fr 0fr 1fr; }
     .gtr-001 { grid-template-rows: 0fr 0.1fr 0fr 1fr; } //contact, projects
     .gtr-100 { grid-template-rows: 0fr 1fr 0fr 0.1fr; } //qui soc, stack
-
   }
-
-
 
 @media only screen and (max-width: 480px) {
 
@@ -87,7 +73,6 @@ $seconds: 0.8s;
   .card {
     margin-bottom: 0.8em;
   }
-
 }
 
 #languages > button {
@@ -104,14 +89,3 @@ $seconds: 0.8s;
 #languages {
   height: 1em
 }
-
-
-// @media screen and (orientation: landscape) {
-//   #layout.fold {
-//     max-width: 800px; max-height: 800px;
-//   }
-//   #layout.unfold {
-//     max-height: 800px; max-width: 1200px
-//   }
-
-// }
