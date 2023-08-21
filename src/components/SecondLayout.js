@@ -43,7 +43,11 @@ const SecondLayout = React.forwardRef((props, ref) => {
         <button id="close-button" onClick={props.hideSecondLayout}>X</button>
         {imageIndex != 0 && <button className="skip-skelleton" id="previmg-button" onClick={prevImg}> &lt; </button>}
         {imageIndex != images.length-1 && <button className="skip-skelleton" id="nextimg-button" onClick={nextImg}>&gt; </button>}
-        <img id="second-layout-image" ref={imgRef} data-index={imageIndex} src={images[imageIndex]}></img>
+        <div style={{height: "100%", width: "100%", overflow: "auto"}}>
+          <div style={{display: "flex", justifyContent: "center"}}>
+            <img id="second-layout-image" ref={imgRef} data-index={imageIndex} src={images[imageIndex]} />
+          </div>
+        </div>
       </div>
       <div id="txt-container" >
         <div >

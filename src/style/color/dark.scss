@@ -6,22 +6,27 @@ $color2: #632f2f;
 }
 
 #webdev {
-  background: $color2
+  background: $color
 }
 #title-container {
-  background: $color2;
+  background: $color;
   color: white;
 }
 
 .chara-container, .card, #second-layout{
-  filter: drop-shadow(0.25em 0.2em 0 $color2);
-}
-
-#second-layout::-webkit-scrollbar-track {
-  // background: $color
+  filter: drop-shadow(0.25em 0.2em 0 $color);
 }
 
 #second-layout::-webkit-scrollbar-thumb {
   background: $color
+}
 
+.border {
+  border-color: $color;
+}
+#img-container > *::-webkit-scrollbar-track {
+  background: $color;
+}
+#txt-container::-webkit-scrollbar-track {
+  background: $color;
 }
