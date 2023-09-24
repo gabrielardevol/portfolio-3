@@ -44,7 +44,8 @@ const Stack = React.forwardRef((props, ref) => {
             </thead>
             <tbody>
               <tr><td>HTML, CSS, Javascript</td></tr>
-              <tr><td>React</td></tr>
+              <tr><td>React.js</td></tr>
+              <tr><td>React native</td></tr>
               <tr><td>Bootstrap</td></tr>
               <tr><td>Sass</td></tr>
               <tr><td>Figma</td></tr>
@@ -60,7 +61,7 @@ const Stack = React.forwardRef((props, ref) => {
             <tbody>
               <tr><td>Ruby</td></tr>
               <tr><td>Ruby on Rails</td></tr>
-              <tr><td>Firebase</td></tr>
+              {/* <tr><td>Firebase</td></tr> */}
               <tr><td>MySQL</td></tr>
               <tr><td>PostgreSQL</td></tr>
             </tbody>
@@ -75,9 +76,9 @@ const Stack = React.forwardRef((props, ref) => {
               </tr>
             </thead>
             <tbody>
-              <tr><td>Github</td></tr>
-              <tr><td>Ubuntu</td></tr>
-              <tr><td>Heroku</td></tr>
+              <tr><td>Github CLI</td></tr>
+              <tr><td>Ubuntu CLI</td></tr>
+              {/* <tr><td>Heroku</td></tr> */}
             </tbody>
           </table>
 
@@ -104,8 +105,10 @@ const Stack = React.forwardRef((props, ref) => {
             </thead>
             <tbody>
               <tr><td>PHP</td></tr>
-              <tr><td>API</td></tr>
-              <tr><td>{t('stack.solidPrinciples')}</td></tr>
+              <tr><td>Vue.js</td></tr>
+
+              {/* <tr><td>API</td></tr> */}
+              {/* <tr><td>{t('stack.solidPrinciples')}</td></tr> */}
             </tbody>
           </table>
         </div>
