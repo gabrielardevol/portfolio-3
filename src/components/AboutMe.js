@@ -45,12 +45,3 @@ const LongBio = (props) => {
 }
 
 export default AboutMe;
-
-// penso que el punt de trobada entre l'art i la tecnologia és l'artesania, el 'craft'. El junior apren del senior
-// de la mateixa manera que l'aprenent respecta al mestre. es diu que l'artesà necessita 10.000 hores de treball
-// per convertir-se en mestre.
-// recommendations:
-// my mom: I'm proud of my son's website. It's colorful and blablabla. I'm proud of my son and I can feel near the day
-// he will pay back the money I lend him.
-// esclat:
-// companys:
